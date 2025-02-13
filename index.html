@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemny | Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="p-4">
+            <div class="mx-auto flex justify-between items-center">
+                <a href="#" class="text-white text-2xl font-bold">Lemney</a>
+                <!-- Main navigation list -->
+                <ul class="hidden-lg-flex">
+                    <li><a href="#" class="text-white p-2">Honey Order</a></li>
+                    <li><a href="#" class="text-white p-2">Logistics</a></li>
+                    <li><a href="#" class="text-white p-2">Housing</a></li>
+                    <li><a href="#" class="text-white p-2">Support</a></li>
+                </ul>
+                <div class="">
+                    <a href="#" class="text-white p-2"><i class="fas fa-search"></i></a>
+                    <a href="#" class="text-white p-2"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#" class="text-white p-2"><i class="fas fa-user"></i></a>
+                    <!-- Hamburger menu for small screens -->
+                    <button id="menu-toggle" class="text-white p-2 lg:hidden"><i class="fa fa-bars"></i></button>
+                </div>
+            </div>
+            <!-- Dropdown menu for small screens -->
+            <div id="dropdown-menu" class="hidden transition-all ease-in-out duration-300">
+                <ul class="flex flex-col text-center">
+                    <li><a href="#" class="text-white p-2 block">Honey Order</a></li>
+                    <li><a href="#" class="text-white p-2 block">Logistics</a></li>
+                    <li><a href="#" class="text-white p-2 block">Housing</a></li>
+                    <li><a href="#" class="text-white p-2 block">Support</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+    </header>
+
+    <main class="w-100">
+        <div class="p-0 m-0"> 
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner w-100 bg-black">
+                <div class="item active">
+                  <img src="assets/img/hero.svg" alt="Los Angeles" style="width:100%;">
+                </div>
+          
+                <div class="item">
+                  <img src="assets/img/hero2.svg" alt="Chicago" style="width:100%;">
+                </div>
+              
+                <div class="item">
+                  <img src="assets/img/hero3.svg" alt="New york" style="width:100%;">
+                </div>
+              </div>
+          
+              <!-- Left and right controls -->
+               <!--
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            -->
+            </div>
+          </div>     
+        
+
+        <section class="features grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center items-center p-4">
+            <div class="rounded w-100 h-100 border border-black p-6">
+                <p class="font-bold boldf"><i class="fa fa-clock"></i> On time delivery</p>
+                <p class="text-sm small-f">On time delivery is ensured to meet up with your schedule on all our services or you can pick a date you want on all your orders match to your schedule.</p>
+            </div>
+        
+            <div class="rounded w-100 border border-gray-200 p-4">
+                <p class="font-bold boldf"><i class="fa fa-check"></i> Customer Satisfaction</p>
+                <p class="text-sm small-f">We ensure to meet up with our customer expectation as well as making sure to improve our service offers to make sure our customers are well served.</p>
+            </div>
+        
+            <div class="rounded w-100 border border-gray-200 p-4">
+                <p class="font-bold boldf"><i class="fa fa-box"></i> Transparency</p>
+                <p class="text-sm small-f">Lemney system enables you to view all your order status in real time to understand where and when your arrivals are. Trust us to do the job.</p>
+            </div>
+        </section>
+
+        <section class="lg:flex section-house w-100 p-4">
+            <div class="lg:mr-10 w-100">
+                <img src="assets/img/house2.svg" class="img house-img" alt="">
+            </div>
+
+            <div class="mr-10 w-50 lg:mt-20">
+                <p class="font-bold text-2xl mb-4 mt-10">HOUSING SOLUTION</p>
+                <p class="house-text mb-10 w-full sm:w-4/5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum autem expedita culpa eaque possimus maxime repellendus quod quo nesciunt! Animi nesciunt magnam blanditiis recusandae cupiditate, veritatis quasi eaque consequuntur dolorem.</p>
+
+                <div class="flex flex-col lg:flex-row items-center lg:space-x-4">
+                    <a href="#" class="bg-yellow-600 text-white p-3 pr-10 pl-10 rounded mt-4 text-center house-btn block lg:inline-block w-full lg:w-auto">LIST A HOUSE</a>
+                    <a href="#" class="bg-white text-yellow-600 p-3 pr-10 pl-10 rounded mt-4 lg:ml-0 text-center house-btn border border-yellow-600 block lg:inline-block w-full lg:w-auto">LIST A HOUSE</a>
+                </div>                
+            </div>
+        </section>
+
+        <section class="p-6">
+            <p class="font-bold text-5xl p-1 pb-4">TOP HOUSE LISTING</p>
+            
+            <div>
+                <div class="w-full grid house-listing gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+                    <!--Start house div-->
+                    <div>
+                        <div class="relative">
+                            <img src="assets/img/img-p.svg" alt="" class="w-full h-auto">
+                            <p class="house-purpose bg-yellow-600 p-2 text-white font-bold absolute top-3 right-3">For sale</p>
+                            <p class="house-purpose bg-black p-2 text-white absolute top-3 left-3 text-cash">Traditional Apartment
+                                <br><span class="font-bold">NGN 30 Million</span>
+                            </p>
+
+                            <span class="house-down absolute bottom-2 left-3">
+                                <p><i class="fa fa-location"></i> Lekki Lagos</p>
+                                <p><i class="fa fa-house"></i> 3 bedroom cottage</p>
+                            </span>
+
+                            <span class="house-down absolute bottom-2 right-3">
+                                <p> <b>2 <i class="fa fa-door-closed"></i></b> <b>2 <i class="fa fa-image"></i></b></p>
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between items-center house-foot">
+                            <div class="pl-1 flex items-center space-x-2">
+                                <img src="assets/img/img-p.svg" alt="" class="w-8 h-8">
+                                <span>Lhano Rhano</span>
+                            </div>
+                        
+                            <div class="pr-1 flex items-center space-x-4">
+                                <i class="fa fa-phone text-black"></i>
+                                <i class="fa fa-save text-black"></i>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <!--End house div-->
+
+                    <!--Start house div-->
+                    <div>
+                        <div class="relative">
+                            <img src="assets/img/img-p.svg" alt="" class="w-full h-auto">
+                            <p class="house-purpose bg-yellow-600 p-2 text-white font-bold absolute top-3 right-3">For sale</p>
+                            <p class="house-purpose bg-black p-2 text-white absolute top-3 left-3 text-cash">Traditional Apartment
+                                <br><span class="font-bold">NGN 30 Million</span>
+                            </p>
+
+                            <span class="house-down absolute bottom-2 left-3">
+                                <p><i class="fa fa-location"></i> Lekki Lagos</p>
+                                <p><i class="fa fa-house"></i> 3 bedroom cottage</p>
+                            </span>
+
+                            <span class="house-down absolute bottom-2 right-3">
+                                <p> <b>2 <i class="fa fa-door-closed"></i></b> <b>2 <i class="fa fa-image"></i></b></p>
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between items-center house-foot">
+                            <div class="pl-1 flex items-center space-x-2">
+                                <img src="assets/img/img-p.svg" alt="" class="w-8 h-8">
+                                <span>Lhano Rhano</span>
+                            </div>
+                        
+                            <div class="pr-1 flex items-center space-x-4">
+                                <i class="fa fa-phone text-black"></i>
+                                <i class="fa fa-save text-black"></i>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <!--End house div-->
+                    
+
+                    <!--Start house div-->
+                    <div>
+                        <div class="relative">
+                            <img src="assets/img/img-p.svg" alt="" class="w-full h-auto">
+                            <p class="house-purpose bg-yellow-600 p-2 text-white font-bold absolute top-3 right-3">For sale</p>
+                            <p class="house-purpose bg-black p-2 text-white absolute top-3 left-3 text-cash">Traditional Apartment
+                                <br><span class="font-bold">NGN 30 Million</span>
+                            </p>
+
+                            <span class="house-down absolute bottom-2 left-3">
+                                <p><i class="fa fa-location"></i> Lekki Lagos</p>
+                                <p><i class="fa fa-house"></i> 3 bedroom cottage</p>
+                            </span>
+
+                            <span class="house-down absolute bottom-2 right-3">
+                                <p> <b>2 <i class="fa fa-door-closed"></i></b> <b>2 <i class="fa fa-image"></i></b></p>
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between items-center house-foot">
+                            <div class="pl-1 flex items-center space-x-2">
+                                <img src="assets/img/img-p.svg" alt="" class="w-8 h-8">
+                                <span>Lhano Rhano</span>
+                            </div>
+                        
+                            <div class="pr-1 flex items-center space-x-4">
+                                <i class="fa fa-phone text-black"></i>
+                                <i class="fa fa-save text-black"></i>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <!--End house div-->
+                    
+
+                    <!--Start house div-->
+                    <div>
+                        <div class="relative">
+                            <img src="assets/img/img-p.svg" alt="" class="w-full h-auto">
+                            <p class="house-purpose bg-yellow-600 p-2 text-white font-bold absolute top-3 right-3">For sale</p>
+                            <p class="house-purpose bg-black p-2 text-white absolute top-3 left-3 text-cash">Traditional Apartment
+                                <br><span class="font-bold">NGN 30 Million</span>
+                            </p>
+
+                            <span class="house-down absolute bottom-2 left-3">
+                                <p><i class="fa fa-location"></i> Lekki Lagos</p>
+                                <p><i class="fa fa-house"></i> 3 bedroom cottage</p>
+                            </span>
+
+                            <span class="house-down absolute bottom-2 right-3">
+                                <p> <b>2 <i class="fa fa-door-closed"></i></b> <b>2 <i class="fa fa-image"></i></b></p>
+                            </span>
+                        </div>
+
+                        <div class="flex justify-between items-center house-foot">
+                            <div class="pl-1 flex items-center space-x-2">
+                                <img src="assets/img/img-p.svg" alt="" class="w-8 h-8">
+                                <span>Lhano Rhano</span>
+                            </div>
+                        
+                            <div class="pr-1 flex items-center space-x-4">
+                                <i class="fa fa-phone text-black"></i>
+                                <i class="fa fa-save text-black"></i>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                    <!--End house div-->
+                    
+
+                </div>
+            </div>
+                        
+        </section>
+
+
+        <section class="p-4 w-100">
+            <p class="font-bold text-5xl m-4">OUR SERVICE OPTIONS</p>
+
+            <div class="block lg:flex honey">
+                <div class="p-8 honey-div">
+                    <p class="font-bold text-5xl text-yellow-600 h">HONEY SALE <br> OFFERS</p>
+                    <p class="mt-4 w-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quisquam numquam facere quis iste molestias dolor, omnis dolorum enim eveniet saepe laborum, nostrum repellendus quidem ut. Beatae, adipisci animi. Exercitationem.</p>
+
+                    <div class="mt-8">
+                        <form action="" class="">
+                            <label for="">Input Amount</label>
+                            <span class="float-right">price: #3000</span>
+
+                            <div class="relative">
+                                <input type="text" name="amount" id="amount" placeholder="Amount" 
+                                    class="border border-gray-300 rounded p-2 pr-20 w-full">
+                                <select name="unit" id="unit" 
+                                    class="absolute top-0 right-0 h-full bg-transparent border-none pr-2 pl-4 cursor-pointer focus:outline-none">
+                                    <option value="liters">Liters</option>
+                                    <option value="milliliters">Milliliters</option>
+                                    <option value="gallons">Gallons</option>
+                                </select>
+                            </div>
+
+                            <div class="flex flex-col lg:flex-row items-center lg:space-x-4 mt-4">
+                                <a href="#" class="bg-yellow-600 text-white p-3 pr-10 pl-10 rounded-full mt-4 text-center house-btn block lg:inline-block w-full">LIST A HOUSE</a>
+                                <a href="#" class="bg-white text-yellow-600 p-3 pr-10 pl-10 rounded-full mt-4 lg:ml-0 text-center house-btn border border-yellow-600 block lg:inline-block w-full">LIST A HOUSE</a>
+                            </div> 
+                        </form>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="assets/img/honey.svg" class="honey-img" alt="" srcset="">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="lg:flex section-house w-100 p-4 lg:ml-6">
+            <div class="mr-10 w-50 lg:mt-20">
+                <p class="font-bold text-3xl mb-4 mt-10">SEND THAT PACKAGE FLYING</p>
+                <p class="house-text mb-10 w-full sm:w-4/5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum autem expedita culpa eaque possimus maxime repellendus quod quo nesciunt! Animi nesciunt magnam blanditiis recusandae cupiditate, veritatis quasi eaque consequuntur dolorem.</p>
+
+                <div class="flex flex-col lg:flex-row items-center lg:space-x-4">
+                    <a href="#" class="bg-yellow-600 text-white p-3 pr-10 pl-10 rounded mt-4 text-center house-btn block lg:inline-block w-full lg:w-auto">REQUEST LOGISTICS</a>
+                </div>                
+            </div>
+
+            <div class="lg:mr-10 w-100">
+                <img src="assets/img/van.svg" class="img house-img" alt="">
+            </div>
+        </section>
+
+
+        <section class="lg:flex section-house w-100 p-4">
+            <div class="lg:mr-10 w-100">
+                <img src="assets/img/cdd.png" class="img house-img" alt="">
+            </div>
+            
+            <div class="mr-10 w-50 lg:mt-20">
+                <p class="font-bold text-3xl mb-4 mt-10">Explore Partnership Experience</p>
+                <p class="house-text mb-10 w-full sm:w-4/5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum autem expedita culpa eaque possimus maxime repellendus quod quo nesciunt! Animi nesciunt magnam blanditiis recusandae cupiditate, veritatis quasi eaque consequuntur dolorem.</p>
+
+                <div class="flex flex-col lg:flex-row items-center lg:space-x-4">
+                    <a href="#" class="bg-yellow-600 text-white p-3 pr-10 pl-10 rounded mt-4 text-center house-btn block lg:inline-block w-full lg:w-auto">REQUEST LOGISTICS</a>
+                </div>                
+            </div>
+        </section>
+
+
+        <section class="p-4">
+            <p class="font-bold text-3xl mb-4 mt-10">CUSTOMER REVIEW</p>
+            <div class="features2 flex p-4 overflow-x-auto space-x-4">
+                <div class="min-w-[300px] sm:min-w-[200px] p-6 flex justify-between fe-div m-6">
+                    <div>
+                        <!-- <img src="assets/img/cdd.png" alt=""> -->
+                    </div>
+
+                    <div class="f-div">
+                        <p class="font-bold text-3xl boldf"><img src="assets/img/cdd.png" alt="">Customer1</p>
+                        <div class="ml-6" style="margin-left: 50px;">
+                            <span>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-gray"></i>
+                            </span>
+                            <p class="text-sm small-f">On time delivery is ensured to meet up with your schedule on all our services or you can pick a date you want on all your orders match to your schedule.</p>
+                            
+                            <span class="text-sm">Executed By<n class="block"><b>John Deo</b></n></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] sm:min-w-[200px] p-6 flex justify-between fe-div m-6">
+                    <div>
+                        <!-- <img src="assets/img/cdd.png" alt=""> -->
+                    </div>
+
+                    <div class="f-div">
+                        <p class="font-bold text-3xl boldf"><img src="assets/img/cdd.png" alt="">Customer1</p>
+                        <div class="ml-6" style="margin-left: 50px;">
+                            <span>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-gray"></i>
+                            </span>
+                            <p class="text-sm small-f">On time delivery is ensured to meet up with your schedule on all our services or you can pick a date you want on all your orders match to your schedule.</p>
+                            
+                            <span class="text-sm">Executed By<n class="block"><b>John Deo</b></n></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] sm:min-w-[200px] p-6 flex justify-between fe-div m-6">
+                    <div>
+                        <!-- <img src="assets/img/cdd.png" alt=""> -->
+                    </div>
+
+                    <div class="f-div">
+                        <p class="font-bold text-3xl boldf"><img src="assets/img/cdd.png" alt="">Customer1</p>
+                        <div class="ml-6" style="margin-left: 50px;">
+                            <span>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-gray"></i>
+                            </span>
+                            <p class="text-sm small-f">On time delivery is ensured to meet up with your schedule on all our services or you can pick a date you want on all your orders match to your schedule.</p>
+                            
+                            <span class="text-sm">Executed By<n class="block"><b>John Deo</b></n></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="min-w-[300px] sm:min-w-[200px] p-6 flex justify-between fe-div m-8">
+                    <div>
+                        <!-- <img src="assets/img/cdd.png" alt=""> -->
+                    </div>
+
+                    <div class="f-div">
+                        <p class="font-bold text-3xl boldf"><img src="assets/img/cdd.png" alt="">Customer1</p>
+                        <div class="ml-6" style="margin-left: 50px;">
+                            <span>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-yellow-600"></i>
+                                <i class="fa fa-star text-gray"></i>
+                            </span>
+                            <p class="text-sm small-f">On time delivery is ensured to meet up with your schedule on all our services or you can pick a date you want on all your orders match to your schedule.</p>
+                            
+                            <span class="text-sm">Executed By<n class="block"><b>John Deo</b></n></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section class="p-4">
+            <p class="font-bold text-3xl mb-4 mt-10">Leave a Review</p>
+
+            <form action="">
+                <div class="lg:flex lg:justify-between">
+                    <div class="m-6">
+                        <label for="email" class="block">Email</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 review-input">
+                    </div>
+
+                    <div class="m-6">
+                        <label for="" class="block">Comment</label>
+                        <input type="text" class="border border-gray-300 rounded p-2 review-input">
+                    </div>
+                </div>
+            </form>
+
+            <div class="lg:flex lg:justify-between">
+                <div class="m-6">
+                    <label for="email">Leave a Rating</label>
+                    <span>
+                        <i class="fa fa-star text-yellow-600"></i>
+                        <i class="fa fa-star text-yellow-600"></i>
+                        <i class="fa fa-star text-yellow-600"></i>
+                        <i class="fa fa-star text-yellow-600"></i>
+                        <i class="fa fa-star text-gray"></i>
+                    </span>
+                </div>
+
+                <div class="m-6">
+                    <label for="" class="btn btn-primary bg-yellow-500 border border-yellow-500 hover:bg-yellow-500 block">Submit</label>
+                </div>
+            </div>
+        </section>
+
+
+        <!--<section class="p-4">
+            <p class="font-bold text-3xl mb-4 mt-10">TIPS</p>
+            <div class="w-full grid house-listing gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 h-auto">
+
+                Start house div
+                <div class="tips">
+                    <div class="relative tip-div">
+                        <img src="assets/img/img-p.svg" alt="" class="w-full h-auto">
+
+                        <div class="m-3 house-down absolute tip-div-2">
+                            <span class="">
+                                <p class="font-bold">CLEANING TIPS</p>
+                                <p>Home cleaning tips at your disposal in case of emergency, we got you covered.
+                                    <br><br><a href="#" style="color: white;">Discover More</a>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                End house div
+
+
+                Start house div
+                <div class="tips">
+                    <div class="relative tip-div">
+                        <img src="assets/img/img-p.svg" alt="" class="w-full h-auto">
+
+                        <div class="m-3 house-down absolute tip-div-2">
+                            <span class="">
+                                <p class="font-bold">CLEANING TIPS</p>
+                                <p>Home cleaning tips at your disposal in case of emergency, we got you covered.
+                                    <br><br><a href="#" style="color: white;">Discover More</a>
+                                </p>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                End house div
+
+
+            </div>
+        </section>-->
+        
+        <section class="m-6 honey-section">
+            <div class="honey-card">
+                <div class="overlay">
+                <h2>HONEY TIPS</h2>
+                <p>
+                    Honey are gems made by one of earth's fascinating creatures housing a lot of nutrients. 
+                    We can show you food combos to enhance health status.
+                </p>
+                <a href="#">Discover More</a>
+                </div>
+            </div>
+
+            <div class="honey-card">
+                <div class="overlay">
+                <h2>HONEY TIPS</h2>
+                <p>
+                    Honey are gems made by one of earth's fascinating creatures housing a lot of nutrients. 
+                    We can show you food combos to enhance health status.
+                </p>
+                <a href="#">Discover More</a>
+                </div>
+            </div>
+
+            <div class="honey-card">
+                <div class="overlay">
+                <h2>HONEY TIPS</h2>
+                <p>
+                    Honey are gems made by one of earth's fascinating creatures housing a lot of nutrients. 
+                    We can show you food combos to enhance health status.
+                </p>
+                <a href="#">Discover More</a>
+                </div>
+            </div>
+        </section>
+          
+
+        <section class="p-4 text-center">
+            <p class="font-bold">Follow the latest trends</p>
+            <p class="text-sm">With our daily newsletter</p>
+
+            <div class="flex justify-evenly items-center">
+                <div class="m-2">
+                    <input type="text" class="border border-gray-300 rounded p-2 review-input" placeholder="you@example.com">
+                </div>
+
+                <div class="m-2">
+                    <label for="" class="btn btn-primary bg-yellow-500 border border-yellow-500 hover:bg-yellow-500 block">Submit</label>
+                </div>
+            </div>
+
+        </section>
+
+
+        <footer class="bg-black text-white py-5 text-sm" style="font-size: 12px;line-height: 2;">
+            <div class="container">
+              <!-- Desktop View -->
+              <div class="row f-desktop">
+                <div class="col-lg-3 mb-4">
+                  <div class="d-flex align-items-center">
+                    <img src="assets/img/logo.png" alt="Lemney Logo" class="me-2" style="width: 50px;">
+                    <span>Lemney.com Ltd</span>
+                  </div>
+                  <div class="d-flex mt-3">
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white">lemney_ltd</a>
+                  </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                  <h5>Contact Information</h5>
+                  <p>Service Hours: Monday to Friday, 9 AM to 6 PM</p>
+                  <p>Phone Number: +234 911 919 4182</p>
+                  <p>Email: customercare@lemneygroup.com</p>
+                </div>
+                <div class="col-lg-2 mb-4">
+                  <h5>Services</h5>
+                  <ul class="list-unstyled">
+                    <li>Honey Sale</li>
+                    <li>Logistics</li>
+                    <li>Home Service</li>
+                    <li>Consultancy</li>
+                  </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                  <h5>Policy</h5>
+                  <ul class="list-unstyled">
+                    <li>FAQ</li>
+                    <li>Terms and Condition</li>
+                    <li>Privacy Policy</li>
+                    <li>About Us</li>
+                  </ul>
+                </div>
+                <div class="col-lg-2">
+                  <h5>Get Help</h5>
+                  <ul class="list-unstyled">
+                    <li>Track Order</li>
+                    <li>Shipping and Delivery</li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Mobile View -->
+              <div class="lg:hidden">
+                <p><i class="fa-brands fa-instagram m-6 mr-4"></i> <i class="fa-brands fa-facebook m-4"></i> Lemney_ltd | Lemney.com Ltd</p>
+                <div class="mb-3">
+                  <span class="w-100 text-start m-6 dropdown-btn">
+                    Contact Information <i class="fas fa-chevron-right"></i>
+                  </span>
+                  <div id="contactInfo" class="m-6 dropdown-list">
+                    <p>Service Hours: Monday to Friday, 9 AM to 6 PM</p>
+                    <p>Phone Number: +234 911 919 4182</p>
+                    <p>Email: customercare@lemneygroup.com</p>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <span class="w-100 text-start m-6 dropdown-btn">
+                    Services <i class="fas fa-chevron-right"></i>
+                  </span>
+                  <div id="services" class="m-6 dropdown-list">
+                    <ul class="list-unstyled">
+                      <li><a href="#">Honey Sale</a></li>
+                      <li>Logistics</li>
+                      <li>Home Service</li>
+                      <li>Consultancy</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <span class="w-100 text-start m-6 dropdown-btn">
+                    Policy <i class="fas fa-chevron-right"></i>
+                  </span>
+                  <div id="policy" class="m-6 dropdown-list">
+                    <ul class="list-unstyled">
+                      <li>FAQ</li>
+                      <li>Terms and Condition</li>
+                      <li>Privacy Policy</li>
+                      <li>About Us</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <span class="m-6 w-100 text-start dropdown-btn">
+                        Get Help <i class="fas fa-chevron-right"></i>
+                    </span>
+                    <div id="getHelp" class="m-6 dropdown-list">
+                        <ul class="list-unstyled">
+                            <li>Track Order</li>
+                            <li>Shipping and Delivery</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-3">
+                  <img src="assets/img/logo.png" alt="Lemney Logo" style="width: 50px;">
+                  <p class="mt-2">Lemney.com Ltd</p>
+                </div>
+              </div>
+            </div>
+        </footer>
+        
+    </main>
+</body>
+<script src="assets/js/script.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Find the next sibling element with the class "dropdown-list"
+            const dropdownList = button.parentElement.querySelector('.dropdown-list');
+
+            // Check if the dropdownList exists
+            if (dropdownList) {
+                //alert('yes')
+                // Toggle the "dropdown-list-active" class to show/hide the list
+                dropdownList.classList.toggle('dropdown-list-active');
+            } else {
+                alert('Dropdown list not found');
+            }
+        });
+    });
+});
+</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
+</html>
