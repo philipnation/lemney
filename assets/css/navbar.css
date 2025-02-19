@@ -1,0 +1,21 @@
+.lemney-navbar .navbar-toggler {
+    box-shadow: none;
+}
+.lemney-navbar .nav-item {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white !important;
+}
+.lemney-navbar .dropdown-menu {
+    background:  var(--bg-lemney-primary-2) !important;
+    border: none;
+}
+.lemney-navbar .dropdown-menu .dropdown-item {
+    color: white;
+    font-weight: bold;
+
+}
+.lemney-navbar .dropdown-menu .dropdown-item:hover {
+    opacity: 1;
+    background-color: #e97a1f;
+}

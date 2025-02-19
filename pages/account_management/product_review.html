@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review - Account Management | Lemney Logistics</title>
+
+    <!-- Styles -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css">
+
+    <!-- Scripts -->
+
+    <!-- JQuery -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js" defer></script>
+    <!-- Bootstrap -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Swiper -->
+    <script src="../../node_modules/swiper/swiper-bundle.min.js" defer></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../../assets/css/lemney.css">
+    <link rel="stylesheet" href="../../assets/css/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/account_management/order_history.css">
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- NavBar -->
+        <nav
+            class="lemney-navbar bg-lemney-primary-gradient navbar navbar-dark navbar-expand-lg px-4 px-md-5 py-3 shadow-sm">
+            <div class="container-fluid d-flex justify-content-between px-0">
+                <!-- Brand -->
+                <a class="navbar-brand text-start d-flex align-items-center" href="#">
+                    <img src="../../assets/img/logo.png" alt="Lemney Brand Logo" class="img-fluid" width="48">
+                </a>
+                <div class="order-md-last d-flex align-items-center justify-content-center">
+                    <!-- NavBar icons -->
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <button type="button" class="btn"><i class="fa fa-search text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-shopping-cart text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-user text-white"></i></button>
+                    </div>
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- NavBar menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-xl-3">
+                        <!-- Honey Order -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Honey Order</a>
+                        </li>
+                        <!-- Logistics -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Logistics</a>
+                        </li>
+                        <!-- Home Service -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Home Service
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#">Honey Sale</a></li>
+                                <li><a class="dropdown-item" href="#">Logistics</a></li>
+                                <li><a class="dropdown-item" href="#">Home Service</a></li>
+                                <li><a class="dropdown-item" href="#">Consultancy</a></li>
+                            </ul>
+                        </li>
+                        <!-- Housing -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Housing</a>
+                        </li>
+                        <!-- Support -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Support
+                            </a>
+                            <ul class="dropdown-menu shadow dropdown-menu-end bg-lemney-primary-2">
+                                <li><a class="dropdown-item" href="#">Track Order</a></li>
+                                <li><a class="dropdown-item" href="#">Shipping and Delivery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <main>
+
+        <!-- Breadcrumbs -->
+        <div class="px-4 px-md-5 bg-lemney-primary-1">
+            <div class="py-3" style="--bs-breadcrumb-divider: '⋙';" aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold my-0">
+                    <li class="breadcrumb-item"><a href="#" class="link">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Product Review</li>
+                </ol>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="d-md-flex ps-md-4">
+
+            <!-- Side bar -->
+            <div class="border-end px-4 py-3 d-none d-md-block">
+                <h5 class="my-2">Account Management</h5>
+                <ul class="list-unstyled text-muted">
+                    <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
+                    <li class="py-1"><a href="" class="link">Personal Information</a></li>
+                    <li class="py-1"><a href="" class="link">Honey Order</a></li>
+                    <li class="py-1"><a href="./product_review.html" class="link active text-dark">Product Review</a>
+                    </li>
+                    <li class="py-1"><a href="" class="link">Logistics</a></li>
+                    <li class="py-1"><a href="" class="link">Home Service</a></li>
+                    <li class="py-1"><a href="" class="link">Booked Service</a></li>
+                    <li class="py-1"><a href="" class="link">Notifications</a></li>
+                    <li class="py-1"><a href="" class="link">Partnership</a></li>
+                    <li class="py-1"><a href="" class="link">House Listing</a></li>
+                    <li class="py-1"><a href="" class="link">Saved Submission</a></li>
+                    <li class="py-1"><a href="" class="link">Saved House</a></li>
+                </ul>
+            </div>
+
+            <!-- Side bar (mobile) -->
+            <div class="px-4 px-md-5 d-md-none">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header py-2">
+                        <h5 class="offcanvas-title my-2" id="offcanvasExampleLabel">Account Management</h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body py-0 my-0">
+                        <div>
+                            <ul class="list-unstyled text-muted">
+                                <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
+                                <li class="py-1"><a href="" class="link">Personal Information</a></li>
+                                <li class="py-1"><a href="" class="link">Honey Order</a></li>
+                                <li class="py-1"><a href="./product_review.html" class="link active text-dark">Product
+                                        Review</a></li>
+                                <li class="py-1"><a href="" class="link">Logistics</a></li>
+                                <li class="py-1"><a href="" class="link">Home Service</a></li>
+                                <li class="py-1"><a href="" class="link">Booked Service</a></li>
+                                <li class="py-1"><a href="" class="link">Notifications</a></li>
+                                <li class="py-1"><a href="" class="link">Partnership</a></li>
+                                <li class="py-1"><a href="" class="link">House Listing</a></li>
+                                <li class="py-1"><a href="" class="link">Saved Submission</a></li>
+                                <li class="py-1"><a href="" class="link">Saved House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="flex-grow-1">
+
+                <!-- Title -->
+                <div class="border-bottom d-flex p-3">
+                    <!-- Toggle (mobile) sidebar -->
+                    <a class="btn px-0 me-3 d-md-none border-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                        role="button" aria-controls="offcanvasExample">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="container row text-muted py-2">
+                        <div class="col-6 col-md-3"><a href="" class="link text-dark">Awaiting Review</a>
+                        </div>
+                        <span class="col-6 col-md-3"><a href="" class="link">Reviewed</a></span>
+                    </div>
+                </div>
+
+                <!-- Dashboard -->
+                <div class="p-3 p-md-4">
+
+                    <!-- First Order -->
+                    <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                        <!-- Order Information -->
+                        <div class="py-2 d-flex align-items-center justify-content-between">
+                            <div>
+                                <div><b>Order Date: </b>11-11-2024</div>
+                                <div><b>Order Number: </b>L-NG1111241A</div>
+                            </div>
+                            <div>
+                                <div class="text-end">
+                                    <span class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">
+                                        Completed</span><br />
+                                    <!-- Show on mobile screen - hide on small screens -->
+                                    <span class="d-md-none"><b>Price: </b><span class="text-uppercase">NGN 17,000</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Order Details -->
+                        <div class="py-2 d-flex align-content-center justify-content-between text-center">
+                            <div class="d-flex align-items-center">
+                                <img src="../../assets/img/order_img_natural_honey.png" alt="" class="img-fluid">
+                                <div class="ps-1">
+                                    <b>Natural Honey</b> <br>
+                                    <span>Plastic Bottling</span>
+                                </div>
+                            </div>
+                            <div>
+                                <b>QTY</b><br>
+                                <span class="">5 litres</span>
+                            </div>
+                            <div class="d-none d-md-block">
+                                <b>Price</b><br>
+                                <span class="text-uppercase">NGN 17,000</span>
+                            </div>
+                            <div>
+                                <b>Delivery</b><br>
+                                <span class="text-uppercase">1 DAY</span>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="d-flex align-items-center justify-content-end">
+                            <button data-bs-toggle="modal" data-bs-target="#reviewModal"
+                                class="btn btn-lemney-primary text-white fw-bold d-inline-block text-uppercase">Review</button>
+
+                            <!-- Review Modal -->
+                            <form method="post" action="javascript:void()">
+
+                                <div class="modal fade" id="reviewModal" data-bs-keyboard="false" tabindex="-1"
+                                    aria-labelledby="Cancel Order Confirmation Modal" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto rounded-3"
+                                        style="max-width: 360px;">
+                                        <div class="modal-content p-3">
+                                            <!-- Modal header -->
+                                            <div class="modal-header border-0 p-2">
+                                                <h2 class="text-uppercase fs-4 my-0">Review</h2>
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="modal-body p-2">
+                                                <!-- Your Rating -->
+                                                <div class="my-2">
+                                                    Your Rating
+                                                    <input type="hidden" name="rating" value="0">
+                                                    <div>
+                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
+                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
+                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
+                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
+                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
+                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
+                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
+                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
+                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
+                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Email address -->
+                                                <div class="my-2">
+                                                    <label for="email" class="form-label fw-bold">Email address</label>
+                                                    <input type="email" name="email" id="email" class="form-control">
+                                                </div>
+
+                                                <!-- Summary -->
+                                                <div class="my-2">
+                                                    <label for="summary" class="form-label fw-bold">Summary</label>
+                                                    <input type="text" name="summary" id="summary" class="form-control">
+                                                </div>
+
+                                                <!-- Review -->
+                                                <div class="my-2">
+                                                    <label for="review" class="form-label fw-bold">Review</label>
+                                                    <textarea name="review" id="review" class="form-control"></textarea>
+                                                </div>
+
+                                                <!-- Add images (0-4 Max) -->
+                                                <div class="my-2">
+                                                    <label for="images" class="form-label">
+                                                        <p class="fw-bold">Add Images (0-4 Max)</p>
+
+                                                        <div class="d-flex align-items-center justify-content-center border border-black rounded-1"
+                                                            style="width: 80px; height: 80px">
+                                                            <i class="fa fa-file-upload"></i>
+                                                        </div>
+                                                    </label>
+                                                    <input type="file" name="images" id="images" class="d-none">
+                                                </div>
+
+                                            </div>
+                                            <!-- Modal footer -->
+                                            <div class="modal-footer border-0 p-2">
+                                                <button type="submit" class="btn btn-lemney-primary px-4"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#reviewSubmissionConfirmationModal">Submit</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </form>
+
+                            <!-- Review Modal Ends here -->
+
+                            <!-- Review Submission Confirmation Modal -->
+                            <div class="modal fade" id="reviewSubmissionConfirmationModal" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="Review Submission Confirmation Modal" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered mx-auto rounded-3"
+                                    style="max-width: 360px;">
+                                    <div class="modal-content p-3">
+                                        <div class="text-center fw-bold">
+                                            <p class="mb-4">Are you sure you want to <span
+                                                    class="fw-bold">Submit</span>?</p>
+
+                                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                                <button class="btn btn-lemney-primary fw-bold px-5">Yes</button>
+                                                <button class="btn btn-lemney-outline-primary fw-bold px-5"
+                                                    data-bs-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Order -->
+                    <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                        <!-- Order Information -->
+                        <div class="py-2 d-flex align-items-center justify-content-between">
+                            <div>
+                                <div><b>Order Number: </b>L-NG1111241A</div>
+                                <div><b>Dispatch Date: </b>11-11-2024</div>
+                                <div><b>Delivery Date: </b>11-11-2024</div>
+                            </div>
+                            <div>
+                                <div class="p-2 rounded-1 fw-bold bg-lemney-secondary-2 text-lemney-primary">
+                                    <img src="../../assets/img/package_check.svg" alt="">
+                                    Delivered
+                                </div>
+                                <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
+                            </div>
+                        </div>
+                        <!-- Order timeline -->
+                        <div class="order-timeline">
+                            <div class="order-timeline-item">
+                                <h5>Approval & Pick up</h5>
+                                <div>
+                                    <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                    <div class="text-muted">11-11-2024 8:00am</div>
+                                </div>
+                            </div>
+                            <div class="order-timeline-item">
+                                <h5>In Transit</h5>
+                                <div>
+                                    <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                    <div class="text-muted">11-11-2024 8:00am</div>
+                                </div>
+                            </div>
+                            <div class="order-timeline-item">
+                                <h5>Delivered</h5>
+                                <div>
+                                    <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                    <div class="text-muted">11-11-2024 8:00am</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                        <div class="d-flex align-items-center justify-content-end">
+                            <button data-bs-toggle="modal" data-bs-target="#reviewModal"
+                                class="btn btn-lemney-primary text-white fw-bold d-inline-block text-uppercase">Review</button>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Third Order -->
+                    <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                        <!-- Order Information -->
+                        <div class="py-2 d-flex align-items-center justify-content-between">
+                            <div>
+                                <div><b>Order Date: </b>11-11-2024</div>
+                                <div><b>Order Number: </b>L-NG1111241A</div>
+                            </div>
+                            <div class="text-end">
+                                <div class="p-2 rounded-1 fw-bold bg-lemney-secondary-2 text-lemney-primary">
+                                    Ongoing
+                                </div>
+                                <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
+                            </div>
+                        </div>
+                        <!-- Order Details -->
+                        <div class="py-2 d-flex align-content-center justify-content-between text-center">
+                            <div class="d-flex align-items-center">
+                                <img src="../../assets/img/order_img_natural_honey.png" alt="" class="img-fluid">
+                                <div class="ps-1">
+                                    <b>Natural Honey</b> <br>
+                                    <span>Plastic Bottling</span>
+                                </div>
+                            </div>
+                            <div>
+                                <b>QTY</b><br>
+                                <span class="">5 litres</span>
+                            </div>
+                            <div class="d-none d-md-block">
+                                <b>Price</b><br>
+                                <span class="text-uppercase">NGN 17,000</span>
+                            </div>
+                            <div>
+                                <b>Delivery</b><br>
+                                <span class="text-uppercase">1 DAY</span>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="d-flex align-items-center justify-content-end">
+                            <button data-bs-toggle="modal" data-bs-target="#reviewModal"
+                                class="btn btn-lemney-primary fw-bold d-inline-block text-uppercase">Review</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+
+        <div class="container-fluid py-3">
+
+            <!-- Social media handles -->
+            <div class="my-3">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook-f"></i>
+                <span>lemney_ltf | lemney.com ltd.</span>
+            </div>
+
+            <!-- Logo -->
+            <div class="my-3">
+                <img src="../../assets/img/logo.png" alt="" height="48">
+            </div>
+
+            <!-- Footer information and details -->
+            <div class="my-3">
+
+                <div class="row">
+
+                    <!-- Contact Information -->
+                    <div class="col-md-3 my-3">
+                        <h5>Contact Information</h5>
+
+                        <!-- Service hours -->
+                        <div class="my-2">
+                            <h6>Service Hours</h6>
+                            <div>Monday to Friday 9 to 6pm</div>
+                        </div>
+
+                        <!-- Phone number -->
+                        <div class="my-2">
+                            <h6>Phone Number</h6>
+                            <div>+234 911 919 4182</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="my-2">
+                            <h6>Email</h6>
+                            <div>customercare@lennygroup.com</div>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-md-3 my-3">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Honey Sale</a></li>
+                            <li><a href="" class="link">Logistics</a></li>
+                            <li><a href="" class="link">Home Service</a></li>
+                            <li><a href="" class="link">Consultancy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Policy -->
+                    <div class="col-md-3 my-3">
+                        <h5>Policy</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">FAQ</a></li>
+                            <li><a href="" class="link">Terms and Condition</a></li>
+                            <li><a href="" class="link">Privacy Policy</a></li>
+                            <li><a href="" class="link">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Get Help -->
+                    <div class="col-md-3 my-3">
+                        <h5>Get Help</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Track Order</a></li>
+                            <li><a href="" class="link">Shipping and Delivery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
