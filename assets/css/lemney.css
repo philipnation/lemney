@@ -1,0 +1,63 @@
+:root {
+    --bg-lemney-primary-1: #FDB137;
+    --bg-lemney-primary-2: #F37E21;
+    --bg-lemney-secondary-1: #FFECCD;
+    --bg-lemney-secondary-2: #FFECB2;
+}
+
+/* Override Bootstrap Defaults */
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 .25rem var(--bg-lemney-primary-2);
+    border-color: var(--bg-lemney-primary-1);
+}
+
+/* Buttons */
+.btn-lemney-primary {
+    background-color: var(--bg-lemney-primary-2);
+    color: white !important;
+}
+.btn-lemney-primary:hover {
+    background-color: var(--bg-lemney-primary-2);
+    opacity: .8;
+}
+.btn-lemney-outline-primary {
+    border-color: var(--bg-lemney-primary-2);
+    color: var(--bg-lemney-primary-2);
+}
+.btn-lemney-outline-primary:hover {
+    background-color: var(--bg-lemney-primary-2);
+    color: white;
+}
+
+/* Background Colours */
+.bg-lemney-primary-1 {
+    background-color: var(--bg-lemney-primary-1) !important;
+}
+.bg-lemney-primary-2 {
+    background-color: var(--bg-lemney-primary-2) !important;
+}
+.bg-lemney-primary-gradient {
+    background: linear-gradient(
+        to right, var(--bg-lemney-primary-1), var(--bg-lemney-primary-2)
+        ) !important;
+}
+.bg-lemney-secondary {
+    background-color: var(--bg-lemney-secondary-1);
+}
+.bg-lemney-secondary-1 {
+    background-color: var(--bg-lemney-secondary-1);
+}
+.bg-lemney-secondary-2 {
+    background-color: var(--bg-lemney-secondary-2);
+}
+
+/* Text Colour schemes */
+.text-lemney-primary {
+    color: var(--bg-lemney-primary-2) !important;
+}
