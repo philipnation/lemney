@@ -1,0 +1,65 @@
+
+/* ------------------------
+ ORDER TRACKING TIMELINE
+ -------------------------- */
+
+ .order-timeline {
+    position: relative;
+}
+
+.order-timeline-item {
+    position: relative;
+    margin-bottom: .8rem;
+}
+.order-timeline-item > * {
+    padding-left: 1.2rem;
+}
+.order-timeline-item > div {
+    position: relative;
+}
+.order-timeline-item > div::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 16px;
+    height: 100%;
+    border-left: 3px solid var(--bg-lemney-primary-2);
+}
+.order-timeline-item.awaiting > div::before {
+    border-left: 3px dotted rgba(128, 128, 128, 0.8);
+}
+.order-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0rem;
+    top: 12px;
+    transform: translate(-50%, -50%);
+    width: .8rem;
+    height:.8rem;
+    background-color: var(--bg-lemney-primary-2);
+    border-radius: 50%;
+}
+
+
+/* For desktop */
+/* @media screen and (min-width: 480px) {
+    .order-timeline {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+    .order-timeline > * {
+        padding-top: 1.2rem;
+    }
+    .order-timeline-item > div::before {
+        border: none;
+        border-top: 3px solid var(--bg-lemney-primary-2);
+        height: 16px;
+        width: 100%;
+        top: -40px;
+        left: 0;
+    }
+
+
+} */

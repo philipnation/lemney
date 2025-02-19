@@ -49,6 +49,11 @@ html, body {
 }
 
 /* Buttons */
+.btn:active {
+    background-color: initial !important;
+    color: initial !important;
+    opacity: .8;
+}
 .btn-lemney:hover {
     background-color: rgba(128, 128, 128, 0.2);
 }

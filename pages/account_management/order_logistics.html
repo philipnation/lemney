@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Review - Account Management | Lemney Logistics</title>
+    <title>Order Logistics - Account Management | Lemney Logistics</title>
 
     <link rel="shortcut icon" href="../../assets/img/logo.png" type="image/x-icon">
 
@@ -64,15 +64,15 @@
                     <ul class="navbar-nav mb-2 mb-lg-0 gap-xl-3">
                         <!-- Honey Order -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./honey_order.html">Honey Order</a>
+                            <a class="nav-link active" aria-current="page" href="#">Honey Order</a>
                         </li>
                         <!-- Logistics -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./home_service.html">Logistics</a>
+                            <a class="nav-link active" aria-current="page" href="#">Logistics</a>
                         </li>
                         <!-- Home Service -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="./home_service.html" role="button"
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Home Service
                             </a>
@@ -118,9 +118,9 @@
             <div class="py-3" style="--bs-breadcrumb-divider: '⋙';" aria-label="breadcrumb">
                 <ol class="breadcrumb fw-bold my-0">
                     <li class="breadcrumb-item"><a href="#" class="link">Home</a></li>
-                    <li class="breadcrumb-item" aria-current="page"><a href="./home_service.html" class="link">Home
-                            Service</a></li>
-                    <li class="breadcrumb-item active">House Cleaning</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="./home_service.html"
+                            class="link">Logistics</a></li>
+                    <li class="breadcrumb-item active">Order Logistics</li>
                 </ol>
             </div>
         </div>
@@ -137,7 +137,7 @@
                     <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
                     <li class="py-1"><a href="./product_review.html" class="link active text-dark">Product Review</a>
                     </li>
-                    <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                    <li class="py-1"><a href="" class="link">Logistics</a></li>
                     <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
                     <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
                     <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
@@ -181,101 +181,124 @@
             </div>
 
             <!-- Main content -->
-            <div class="flex-grow-1">
+            <div class="flex-grow-1 p-3">
 
-                <!-- Title -->
-                <div
-                    class="container d-flex align-items-center justify-content-between gap-2 text-center text-muted py-2">
-                    <span><a href="" class="link text-dark">Place Orders</a>
-                    </span>
-                    <span><a href="" class="link">Completed</a></span>
-                    <span><a href="" class="link">Cancelled</a></span>
-                    <span><a href="" class="link">Ongoing</a></span>
-
+                <div class="p-2">
+                    <h3 class="fs-4">Welcome, Username</h3>
+                    <p class="lead text-muted small">Ship item to any location,
+                        you can also track order to keep you calm
+                    </p>
                 </div>
 
-                <!-- Home Service Form -->
-                <div class="row container-fluid m-0 p-3 p-md-2">
+                <!-- Order Logistics Form -->
+                <div class="row container-fluid m-0">
 
-                    <div class="col-5 order-last d-none d-md-block py-2">
-                        <img src="../../assets/img/home_service_options.png" alt="" srcset="" class="img-fluid">
+                    <div class="col-5 order-last d-none d-md-block">
+                        <img src="../../assets/img/order_logistics_google_map.png" alt="" srcset="" class="img-fluid">
                     </div>
 
                     <div class="col-12 col-md-7">
                         <!--  -->
-                        <form action="javascript:void()" method="post">
+                        <form action="javascript:void('')" method="post">
 
-                            <!-- Recipient full name -->
-                            <div class="my-2">
-                                <label for="fullname" class="form-label fw-semibold">Receipient Full Name</label>
-                                <input type="text" name="fullname" id="fullname" class="form-control">
-                            </div>
+                            <div class="row px-2">
 
-                            <!-- Service Location -->
-                            <div class="my-2">
-                                <label for="location" class="form-label fw-semibold">Service Location</label>
-                                <select name="location" id="location" class="form-select">
-                                    <option value="location1" selected>Location 1</option>
-                                    <option value="location2">Location 2</option>
-                                    <option value="location3">Location 3</option>
-                                    <option value="location4">Location 4</option>
-                                    <option value="location5">Location 5</option>
-                                </select>
-                            </div>
+                                <div class="col-md-6">
 
-                            <!-- Phone Number -->
-                            <div class="my-2">
-                                <label for="phone" class="form-label fw-semibold">Phone Number</label>
-                                <input type="text" name="phone" id="phone" class="form-control">
-                            </div>
+                                    <!-- Sender full name -->
+                                    <div class="my-2">
+                                        <label for="fullname" class="form-label fw-semibold">Receipient Full
+                                            Name</label>
+                                        <input type="text" name="fullname" id="fullname" class="form-control">
+                                    </div>
 
-                            <!-- Recipient State -->
-                            <div class="my-2">
-                                <label for="state" class="form-label fw-semibold">Recipient State</label>
-                                <select name="state" id="state" class="form-select">
-                                    <option value="state1">State 1</option>
-                                    <option value="state2">State 2</option>
-                                    <option value="state3">State 3</option>
-                                    <option value="state4">State 4</option>
-                                    <option value="state5">State 5</option>
-                                </select>
-                            </div>
-
-                            <!-- Recipient Local Government -->
-                            <div class="my-2">
-                                <label for="lga" class="form-label fw-semibold">Recipient Local Government</label>
-                                <select name="lga" id="lga" class="form-select">
-                                    <option value="lga1">LGA 1</option>
-                                    <option value="lga2">LGA 2</option>
-                                    <option value="lga3">LGA 3</option>
-                                    <option value="lga4">LGA 4</option>
-                                    <option value="lga5">LGA 5</option>
-                                </select>
-                            </div>
-
-                            <!-- Required Home Service -->
-                            <div class="my-2">
-                                <label for="service" class="form-label fw-semibold">Required Home Service</label>
-                                <select name="state" id="state" class="form-select">
-                                    <option value="service1">Service 1</option>
-                                    <option value="service2">Service 2</option>
-                                    <option value="service3">Service 3</option>
-                                    <option value="service4">Service 4</option>
-                                    <option value="service5">Service 5</option>
-                                </select>
-                            </div>
-
-                            <!-- Schedule Date and Time -->
-                            <div class="my-2 row py-2">
-                                <div class="schedule-date col-12 col-md-6">
-                                    <label for="schedule-date" class="form-label fw-semibold">Schedule Date</label>
-                                    <input type="date" name="schedule-date" id="schedule-date" class="form-control">
                                 </div>
-                                <div class="schedule-time col-12 col-md-6">
-                                    <label for="schedule-time" class="form-label fw-semibold">Schedule Time</label>
-                                    <input type="time" name="schedule-time" id="schedule-time" class="form-control">
+
+                                <div class="col-md-6">
+
+                                    <!-- Sender phone number -->
+                                    <div class="my-2">
+                                        <label for="fullname" class="form-label fw-semibold">Receipient Full
+                                            Name</label>
+                                        <input type="text" name="fullname" id="fullname" class="form-control">
+                                    </div>
+
                                 </div>
+
+                                <div class="col-md-6">
+
+                                    <!-- Sender full name -->
+                                    <div class="my-2">
+                                        <label for="fullname" class="form-label fw-semibold">Receipient Full
+                                            Name</label>
+                                        <input type="text" name="fullname" id="fullname" class="form-control">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <!-- Sender full name -->
+                                    <div class="my-2">
+                                        <label for="fullname" class="form-label fw-semibold">Receipient Full
+                                            Name</label>
+                                        <input type="text" name="fullname" id="fullname" class="form-control">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <!-- Sender full name -->
+                                    <div class="my-2">
+                                        <label for="fullname" class="form-label fw-semibold">Receipient Full
+                                            Name</label>
+                                        <input type="text" name="fullname" id="fullname" class="form-control">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <!-- Sender full name -->
+                                    <div class="my-2">
+                                        <label for="fullname" class="form-label fw-semibold">Receipient Full
+                                            Name</label>
+                                        <input type="text" name="fullname" id="fullname" class="form-control">
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <!-- Sender full name -->
+                                    <div class="my-2">
+                                        <label for="fullname" class="form-label fw-semibold">Receipient Full
+                                            Name</label>
+                                        <input type="text" name="fullname" id="fullname" class="form-control">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <!-- Sender Location -->
+
+                                    <div class="my-2">
+                                        <label for="location" class="form-label fw-semibold">Service Location</label>
+                                        <select name="location" id="location" class="form-select">
+                                            <option value="location1" selected>Location 1</option>
+                                            <option value="location2">Location 2</option>
+                                            <option value="location3">Location 3</option>
+                                            <option value="location4">Location 4</option>
+                                            <option value="location5">Location 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                             </div>
+
 
                             <div class="my-2">
                                 <p>N/B: The services are mostly estimated prices, as charges might be affected by
@@ -353,8 +376,8 @@
                         <h5>Services</h5>
                         <ul class="list-unstyled">
                             <li><a href="" class="link">Honey Sale</a></li>
-                            <li><a href="./logistics.html" class="link">Logistics</a></li>
-                            <li><a href="./home_service.html" class="link">Home Service</a></li>
+                            <li><a href="" class="link">Logistics</a></li>
+                            <li><a href="" class="link">Home Service</a></li>
                             <li><a href="" class="link">Consultancy</a></li>
                         </ul>
                     </div>

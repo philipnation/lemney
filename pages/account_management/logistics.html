@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistics - Account Management | Lemney Logistics</title>
+    <title>Logistics- Account Management | Lemney Logistics</title>
 
     <link rel="shortcut icon" href="../../assets/img/logo.png" type="image/x-icon">
 
@@ -28,7 +28,9 @@
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="../../assets/css/account_management/account_management.css">
-    <link rel="stylesheet" href="../../assets/css/account_management/order_history.css">
+    <link rel="stylesheet" href="../../assets/css/account_management/timeline.css">
+
+
 
 
 </head>
@@ -65,11 +67,11 @@
                     <ul class="navbar-nav mb-2 mb-lg-0 gap-xl-3">
                         <!-- Honey Order -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Honey Order</a>
+                            <a class="nav-link" aria-current="page" href="./honey_order.html">Honey Order</a>
                         </li>
                         <!-- Logistics -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./logistics.html">Logistics</a>
+                            <a class="nav-link" aria-current="page" href="#">Logistics</a>
                         </li>
                         <!-- Home Service -->
                         <li class="nav-item dropdown">
@@ -78,15 +80,15 @@
                                 Home Service
                             </a>
                             <ul class="dropdown-menu shadow">
-                                <li><a class="dropdown-item" href="">Honey Sale</a></li>
+                                <li><a class="dropdown-item" href="#">Honey Sale</a></li>
                                 <li><a class="dropdown-item" href="./logistics.html">Logistics</a></li>
                                 <li><a class="dropdown-item" href="./home_service.html">Home Service</a></li>
-                                <li><a class="dropdown-item" href="">Consultancy</a></li>
+                                <li><a class="dropdown-item" href="#">Consultancy</a></li>
                             </ul>
                         </li>
                         <!-- Housing -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Housing</a>
+                            <a class="nav-link" aria-current="page" href="#">Housing</a>
                         </li>
                         <!-- Support -->
                         <li class="nav-item dropdown">
@@ -109,11 +111,17 @@
     <main>
 
         <!-- Breadcrumbs -->
-        <div class="px-4 px-md-5 bg-lemney-primary-1">
+        <div class="d-flex align-items-center px-4 px-md-5 bg-lemney-primary-1">
+            <!-- Toggle (mobile) sidebar -->
+            <a class="btn px-0 me-3 d-md-none border-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                role="button" aria-controls="offcanvasExample">
+                <i class="fa fa-bars"></i>
+            </a>
+
             <div class="py-3" style="--bs-breadcrumb-divider: '⋙';" aria-label="breadcrumb">
                 <ol class="breadcrumb fw-bold my-0">
                     <li class="breadcrumb-item"><a href="#" class="link">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Product Review</li>
+                    <li class="breadcrumb-item active"><a href="./honey_order.html" class="link">Logistics</a></li>
                 </ol>
             </div>
         </div>
@@ -122,7 +130,7 @@
         <div class="d-md-flex ps-md-4">
 
             <!-- Side bar -->
-            <div class="border-end px-4 py-3 d-none d-md-block">
+            <div class="border-end px-4 py-3 d-none d-md-block" style="min-width: 240px;">
                 <h5 class="my-2">Account Management</h5>
                 <ul class="list-unstyled text-muted">
                     <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
@@ -135,7 +143,7 @@
                     <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
                     <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
                     <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
-                    <li class="py-1"><a href="./house_listing.html" class="link">House Listing</a></li>
+                    <li class="py-1"><a href="./notifications.html" class="link">House Listing</a></li>
                     <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a></li>
                     <li class="py-1"><a href="./saved_house.html" class="link">Saved House</a></li>
                 </ul>
@@ -154,18 +162,21 @@
                         <div>
                             <ul class="list-unstyled text-muted">
                                 <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
-                                <li class="py-1"><a href="" class="link">Personal Information</a></li>
-                                <li class="py-1"><a href="" class="link">Honey Order</a></li>
+                                <li class="py-1"><a href="./personal_info.html" class="link">Personal Information</a>
+                                </li>
+                                <li class="py-1"><a href="./honey_order.html" class="link active text-dark">Honey
+                                        Order</a></li>
                                 <li class="py-1"><a href="./product_review.html" class="link active text-dark">Product
                                         Review</a></li>
-                                <li class="py-1"><a href="" class="link">Logistics</a></li>
-                                <li class="py-1"><a href="" class="link">Home Service</a></li>
-                                <li class="py-1"><a href="" class="link">Booked Service</a></li>
-                                <li class="py-1"><a href="" class="link">Notifications</a></li>
-                                <li class="py-1"><a href="" class="link">Partnership</a></li>
-                                <li class="py-1"><a href="" class="link">House Listing</a></li>
-                                <li class="py-1"><a href="" class="link">Saved Submission</a></li>
-                                <li class="py-1"><a href="" class="link">Saved House</a></li>
+                                <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                                <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
+                                <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
+                                <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
+                                <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
+                                <li class="py-1"><a href="./house_listing.html" class="link">House Listing</a></li>
+                                <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a>
+                                </li>
+                                <li class="py-1"><a href="./saved_house.html" class="link">Saved House</a></li>
                             </ul>
                         </div>
                     </div>
@@ -175,267 +186,419 @@
             <!-- Main content -->
             <div class="flex-grow-1">
 
-                <!-- Title -->
-                <div class="border-bottom d-flex p-3">
-                    <!-- Toggle (mobile) sidebar -->
-                    <a class="btn px-0 me-3 d-md-none border-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
-                        role="button" aria-controls="offcanvasExample">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                    <div class="container row text-muted py-2">
-                        <div class="col-6 col-md-3"><a href="" class="link text-dark">Awaiting Review</a>
-                        </div>
-                        <span class="col-6 col-md-3"><a href="" class="link">Reviewed</a></span>
+                <!-- Tabs -->
+                <ul class="nav nav-pills p-3 d-flex align-items-center justify-content-between border-bottom" id="myTab"
+                    role="tablist">
+
+                    <!-- Place Orders Tab -->
+                    <li class="nav-item">
+                        <button class="nav-link active" id="place-orders-tab" data-bs-toggle="tab"
+                            data-bs-target="#place-orders-tab-pane" type="button" role="tab">Place Orders</button>
+                    </li>
+
+                    <!-- Completed Tab -->
+                    <li class="nav-item">
+                        <button class="nav-link" id="completed-tab" data-bs-toggle="tab"
+                            data-bs-target="#completed-tab-pane" type="button">Completed</button>
+                    </li>
+
+                    <!-- Cancelled Tab -->
+                    <li class="nav-item">
+                        <button class="nav-link" id="cancelled-tab" data-bs-toggle="tab"
+                            data-bs-target="#cancelled-tab-pane" type="button">Cancelled</button>
+                    </li>
+
+                    <!-- Ongoing Tab -->
+                    <li class="nav-item">
+                        <button class="nav-link" id="ongoing-tab" data-bs-toggle="tab"
+                            data-bs-target="#ongoing-tab-pane" type="button">Ongoing</button>
+                    </li>
+                </ul>
+
+                <!-- Tabs Content -->
+                <div class="tab-content p-3" id="myTabContent">
+
+                    <div>
+                        <a href="./order_logistics.html" class="btn btn-lemney-primary">Order Logistics</a>
                     </div>
-                </div>
 
-                <!-- Dashboard -->
-                <div class="p-3 p-md-4">
+                    <!-- Place Orders Tab Content -->
+                    <div class="tab-pane fade show active" id="place-orders-tab-pane" role="tabpanel">
 
-                    <!-- First Order -->
-                    <div class="bg-lemney-secondary rounded-3 p-3 my-3">
-                        <!-- Order Information -->
-                        <div class="py-2 d-flex align-items-center justify-content-between">
-                            <div>
-                                <div><b>Order Date: </b>11-11-2024</div>
-                                <div><b>Order Number: </b>L-NG1111241A</div>
+                        <!-- Home Service Form -->
+                        <div class="row">
+
+                            <div class="col-5 order-last d-none d-md-block">
+                                <img src="../../assets/img/teddy_bear_honey.png" alt="" srcset="" class="img-fluid">
                             </div>
-                            <div>
+
+                            <div class="col-12 col-md-7">
+                                <!--  -->
+                                <form action="javascript:void('')" method="post">
+
+                                    <!-- Recipient full name -->
+                                    <div class="my-2">
+                                        <label for="fullname" class="form-label fw-bold">Receipient Full Name</label>
+                                        <input type="text" name="fullname" id="fullname" class="form-control">
+                                    </div>
+
+                                    <!-- Phone Number -->
+                                    <div class="my-2">
+                                        <label for="phone" class="form-label fw-bold">Phone Number</label>
+                                        <input type="text" name="phone" id="phone" class="form-control">
+                                    </div>
+
+                                    <!-- Recipient Pickup Address -->
+                                    <div class="my-2">
+                                        <label for="state" class="form-label fw-bold">Recipient Pickup Address</label>
+                                        <select name="address" id="address" class="form-select">
+                                            <option value="address1">Address 1</option>
+                                            <option value="address2">Address 2</option>
+                                            <option value="address3">Address 3</option>
+                                            <option value="address4">Address 4</option>
+                                            <option value="address5">Address 5</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Recipient State -->
+                                    <div class="my-2">
+                                        <label for="state" class="form-label fw-bold">Recipient State</label>
+                                        <select name="state" id="state" class="form-select">
+                                            <option value="state1">State 1</option>
+                                            <option value="state2">State 2</option>
+                                            <option value="state3">State 3</option>
+                                            <option value="state4">State 4</option>
+                                            <option value="state5">State 5</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Recipient Local Government -->
+                                    <div class="my-2">
+                                        <label for="lga" class="form-label fw-bold">Recipient Local Government</label>
+                                        <select name="lga" id="lga" class="form-select">
+                                            <option value="lga1">LGA 1</option>
+                                            <option value="lga2">LGA 2</option>
+                                            <option value="lga3">LGA 3</option>
+                                            <option value="lga4">LGA 4</option>
+                                            <option value="lga5">LGA 5</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="my-2">
+                                        <label for="quantitiy" class="form-label fw-bold">Honey Quantity</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" value="2">
+                                            <select name="option" id="option" class="form-select">
+                                                <option value="litre">Litre</option>
+                                                <option value="bottle">Bottle</option>
+                                                <option value="cup">Cup</option>
+                                            </select>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>Price: <span class="text-lemney-primary fw-bold">&#x020A6;<span
+                                                        class="amount">6,000</span></span>
+                                            </div>
+                                            <div>Distributor Discount Price: <span
+                                                    class="text-lemney-primary fw-bold">&#x020A6;<span
+                                                        class="amount-discount">5,800</span></span></div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="my-2 py-2">
+
+                                        <div class="d-flex align-items-center justify-content-between my-2">
+                                            <button class="btn btn-lemney-primary px-5 text-uppercase">Buy Now</button>
+                                            <button class="btn btn-lemney-outline-primary text-uppercase">Add To
+                                                Cart</button>
+                                        </div>
+                                    </div>
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Completed Tab Content -->
+                    <div class="tab-pane fade" id="completed-tab-pane" role="tabpanel">
+
+                        <!-- Completed Timeline 1 -->
+                        <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                            <!-- Order Information -->
+                            <div class="py-2 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <div><b>Order Number: </b>L-NG1111241A</div>
+                                    <div><b>Dispatch Date: </b>11-11-2024</div>
+                                    <div><b>Delivery Date: </b>11-11-2024</div>
+                                </div>
                                 <div class="text-end">
                                     <span class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">
-                                        Completed</span><br />
-                                    <!-- Show on mobile screen - hide on small screens -->
-                                    <span class="d-md-none"><b>Price: </b><span class="text-uppercase">NGN 17,000</span>
-                                    </span>
+                                        <img src="../../assets/img/package_check.svg" alt="">
+                                        Delivered
+                                    </span><br>
+                                    <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Order Details -->
-                        <div class="py-2 d-flex align-content-center justify-content-between text-center">
-                            <div class="d-flex align-items-center">
-                                <img src="../../assets/img/order_img_natural_honey.png" alt="" class="img-fluid">
-                                <div class="ps-1">
-                                    <b>Natural Honey</b> <br>
-                                    <span>Plastic Bottling</span>
-                                </div>
-                            </div>
-                            <div>
-                                <b>QTY</b><br>
-                                <span class="">5 litres</span>
-                            </div>
-                            <div class="d-none d-md-block">
-                                <b>Price</b><br>
-                                <span class="text-uppercase">NGN 17,000</span>
-                            </div>
-                            <div>
-                                <b>Delivery</b><br>
-                                <span class="text-uppercase">1 DAY</span>
-                            </div>
-                        </div>
-                        <!--  -->
-                        <div class="d-flex align-items-center justify-content-end">
-                            <button data-bs-toggle="modal" data-bs-target="#reviewModal"
-                                class="btn btn-lemney-primary text-white fw-bold d-inline-block text-uppercase">Review</button>
-
-                            <!-- Review Modal -->
-                            <form method="post" action="javascript:void()">
-
-                                <div class="modal fade" id="reviewModal" data-bs-keyboard="false" tabindex="-1"
-                                    aria-labelledby="Cancel Order Confirmation Modal" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable mx-auto rounded-3"
-                                        style="max-width: 360px;">
-                                        <div class="modal-content p-3">
-                                            <!-- Modal header -->
-                                            <div class="modal-header border-0 p-2">
-                                                <h2 class="text-uppercase fs-4 my-0">Review</h2>
-                                            </div>
-                                            <!-- Modal body -->
-                                            <div class="modal-body p-2">
-                                                <!-- Your Rating -->
-                                                <div class="my-2">
-                                                    Your Rating
-                                                    <input type="hidden" name="rating" value="0">
-                                                    <div>
-                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
-                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
-                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
-                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
-                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
-                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
-                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
-                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
-                                                        <button class="btn btn-sm border-0"><i class="fa fa-star"
-                                                                style="color: rgba(231, 231, 231, 0.8);"></i></button>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Email address -->
-                                                <div class="my-2">
-                                                    <label for="email" class="form-label fw-bold">Email address</label>
-                                                    <input type="email" name="email" id="email" class="form-control">
-                                                </div>
-
-                                                <!-- Summary -->
-                                                <div class="my-2">
-                                                    <label for="summary" class="form-label fw-bold">Summary</label>
-                                                    <input type="text" name="summary" id="summary" class="form-control">
-                                                </div>
-
-                                                <!-- Review -->
-                                                <div class="my-2">
-                                                    <label for="review" class="form-label fw-bold">Review</label>
-                                                    <textarea name="review" id="review" class="form-control"></textarea>
-                                                </div>
-
-                                                <!-- Add images (0-4 Max) -->
-                                                <div class="my-2">
-                                                    <label for="images" class="form-label">
-                                                        <p class="fw-bold">Add Images (0-4 Max)</p>
-
-                                                        <div class="d-flex align-items-center justify-content-center border border-black rounded-1"
-                                                            style="width: 80px; height: 80px">
-                                                            <i class="fa fa-file-upload"></i>
-                                                        </div>
-                                                    </label>
-                                                    <input type="file" name="images" id="images" class="d-none">
-                                                </div>
-
-                                            </div>
-                                            <!-- Modal footer -->
-                                            <div class="modal-footer border-0 p-2">
-                                                <button type="submit" class="btn btn-lemney-primary px-4"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#reviewSubmissionConfirmationModal">Submit</button>
-                                            </div>
-                                        </div>
-
+                            <!-- Order timeline -->
+                            <div class="order-timeline">
+                                <div class="order-timeline-item">
+                                    <h5>Approval & Pick up</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
                                     </div>
-
                                 </div>
-                            </form>
-
-                            <!-- Review Modal Ends here -->
-
-                            <!-- Review Submission Confirmation Modal -->
-                            <div class="modal fade" id="reviewSubmissionConfirmationModal" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1"
-                                aria-labelledby="Review Submission Confirmation Modal" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered mx-auto rounded-3"
-                                    style="max-width: 360px;">
-                                    <div class="modal-content p-3">
-                                        <div class="text-center fw-bold">
-                                            <p class="mb-4">Are you sure you want to <span
-                                                    class="fw-bold">Submit</span>?</p>
-
-                                            <div class="d-flex align-items-center justify-content-between mt-4">
-                                                <button class="btn btn-lemney-primary fw-bold px-5">Yes</button>
-                                                <button class="btn btn-lemney-outline-primary fw-bold px-5"
-                                                    data-bs-dismiss="modal">No</button>
-                                            </div>
-                                        </div>
-
+                                <div class="order-timeline-item">
+                                    <h5>In Transit</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item">
+                                    <h5>Delivered</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- Second Order -->
-                    <div class="bg-lemney-secondary rounded-3 p-3 my-3">
-                        <!-- Order Information -->
-                        <div class="py-2 d-flex align-items-center justify-content-between">
-                            <div>
-                                <div><b>Order Number: </b>L-NG1111241A</div>
-                                <div><b>Dispatch Date: </b>11-11-2024</div>
-                                <div><b>Delivery Date: </b>11-11-2024</div>
-                            </div>
-                            <div>
-                                <div class="p-2 rounded-1 fw-bold bg-lemney-secondary-2 text-lemney-primary">
-                                    <img src="../../assets/img/package_check.svg" alt="">
-                                    Delivered
-                                </div>
-                                <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
-                            </div>
-                        </div>
-                        <!-- Order timeline -->
-                        <div class="order-timeline">
-                            <div class="order-timeline-item">
-                                <h5>Approval & Pick up</h5>
-                                <div>
-                                    <div class="text-muted">No. 6 Street Awka, Anambra</div>
-                                    <div class="text-muted">11-11-2024 8:00am</div>
-                                </div>
-                            </div>
-                            <div class="order-timeline-item">
-                                <h5>In Transit</h5>
-                                <div>
-                                    <div class="text-muted">No. 6 Street Awka, Anambra</div>
-                                    <div class="text-muted">11-11-2024 8:00am</div>
-                                </div>
-                            </div>
-                            <div class="order-timeline-item">
-                                <h5>Delivered</h5>
-                                <div>
-                                    <div class="text-muted">No. 6 Street Awka, Anambra</div>
-                                    <div class="text-muted">11-11-2024 8:00am</div>
-                                </div>
-                            </div>
                         </div>
 
                         <!--  -->
-                        <div class="d-flex align-items-center justify-content-end">
-                            <button data-bs-toggle="modal" data-bs-target="#reviewModal"
-                                class="btn btn-lemney-primary text-white fw-bold d-inline-block text-uppercase">Review</button>
-                        </div>
+                        <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                            <!-- Order Information -->
+                            <div class="py-2 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <div><b>Order Number: </b>L-NG1111241A</div>
+                                    <div><b>Dispatch Date: </b>11-11-2024</div>
+                                    <div><b>Delivery Date: </b>11-11-2024</div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">
+                                        <img src="../../assets/img/package_check.svg" alt="">
+                                        Delivered
+                                    </span><br>
+                                    <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
+                                </div>
+                            </div>
+                            <!-- Order timeline -->
+                            <div class="order-timeline">
+                                <div class="order-timeline-item">
+                                    <h5>Approval & Pick up</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item">
+                                    <h5>In Transit</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item">
+                                    <h5>Delivered</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                            </div>
 
+                        </div>
 
                     </div>
 
-                    <!-- Third Order -->
-                    <div class="bg-lemney-secondary rounded-3 p-3 my-3">
-                        <!-- Order Information -->
-                        <div class="py-2 d-flex align-items-center justify-content-between">
-                            <div>
-                                <div><b>Order Date: </b>11-11-2024</div>
-                                <div><b>Order Number: </b>L-NG1111241A</div>
-                            </div>
-                            <div class="text-end">
-                                <div class="p-2 rounded-1 fw-bold bg-lemney-secondary-2 text-lemney-primary">
-                                    Ongoing
+                    <!-- Cancelled Tab Content -->
+                    <div class="tab-pane fade" id="cancelled-tab-pane" role="tabpanel">
+
+                        <!-- Cancelled Time line 1 -->
+
+                        <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                            <!-- Order Information -->
+                            <div class="py-2 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <div><b>Order Number: </b>L-NG1111241A</div>
+                                    <div><b>Dispatch Date: </b>11-11-2024</div>
+                                    <div><b>Delivery Date: </b>11-11-2024</div>
                                 </div>
-                                <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
-                            </div>
-                        </div>
-                        <!-- Order Details -->
-                        <div class="py-2 d-flex align-content-center justify-content-between text-center">
-                            <div class="d-flex align-items-center">
-                                <img src="../../assets/img/order_img_natural_honey.png" alt="" class="img-fluid">
-                                <div class="ps-1">
-                                    <b>Natural Honey</b> <br>
-                                    <span>Plastic Bottling</span>
+                                <div class="text-end">
+                                    <span class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">
+                                        <img src="../../assets/img/package_check.svg" alt="">
+                                        Cancelled
+                                    </span><br>
+                                    <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
                                 </div>
                             </div>
-                            <div>
-                                <b>QTY</b><br>
-                                <span class="">5 litres</span>
+                            <!-- Order timeline -->
+                            <div class="order-timeline">
+                                <div class="order-timeline-item">
+                                    <h5>Approval & Pick up</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item text-muted user-select-none">
+                                    <h5>In Transit</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item text-muted user-select-none">
+                                    <h5>Awaiting Delivery</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-none d-md-block">
-                                <b>Price</b><br>
-                                <span class="text-uppercase">NGN 17,000</span>
-                            </div>
-                            <div>
-                                <b>Delivery</b><br>
-                                <span class="text-uppercase">1 DAY</span>
-                            </div>
+
                         </div>
-                        <!--  -->
-                        <div class="d-flex align-items-center justify-content-end">
-                            <button data-bs-toggle="modal" data-bs-target="#reviewModal"
-                                class="btn btn-lemney-primary fw-bold d-inline-block text-uppercase">Review</button>
+
+                        <!-- Cancelled Time Line 2 -->
+                        <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                            <!-- Order Information -->
+                            <div class="py-2 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <div><b>Order Number: </b>L-NG1111241A</div>
+                                    <div><b>Dispatch Date: </b>11-11-2024</div>
+                                    <div><b>Delivery Date: </b>11-11-2024</div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">
+                                        <img src="../../assets/img/package_check.svg" alt="">
+                                        Cancelled
+                                    </span><br>
+                                    <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
+                                </div>
+                            </div>
+                            <!-- Order timeline -->
+                            <div class="order-timeline">
+                                <div class="order-timeline-item">
+                                    <h5>Approval & Pick up</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item text-muted user-select-none">
+                                    <h5>In Transit</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item text-muted user-select-none">
+                                    <h5>Awaiting Delivery</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
+                    <!-- Ongoing Tab Content -->
+                    <div class="tab-pane fade" id="ongoing-tab-pane" role="tabpanel">
 
+                        <!-- Ongoing Time line 1 -->
+
+                        <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                            <!-- Order Information -->
+                            <div class="py-2 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <div><b>Order Number: </b>L-NG1111241A</div>
+                                    <div><b>Dispatch Date: </b>11-11-2024</div>
+                                    <div><b>Delivery Date: </b>11-11-2024</div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">
+                                        <img src="../../assets/img/package_check.svg" alt="">
+                                        In Transit
+                                    </span><br>
+                                    <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
+                                </div>
+                            </div>
+                            <!-- Order timeline -->
+                            <div class="order-timeline">
+                                <div class="order-timeline-item">
+                                    <h5>Approval & Pick up</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item">
+                                    <h5>In Transit</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item awaiting text-muted">
+                                    <h5>Awaiting Delivery</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Ongoing Time Line 2 -->
+                        <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                            <!-- Order Information -->
+                            <div class="py-2 d-flex align-items-center justify-content-between">
+                                <div>
+                                    <div><b>Order Number: </b>L-NG1111241A</div>
+                                    <div><b>Dispatch Date: </b>11-11-2024</div>
+                                    <div><b>Delivery Date: </b>11-11-2024</div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">
+                                        <img src="../../assets/img/package_check.svg" alt="">
+                                        In Transit
+                                    </span><br>
+                                    <div><b>Cost: </b><span class="text-uppercase">NGN 17,000</span></div>
+                                </div>
+                            </div>
+                            <!-- Order timeline -->
+                            <div class="order-timeline">
+                                <div class="order-timeline-item">
+                                    <h5>Approval & Pick up</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item">
+                                    <h5>In Transit</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                                <div class="order-timeline-item awaiting text-muted">
+                                    <h5>Awaiting Delivery</h5>
+                                    <div>
+                                        <div class="text-muted">No. 6 Street Awka, Anambra</div>
+                                        <div class="text-muted">11-11-2024 8:00am</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -492,8 +655,8 @@
                         <h5>Services</h5>
                         <ul class="list-unstyled">
                             <li><a href="" class="link">Honey Sale</a></li>
-                            <li><a href="" class="link">Logistics</a></li>
-                            <li><a href="" class="link">Home Service</a></li>
+                            <li><a href="./logistics.html" class="link">Logistics</a></li>
+                            <li><a href="./home_service.html" class="link">Home Service</a></li>
                             <li><a href="" class="link">Consultancy</a></li>
                         </ul>
                     </div>
