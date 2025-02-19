@@ -1,0 +1,20 @@
+@import url("../lemney.css");
+@import url("../navbar.css");
+
+
+/* Side bar */
+.account-management-sidebar {
+    min-width: 160px;
+}
+
+/* Top Nav Tab/Pill */
+.nav-pills .nav-link {
+    background: none !important;
+    color: rgba(0, 0, 0, 0.64);
+}
+.nav-pills .nav-link.active {
+    color: black !important;
+}
+.nav-pills .nav-link:focus {
+    box-shadow: none !important;
+}
