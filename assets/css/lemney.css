@@ -1,14 +1,45 @@
+/* Add Custom Family font */
+@font-face {
+    
+    font-family: "Lemney Montserrat";
+    src: url("../../vendor/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Lemney-Red-Rose";
+    src: url("../../vendor/fonts/Red_Rose/RedRose-VariableFont_wght.ttf");
+}
+
 :root {
+
+    /* Theme colour */
     --bg-lemney-primary-1: #FDB137;
     --bg-lemney-primary-2: #F37E21;
     --bg-lemney-secondary-1: #FFECCD;
     --bg-lemney-secondary-2: #FFECB2;
+
+    /* Theme font */
+    --font-lemney-primary: "Lemney Montserrat", sans-serif;
+    --font-lemney-secondary: "Lemney-Red-Rose", sans-serif;
+
+    --font-lemney-size: 16px;
+}
+
+html, body {
+    box-sizing: border-box;
+    
+    font-family: var(--font-lemney-primary);
+    font-size: var(--font-lemney-size);
 }
 
 /* Override Bootstrap Defaults */
 .link {
     text-decoration: none;
     color: inherit;
+}
+
+.link.active {
+    color: black;
 }
 
 .form-control:focus,
@@ -18,9 +49,13 @@
 }
 
 /* Buttons */
+.btn-lemney:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
 .btn-lemney-primary {
     background-color: var(--bg-lemney-primary-2);
     color: white !important;
+    font-weight: 600;
 }
 .btn-lemney-primary:hover {
     background-color: var(--bg-lemney-primary-2);
@@ -29,11 +64,16 @@
 .btn-lemney-outline-primary {
     border-color: var(--bg-lemney-primary-2);
     color: var(--bg-lemney-primary-2);
+    font-weight: 600;
 }
 .btn-lemney-outline-primary:hover {
     background-color: var(--bg-lemney-primary-2);
     color: white;
 }
+
+/* -----------------
+    Custom Classes
+  ------------------ */
 
 /* Background Colours */
 .bg-lemney-primary-1 {
@@ -60,4 +100,13 @@
 /* Text Colour schemes */
 .text-lemney-primary {
     color: var(--bg-lemney-primary-2) !important;
+}
+
+/* Font-family */
+.font-lemney-primary {
+    font-family: var(--font-lemney-primary);
+}
+
+.font-lemney-secondary {
+    font-family: var(--font-lemney-secondary);
 }
