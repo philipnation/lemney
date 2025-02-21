@@ -1,0 +1,36 @@
+@import url("../lemney.css");
+
+.sidebar-container {
+    min-width: 240px;
+}
+
+.sidebar-menu-list .list-group-item {
+    border: none;
+    border-right: .48rem solid transparent;
+    font-weight: 500;
+    color: black;
+    padding-left: 1.6rem;
+}
+
+.sidebar-menu-list .list-group-item.active {
+    background-color: var(--bg-lemney-secondary-2);
+    border-right-color: var(--bg-lemney-primary-1);
+}
+
+.header-search-bar {
+    background-color: var(--bg-lemney-secondary-2);
+}
+
+.header-search-bar:hover {
+    opacity: .8;
+}
+
+.header-search-bar > * {
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.header-search-bar input {
+    box-shadow: none !important;
+}

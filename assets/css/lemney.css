@@ -33,6 +33,12 @@ html, body {
 }
 
 /* Override Bootstrap Defaults */
+/* .btn, */
+.btn:active {
+    border: none !important;
+}
+
+
 .link {
     text-decoration: none;
     color: inherit;
@@ -49,11 +55,6 @@ html, body {
 }
 
 /* Buttons */
-.btn:active {
-    background-color: initial !important;
-    color: initial !important;
-    opacity: .8;
-}
 .btn-lemney:hover {
     background-color: rgba(128, 128, 128, 0.2);
 }
@@ -62,12 +63,19 @@ html, body {
     color: white !important;
     font-weight: 600;
 }
-.btn-lemney-primary:hover {
+.btn-lemney-primary:hover,
+.btn-lemney-primary:focus {
     background-color: var(--bg-lemney-primary-2);
     opacity: .8;
+    outline: none;
+}
+.btn-lemney-primary:active {
+    background-color: var(--bg-lemney-primary-2) !important;
+    outline: none;
+    border: none !important;
 }
 .btn-lemney-outline-primary {
-    border-color: var(--bg-lemney-primary-2);
+    border: 1px solid var(--bg-lemney-primary-2) !important;
     color: var(--bg-lemney-primary-2);
     font-weight: 600;
 }
@@ -106,6 +114,7 @@ html, body {
 .text-lemney-primary {
     color: var(--bg-lemney-primary-2) !important;
 }
+
 
 /* Font-family */
 .font-lemney-primary {
