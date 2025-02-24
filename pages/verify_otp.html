@@ -4,33 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Lemney Logistics</title>
+    <title>Verify OTP | Lemney Logistics</title>
 
-    <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../assets/img/logo.png" type="image/x-icon">
 
     <!-- Styles -->
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <!-- Swiper -->
-    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css">
 
     <!-- Scripts -->
 
     <!-- JQuery -->
-    <script src="../node_modules/jquery/dist/jquery.min.js" defer></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js" defer></script>
     <!-- Bootstrap -->
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <!-- Swiper -->
-    <script src="../node_modules/swiper/swiper-bundle.min.js" defer></script>
+    <script src="../../node_modules/swiper/swiper-bundle.min.js" defer></script>
 
     <!-- Custom styles -->
-    <link rel="stylesheet" href="../assets/css/lemney.css">
-    <link rel="stylesheet" href="../assets/css/navbar.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../../assets/css/navbar.css">
 
+    <!-- Custom script -->
+    <script src="../assets/js/otp.js" defer></script>
+    <script src="../assets/js/verify_otp.js" defer></script>
 
 </head>
 
@@ -44,7 +45,7 @@
             <div class="container-fluid d-flex justify-content-between">
                 <!-- Brand -->
                 <a class="navbar-brand text-start d-flex align-items-center" href="#">
-                    <img src="../assets/img/logo.png" alt="Lemney Brand Logo" class="img-fluid" width="48">
+                    <img src="../../../assets/img/logo.png" alt="Lemney Brand Logo" class="img-fluid" width="48">
                 </a>
                 <div class="order-md-last d-flex align-items-center justify-content-center">
                     <!-- NavBar icons -->
@@ -108,56 +109,69 @@
     <!-- Main -->
     <main>
 
-        <div class="container-fluid bg-lemney-primary-gradient text-white py-5">
-            <h2 class="text-uppercase text-center my-3">Login to Your Lemney Account</h2>
+        <div class="container-fluid bg-lemney-primary-gradient text-dark py-5">
 
-            <div class="login-form-container">
+            <div class="container">
 
-                <!-- Form -->
-                <div class="login-form bg-white text-dark rounded-4 mx-auto p-4 mt-4" style="max-width: 480px;">
-                    <form action="javascript:void()" method="post">
+                <div class="text-center">
+                    <h2 class="my-3 fw-semibold text-uppercase">OTP Verfication?</h2>
+                    <p class="lead fs-6">Enter the OTP sent to <strong class="fw-bold">ddvbjnhv@gmail.com</strong>
+                    </p>
+                </div>
 
-                        <!-- Email address -->
-                        <div class="form-field mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" name="password" id="email">
-                        </div>
+                <!-- Form Container -->
+                <div class="py-2 py-md-4 mx-auto" style="max-width: 480px;">
+                    <form action="../test.php" method="post" id="verify-otp-form">
 
-                        <!-- Password -->
-                        <div class="form-field mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="password">
-                        </div>
+                        <!-- OTP Code -->
+                        <div class="my-2">
 
-                        <!-- Remember Me section -->
-                        <div class="form-field mb-3 d-flex align-items-center justify-content-between">
-                            <div>
-                                <input type="checkbox" name="remember-me" id="remember-me">
-                                <label for="remember-me">Remember Me</label>
+                            <!-- Actual OTP Input to Submit -->
+                            <input type="hidden" name="otp" id="otp-actual" value="425422">
+
+                            <!-- OTP Input Boxes -->
+                            <div class="d-flex align-items-center justify-content-center gap-2 otp-input-boxes">
+                                <input type="text" inputmode="numeric" name="otp-input-1" id="otp-input-1"
+                                    class="form-control text-center p-2 p-md-3 fw-semibold"
+                                    style="width: 48px; height: 48px;">
+                                <input type="text" inputmode="numeric" name="otp-input-2" id="otp-input-2"
+                                    class="form-control text-center p-2 p-md-3 fw-semibold"
+                                    style="width: 48px; height: 48px;">
+                                <input type="text" inputmode="numeric" name="otp-input-3" id="otp-input-3"
+                                    class="form-control text-center p-2 p-md-3 fw-semibold"
+                                    style="width: 48px; height: 48px;">
+                                <input type="text" inputmode="numeric" name="otp-input-4" id="otp-input-4"
+                                    class="form-control text-center p-2 p-md-3 fw-semibold"
+                                    style="width: 48px; height: 48px;">
+                                <input type="text" inputmode="numeric" name="otp-input-5" id="otp-input-5"
+                                    class="form-control text-center p-2 p-md-3 fw-semibold"
+                                    style="width: 48px; height: 48px;">
+                                <input type="text" inputmode="numeric" name="otp-input-6" id="otp-input-6"
+                                    class="form-control text-center p-2 p-md-3 fw-semibold"
+                                    style="width: 48px; height: 48px;">
                             </div>
-                            <div><a href="" class="link">Forgot Password?</a></div>
                         </div>
 
+                        <!-- Resend OTP -->
+                        <div class="my-2 mt-4 text-center">
+                            <p><strong>120 Secs</strong></p>
+                            <p>Don't receive code? <strong>Re-send</strong></p>
+                        </div>
 
                         <!-- Submit Button -->
-                        <div>
-                            <button
-                                class="btn btn-block d-block w-100 bg-lemney-primary-2 text-white text-uppercase py-2 my-3">Sign
-                                In
-                            </button>
-                            <button class="btn btn-block d-block w-100 btn-lemney-outline-primary py-2 my-3">
-                                <img src="../assets/img/google-icons.png" alt="" class="img-fluid me-1">
-                                Sign In With Google
-                            </button>
+                        <div class="my-2">
+                            <div class="d-grid">
+                                <button class="btn btn-dark py-2 my-3">Submit
+                                </button>
+                            </div>
+
                         </div>
 
-                        <div class="text-center mb-2">
-                            I don't have an account, <a href="" class="fw-bold link">Sign Up</a>
-                        </div>
                     </form>
                 </div>
 
             </div>
+
         </div>
     </main>
 
@@ -175,7 +189,7 @@
 
             <!-- Logo -->
             <div class="my-3">
-                <img src="../assets/img/logo.png" alt="" height="48">
+                <img src="../../assets/img/logo.png" alt="" height="48">
             </div>
 
             <!-- Footer information and details -->
