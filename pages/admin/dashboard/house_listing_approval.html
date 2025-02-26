@@ -28,6 +28,10 @@
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="../../../assets/css/admin/dashboard.css">
+    <link rel="stylesheet" href="../../../assets/css/admin/house_listing_approval.css">
+
+    <!-- Custom Script -->
+    <script src="../../../assets/js/house_listing_approval.js" defer></script>
 
 
 </head>
@@ -194,7 +198,7 @@
                 <!--  -->
                 <div class="p-3">
                     <div class="d-flex align-items-center justify-content-between">
-                        <!-- Mobile Sidebar Navigation -->
+                        <!-- Empty div to push Search Bar to the end -->
                         <div>
                             <div class="d-md-none">
                                 <!--  -->
@@ -227,8 +231,950 @@
                     </div>
                 </div>
 
+                <!--  -->
+                <div class="p-3">
+
+                    <!-- Notice -->
+                    <div>
+                        <p>All orders should be treated with scrutiny to avoid complications. Upon completion of
+                            continue
+                            progress report of materials to ensure delivery and client update</p>
+                    </div>
+
+                    <!-- House Listing Modal -->
+                    <div class="modal fade p-2" id="houseListingModal" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+                            style="max-width: fit-content; max-height: fit-content;">
+                            <div class="modal-content p-2">
+
+                                <div class="modal-body">
+
+                                    <div class="position-relative small">
+
+                                        <!-- Close Button -->
+                                        <div class="position-sticky top-0 start-100 text-end z-3">
+                                            <button class="btn btn-lemney rounded-circle" data-bs-dismiss="modal">
+                                                <i class="fa fa-close"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+
+                                                <!-- Carousel -->
+                                                <div>
+                                                    <!-- Swiper -->
+                                                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                                                        class="swiper swiperMain">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <div class="position-relative">
+                                                                    <div class="position-absolute w-100 h-100"
+                                                                        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));">
+                                                                    </div>
+
+                                                                    <div class="position-absolute top-0 end-0 m-4 z-3">
+                                                                        <span
+                                                                            class="bg-lemney-primary-1 text-white p-2">For
+                                                                            sale</span>
+                                                                    </div>
+                                                                    <div
+                                                                        class="position-absolute bottom-0 end-0 text-end text-white m-4 z-3">
+                                                                        <span class="d-flex align-items-center gap-2">
+                                                                            <span>
+                                                                                <svg width="24" height="24"
+                                                                                    viewBox="0 0 24 24" fill="none"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path fill-rule="evenodd"
+                                                                                        clip-rule="evenodd"
+                                                                                        d="M12.0001 -0.00146484C16.4941 -0.00146484 20.2391 3.7435 20.2391 8.23757C20.2391 9.70429 19.7349 11.1508 19.0303 12.4614C18.323 13.777 17.3867 15.0055 16.4564 16.0513C15.5244 17.0992 14.5827 17.9814 13.849 18.6048C13.4825 18.9161 13.1617 19.1681 12.9144 19.3465C12.7923 19.4346 12.6779 19.5121 12.5791 19.5714C12.531 19.6002 12.4724 19.6335 12.4101 19.6623C12.3791 19.6765 12.3345 19.6957 12.2813 19.7127C12.2394 19.7261 12.1348 19.7574 12.0001 19.7574C11.8642 19.7574 11.7587 19.7256 11.7167 19.712C11.6632 19.6947 11.6184 19.6753 11.5874 19.6609C11.525 19.6318 11.4663 19.5984 11.4183 19.5692C11.3195 19.5094 11.2052 19.4312 11.0831 19.3424C10.836 19.1628 10.5153 18.909 10.149 18.5957C9.41567 17.9686 8.47439 17.0818 7.54283 16.0311C6.61312 14.9825 5.67726 13.7529 4.97015 12.4403C4.26607 11.1334 3.76106 9.69279 3.76106 8.23757C3.76106 3.7435 7.50602 -0.00146484 12.0001 -0.00146484ZM12.0001 10.6982C10.6411 10.6982 9.53946 9.59653 9.53946 8.23757C9.53946 6.8786 10.6411 5.77693 12.0001 5.77693C13.3591 5.77693 14.4607 6.8786 14.4607 8.23757C14.4607 9.59653 13.3591 10.6982 12.0001 10.6982ZM17.313 17.4108C17.6293 17.0552 17.9457 16.6827 18.2563 16.2957H20.5588C20.9017 16.2957 21.2116 16.5 21.3467 16.8152L23.9142 22.8063C24.0277 23.0712 24.0006 23.3753 23.842 23.6158C23.6834 23.8563 23.4145 24.001 23.1265 24.001H0.873746C0.585625 24.001 0.316777 23.8563 0.158169 23.6158C-0.000439687 23.3753 -0.0275883 23.0712 0.0859093 22.8063L2.65351 16.8152C2.78858 16.5 3.09847 16.2957 3.44137 16.2957H5.76479C6.06834 16.6737 6.37734 17.0379 6.68606 17.3861C7.82012 18.6653 8.9662 19.7451 9.85843 20.508C10.3042 20.8892 10.6927 21.1966 10.9903 21.4129C11.1376 21.5201 11.2728 21.6123 11.3873 21.6816C11.4432 21.7155 11.5083 21.7525 11.5759 21.7841C11.6096 21.7998 11.6566 21.8201 11.712 21.8379C11.7559 21.8521 11.8629 21.8844 12 21.8844C12.1359 21.8844 12.2421 21.8526 12.2858 21.8388C12.3409 21.8211 12.3878 21.801 12.4214 21.7854C12.4889 21.7542 12.554 21.7176 12.6099 21.684C12.7244 21.6152 12.8597 21.5237 13.007 21.4174C13.3048 21.2026 13.6935 20.8974 14.1394 20.5186C15.032 19.7604 16.1785 18.6862 17.313 17.4108Z"
+                                                                                        fill="white" />
+                                                                                </svg>
+
+                                                                            </span>
+                                                                            <span>Lekki, Lagos</span>
+                                                                        </span>
+                                                                    </div>
+                                                                    <img
+                                                                        src="../../../assets/img/house_swimming_pool.png" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Next/Previous Buttons -->
+                                                        <div class="swiper-button-next mx-2"></div>
+                                                        <div class="swiper-button-prev mx-2"></div>
+                                                    </div>
+
+                                                    <!-- Thumbnail -->
+                                                    <div thumbsSlider="" class="swiper swiperThumbnail">
+                                                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <img
+                                                                    src="../../../assets/img/house_swimming_pool.png" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div>
+
+                                                    <!-- House Listing Details -->
+                                                    <div>
+                                                        <!-- Info -->
+                                                        <div class="my-2 py-2">
+                                                            <div class="row">
+
+                                                                <!-- Building Name -->
+                                                                <div class="col-6 py-2">
+                                                                    <span class="">Building Name</span> <br>
+                                                                    <span class="fs-6 fw-semibold">De Faith Housing
+                                                                        Modern
+                                                                        Apartment</span>
+                                                                </div>
+
+                                                                <!-- Building Type -->
+                                                                <div class="col-6 py-2">
+                                                                    <span class="">Building Type</span> <br>
+                                                                    <span class="fs-6 fw-semibold">2 Bedroom</span>
+                                                                </div>
+
+                                                                <!-- Price -->
+                                                                <div class="col-6 py-2">
+                                                                    <span class="">Building Name</span> <br>
+                                                                    <span class="fs-6 fw-semibold">NGN 38,000,000</span>
+                                                                </div>
+
+                                                                <!-- Condition -->
+                                                                <div class="col-6 py-2">
+                                                                    <span class="">Condition</span> <br>
+                                                                    <span class="fs-6 fw-semibold">Newly Built</span>
+                                                                </div>
+
+                                                                <!-- Address -->
+                                                                <div class="col-6 py-2">
+                                                                    <span class="">Address</span> <br>
+                                                                    <span class="fs-6 fw-semibold">No. 1 Street,
+                                                                        Awka</span>
+
+                                                                </div>
+
+                                                                <!-- Negotiable -->
+                                                                <div class="col-6 py-2">
+                                                                    <span class="">Negotiable</span> <br>
+                                                                    <span class="fs-6 fw-semibold">Yes</span>
+
+                                                                </div>
+
+                                                                <!-- Furnishing -->
+                                                                <div class="col-6 py-2">
+                                                                    <span class="">Furnishing</span> <br>
+                                                                    <span class="fs-6 fw-semibold">No</span>
+                                                                </div>
+
+                                                                <!-- State/L.G.A -->
+                                                                <div class="col-6 py-2">
+                                                                    <span class="">State/L.G.A</span> <br>
+                                                                    <span class="fs-6 fw-semibold">Nsukka L.G.A,
+                                                                        Enugu</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Features -->
+                                                        <div class="my-2 py-2">
+                                                            <div
+                                                                class="d-flex align-items-center justify-content-between">
+                                                                <div>
+                                                                    <div class="text-center">
+                                                                        <span>
+                                                                            <svg width="30" height="28"
+                                                                                viewBox="0 0 30 28" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M1.66699 26.0835C1.25278 26.0835 0.916992 26.4193 0.916992 26.8335C0.916992 27.2477 1.25278 27.5835 1.66699 27.5835V26.0835ZM28.3337 27.5835C28.7479 27.5835 29.0837 27.2477 29.0837 26.8335C29.0837 26.4193 28.7479 26.0835 28.3337 26.0835V27.5835ZM3.00033 10.7935L3.75033 10.7966V10.7935H3.00033ZM4.02699 8.70022L3.56623 8.10841L3.56147 8.11218L4.02699 8.70022ZM13.3603 1.43354L12.8999 0.841521L12.8996 0.841749L13.3603 1.43354ZM16.6403 1.43354L17.1006 0.841327L17.0968 0.838462L16.6403 1.43354ZM25.9737 8.68687L25.5134 9.27907L25.514 9.27954L25.9737 8.68687ZM11.667 26.8335H10.917C10.917 27.2477 11.2528 27.5835 11.667 27.5835V26.8335ZM18.3337 26.8335V27.5835C18.7479 27.5835 19.0837 27.2477 19.0837 26.8335H18.3337ZM23.5837 6.841C23.5878 7.25519 23.927 7.5876 24.3412 7.58346C24.7554 7.57932 25.0878 7.24019 25.0836 6.826L23.5837 6.841ZM24.2937 2.8335L25.0436 2.826C25.0395 2.41473 24.7049 2.0835 24.2937 2.0835V2.8335ZM18.427 2.0835C18.0128 2.0835 17.677 2.41928 17.677 2.8335C17.677 3.24771 18.0128 3.5835 18.427 3.5835V2.0835ZM1.66699 27.5835H28.3337V26.0835H1.66699V27.5835ZM3.68365 26.8366L3.75032 10.7966L2.25033 10.7904L2.18367 26.8304L3.68365 26.8366ZM3.75033 10.7935C3.75033 10.2176 4.02563 9.65787 4.49252 9.28825L3.56147 8.11218C2.74835 8.7559 2.25033 9.74271 2.25033 10.7935H3.75033ZM4.48774 9.292L13.8211 2.02532L12.8996 0.841749L3.56624 8.10843L4.48774 9.292ZM13.8208 2.02555C14.5081 1.49097 15.4779 1.48707 16.1838 2.02861L17.0968 0.838462C15.8561 -0.113335 14.1326 -0.117232 12.8999 0.841521L13.8208 2.02555ZM16.1801 2.02573L25.5134 9.27907L26.4339 8.09468L17.1005 0.841339L16.1801 2.02573ZM25.514 9.27954C25.9815 9.64204 26.2503 10.1952 26.2503 10.7935H27.7503C27.7503 9.73846 27.2725 8.74504 26.4333 8.09421L25.514 9.27954ZM26.2503 10.7935V26.8335H27.7503V10.7935H26.2503ZM16.3337 19.4168H13.667V20.9168H16.3337V19.4168ZM13.667 19.4168C12.1461 19.4168 10.917 20.646 10.917 22.1668H12.417C12.417 21.4744 12.9745 20.9168 13.667 20.9168V19.4168ZM10.917 22.1668V26.8335H12.417V22.1668H10.917ZM11.667 27.5835H18.3337V26.0835H11.667V27.5835ZM19.0837 26.8335V22.1668H17.5837V26.8335H19.0837ZM19.0837 22.1668C19.0837 20.646 17.8545 19.4168 16.3337 19.4168V20.9168C17.0261 20.9168 17.5837 21.4744 17.5837 22.1668H19.0837ZM11.667 15.0835H9.00033V16.5835H11.667V15.0835ZM9.00033 15.0835C8.68121 15.0835 8.41699 14.8193 8.41699 14.5002H6.91699C6.91699 15.6477 7.85278 16.5835 9.00033 16.5835V15.0835ZM8.41699 14.5002V12.5002H6.91699V14.5002H8.41699ZM8.41699 12.5002C8.41699 12.181 8.68121 11.9168 9.00033 11.9168V10.4168C7.85278 10.4168 6.91699 11.3526 6.91699 12.5002H8.41699ZM9.00033 11.9168H11.667V10.4168H9.00033V11.9168ZM11.667 11.9168C11.9861 11.9168 12.2503 12.181 12.2503 12.5002H13.7503C13.7503 11.3526 12.8145 10.4168 11.667 10.4168V11.9168ZM12.2503 12.5002V14.5002H13.7503V12.5002H12.2503ZM12.2503 14.5002C12.2503 14.8193 11.9861 15.0835 11.667 15.0835V16.5835C12.8145 16.5835 13.7503 15.6477 13.7503 14.5002H12.2503ZM21.0003 15.0835H18.3337V16.5835H21.0003V15.0835ZM18.3337 15.0835C18.0145 15.0835 17.7503 14.8193 17.7503 14.5002H16.2503C16.2503 15.6477 17.1861 16.5835 18.3337 16.5835V15.0835ZM17.7503 14.5002V12.5002H16.2503V14.5002H17.7503ZM17.7503 12.5002C17.7503 12.181 18.0145 11.9168 18.3337 11.9168V10.4168C17.1861 10.4168 16.2503 11.3526 16.2503 12.5002H17.7503ZM18.3337 11.9168H21.0003V10.4168H18.3337V11.9168ZM21.0003 11.9168C21.3194 11.9168 21.5837 12.181 21.5837 12.5002H23.0837C23.0837 11.3526 22.1479 10.4168 21.0003 10.4168V11.9168ZM21.5837 12.5002V14.5002H23.0837V12.5002H21.5837ZM21.5837 14.5002C21.5837 14.8193 21.3194 15.0835 21.0003 15.0835V16.5835C22.1479 16.5835 23.0837 15.6477 23.0837 14.5002H21.5837ZM25.0836 6.826L25.0436 2.826L23.5437 2.841L23.5837 6.841L25.0836 6.826ZM24.2937 2.0835H18.427V3.5835H24.2937V2.0835Z"
+                                                                                    fill="black" />
+                                                                            </svg>
+                                                                        </span> <br>
+                                                                        <span>3 Bed Room</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="text-center">
+                                                                        <span>
+                                                                            <svg width="33" height="33"
+                                                                                viewBox="0 0 33 33" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <g clip-path="url(#clip0_673_7744)">
+                                                                                    <path
+                                                                                        d="M30.5018 20.3501H3.16426C2.08301 20.3501 1.20801 19.4688 1.20801 18.3938C1.20801 17.3188 2.08301 16.4438 3.15801 16.4438H30.5018C31.5768 16.4438 32.4518 17.3188 32.4518 18.3938C32.4518 19.4688 31.583 20.3501 30.5018 20.3501ZM3.16426 17.7438C2.80801 17.7438 2.51426 18.0376 2.51426 18.3938C2.51426 18.7501 2.80801 19.0438 3.16426 19.0438H30.508C30.8643 19.0438 31.158 18.7501 31.158 18.3938C31.158 18.0376 30.8643 17.7438 30.508 17.7438H3.16426Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M24.9513 29.4622H8.71383C6.68883 29.4622 4.88883 28.106 4.33258 26.156L2.53258 19.8747C2.43258 19.531 2.63258 19.1685 2.98258 19.0685C3.32633 18.9747 3.68883 19.1685 3.78883 19.5185L5.58258 25.7997C5.97633 27.1872 7.26383 28.1622 8.71383 28.1622H24.9576C26.4013 28.1622 27.6888 27.1935 28.0888 25.7997L29.8826 19.5185C29.9826 19.1747 30.3451 18.9747 30.6888 19.0685C31.0326 19.1685 31.2326 19.531 31.1388 19.8747L29.3326 26.156C28.7826 28.0997 26.9763 29.4622 24.9513 29.4622Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M8.71461 26.8563C7.84586 26.8563 7.07711 26.2751 6.83336 25.4376L5.98961 22.4751C5.88961 22.1313 6.08961 21.7688 6.43961 21.6688C6.78961 21.5688 7.14586 21.7688 7.24586 22.1188L8.08961 25.0813C8.17086 25.3563 8.42711 25.5563 8.71461 25.5563C9.07711 25.5563 9.36461 25.8501 9.36461 26.2063C9.36461 26.5626 9.07086 26.8563 8.71461 26.8563Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M8.37074 32.0688C8.27074 32.0688 8.17074 32.0438 8.08324 32C7.76449 31.8375 7.63324 31.45 7.78949 31.125L9.08949 28.5188C9.25199 28.2 9.63949 28.0688 9.96449 28.225C10.2832 28.3875 10.4145 28.775 10.2582 29.1L8.95824 31.7063C8.83949 31.9375 8.60824 32.0688 8.37074 32.0688Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M25.2957 32.0687C25.0582 32.0687 24.8269 31.9375 24.7144 31.7062L23.4144 29.1C23.2519 28.7812 23.3832 28.3875 23.7082 28.225C24.0269 28.0625 24.4207 28.1937 24.5832 28.5187L25.8832 31.125C26.0457 31.4437 25.9144 31.8375 25.5894 32C25.4957 32.0437 25.3957 32.0687 25.2957 32.0687Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M29.2014 17.7437C28.8389 17.7437 28.5514 17.4499 28.5514 17.0937V3.41865C28.5514 2.7624 28.0201 2.23115 27.3639 2.23115C27.0389 2.23115 26.7451 2.35615 26.5201 2.58115L24.4576 4.6499C24.2014 4.90615 23.7889 4.90615 23.5389 4.6499C23.2826 4.39365 23.2826 3.98115 23.5389 3.73115L25.6076 1.6624C26.0764 1.19365 26.7014 0.931152 27.3639 0.931152C28.7451 0.931152 29.8576 2.0499 29.8576 3.41865V17.0874C29.8514 17.4499 29.5639 17.7437 29.2014 17.7437Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M23.9951 8.74386C23.8201 8.74386 23.6513 8.67511 23.5263 8.54386L19.6201 4.51886C19.4513 4.34386 19.3951 4.09386 19.4701 3.86261C19.5451 3.63136 19.7451 3.46261 19.9826 3.42511L23.2388 2.89386C23.4451 2.85636 23.6576 2.92511 23.8076 3.07511L25.1076 4.37511C25.2638 4.53136 25.3263 4.75011 25.2826 4.96261L24.6326 8.21886C24.5826 8.45636 24.4076 8.65011 24.1763 8.71261C24.1201 8.73761 24.0576 8.74386 23.9951 8.74386ZM21.4201 4.51261L23.5951 6.75011L23.9326 5.05011L23.1138 4.23136L21.4201 4.51261Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M14.8832 11.2312C14.7145 11.2312 14.552 11.1687 14.4207 11.0374C14.1645 10.7812 14.1645 10.3687 14.4207 10.1187L15.7207 8.81865C15.977 8.5624 16.3895 8.5624 16.6395 8.81865C16.8957 9.0749 16.8957 9.4874 16.6395 9.7374L15.3395 11.0374C15.2145 11.1687 15.0457 11.2312 14.8832 11.2312Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M17.4828 13.8376C17.3141 13.8376 17.1516 13.7751 17.0203 13.6438C16.7641 13.3876 16.7641 12.9751 17.0203 12.7251L18.3203 11.4251C18.5766 11.1688 18.9891 11.1688 19.2391 11.4251C19.4891 11.6813 19.4953 12.0938 19.2391 12.3438L17.9391 13.6438C17.8141 13.7751 17.6516 13.8376 17.4828 13.8376Z"
+                                                                                        fill="black" />
+                                                                                    <path
+                                                                                        d="M18.7826 9.93135C18.6139 9.93135 18.4514 9.86885 18.3201 9.7376C18.0639 9.48135 18.0639 9.06885 18.3201 8.81885L19.6201 7.51885C19.8764 7.2626 20.2889 7.2626 20.5389 7.51885C20.7951 7.7751 20.7951 8.1876 20.5389 8.4376L19.2389 9.7376C19.1201 9.86885 18.9514 9.93135 18.7826 9.93135Z"
+                                                                                        fill="black" />
+                                                                                </g>
+                                                                                <defs>
+                                                                                    <clipPath id="clip0_673_7744">
+                                                                                        <rect width="32" height="32"
+                                                                                            fill="white"
+                                                                                            transform="translate(0.833008 0.5)" />
+                                                                                    </clipPath>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        </span> <br>
+                                                                        <span>2 Bathrooms</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="text-center">
+                                                                        <span>
+                                                                            <svg width="25" height="25"
+                                                                                viewBox="0 0 25 25" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <rect x="1.16699" y="1.5" width="22"
+                                                                                    height="22" stroke="black"
+                                                                                    stroke-width="2"
+                                                                                    stroke-dasharray="4 4" />
+                                                                            </svg>
+                                                                        </span><br>
+                                                                        <span>500 Sqm</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <div class="text-center">
+                                                                        <span>
+                                                                            <svg width="25" height="21"
+                                                                                viewBox="0 0 25 21" fill="none"
+                                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                                <path
+                                                                                    d="M1.83301 13.8332V10.7275C1.83301 9.2188 3.02692 7.99577 4.49967 7.99577M1.83301 13.8332C1.83301 15.3419 3.02692 16.5649 4.49967 16.5649H20.4997C21.9724 16.5649 23.1663 15.3419 23.1663 13.8332M1.83301 13.8332V18.012C1.83301 19.0178 2.62895 19.8332 3.61079 19.8332H5.38856C6.3704 19.8332 7.16634 19.0178 7.16634 18.012V16.5649M23.1663 13.8332V10.7275C23.1663 9.2188 21.9724 7.99577 20.4997 7.99577H4.49967M23.1663 13.8332V18.012C23.1663 19.0178 22.3704 19.8332 21.3886 19.8332H19.6108C18.6289 19.8332 17.833 19.0178 17.833 18.012V16.5649M4.49967 7.99577L5.92553 2.5184C6.13306 1.72119 6.83786 1.1665 7.64328 1.1665H17.4405C18.2058 1.1665 18.8851 1.6681 19.1271 2.41175L20.9441 7.99577M4.94412 12.0933H8.05523M16.9441 12.0933H20.0552"
+                                                                                    stroke="black" stroke-width="2"
+                                                                                    stroke-linecap="round"
+                                                                                    stroke-linejoin="round" />
+                                                                            </svg>
+                                                                        </span><br>
+                                                                        <span>No Parking spot</span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Agent -->
+                                                        <div class="my-2 py-2">
+                                                            <div
+                                                                class="d-flex align-items-center justify-content-between">
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div>
+                                                                        <img src="../../../assets/img/lhano_rano.png"
+                                                                            alt="">
+                                                                    </div>
+                                                                    <div>
+                                                                        <span class="fw-semibold">Lharo Rano</span> <br>
+                                                                        <span class="small text-muted">Agent</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div>
+                                                                    <button class="btn btn-lemney-primary">
+                                                                        Contact Owner/Agent
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Info Contd. -->
+                                                        <div class="my-2 py-2">
+
+                                                            <!-- Additional Info -->
+                                                            <div class="py-2">
+                                                                <div class="fs-6 fw-semibold mb-1">Additional
+                                                                    Info</div>
+                                                                <span>Lorem, ipsum dolor sit
+                                                                    amet consectetur adipisicing elit. At minima debitis
+                                                                    aut odit magni quas deleniti velit veniam!
+                                                                    Consequatur voluptas maiores labore magnam! At
+                                                                    reiciendis tempore inventore quam. Est odit rem modi
+                                                                    recusandae illo alias velit asperiores dolorum.
+                                                                    Laudantium, aut! Pariatur vero, itaque repellendus
+                                                                    alias quisquam, numquam eum ipsum quasi ratione
+                                                                    laudantium velit voluptatibus exercitationem nam
+                                                                    consequuntur laborum illo sit dignissimos aperiam
+                                                                    dolorem earum similique aut? Veritatis asperiores ex
+                                                                    ut. </span>
+                                                            </div>
+
+                                                            <!-- Attachments -->
+                                                            <div class="py-2">
+                                                                <div class="fs-6 fw-semibold mb-1">Attachments</div>
+                                                                <!-- Attachment list -->
+                                                                <div class="d-flex flex-wrap align-items-center gap-2">
+
+                                                                    <!-- Attachment -->
+                                                                    <div style="width: 200px;">
+                                                                        <a href="" class="link">
+                                                                            <div
+                                                                                class="border border-lemney-primary-1 p-1 rounded-2">
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <img src="../../../assets/img/icons/pdf_icon.png"
+                                                                                        class="img-fluid" alt="">
+                                                                                    <span>Agro Allied Busines
+                                                                                        Plan.pdf</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+
+                                                                    <!-- Attachment -->
+                                                                    <div style="width: 200px;">
+                                                                        <a href="" class="link">
+                                                                            <div
+                                                                                class="border border-lemney-primary-1 p-1 rounded-2">
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <img src="../../../assets/img/icons/pdf_icon.png"
+                                                                                        class="img-fluid" alt="">
+                                                                                    <span>Agro Allied Busines
+                                                                                        Plan.pdf</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+
+                                                                    <!-- Attachment -->
+                                                                    <div style="width: 200px;">
+                                                                        <a href="" class="link">
+                                                                            <div
+                                                                                class="border border-lemney-primary-1 p-1 rounded-2">
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <img src="../../../assets/img/icons/link_icon.png"
+                                                                                        class="img-fluid" alt="">
+                                                                                    <span>Business Plan Questionnaire
+                                                                                        Link</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+
+                                                                    <!-- Attachment -->
+                                                                    <div style="width: 200px;">
+                                                                        <a href="" class="link">
+                                                                            <div
+                                                                                class="border border-lemney-primary-1 p-1 rounded-2">
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <img src="../../../assets/img/icons/pdf_icon.png"
+                                                                                        class="img-fluid" alt="">
+                                                                                    <span>Agro Allied Busines
+                                                                                        Plan.pdf</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+
+                                                                    <!-- Attachment -->
+                                                                    <div style="width: 200px;">
+                                                                        <a href="" class="link">
+                                                                            <div
+                                                                                class="border border-lemney-primary-1 p-1 rounded-2">
+                                                                                <div class="d-flex align-items-center">
+                                                                                    <img src="../../../assets/img/icons/link_icon.png"
+                                                                                        class="img-fluid" alt="">
+                                                                                    <span>Business Plan Questionnaire
+                                                                                        Link</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- House Listing -->
+                    <div class="row">
+
+                        <!-- House Listing 1 -->
+                        <div class="col-md-4 py-3">
+                            <div>
+                                <!-- Card -->
+                                <div class="card border shadow-sm">
+                                    <div class="position-relative rounded-top">
+                                        <img src="../../../assets/img/card_img_overlay_room.png" class="card-img-top"
+                                            alt="Traditional Apartment">
+
+                                        <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
+                                            style="background-color: rgba(0, 0, 0, 0.6);">
+
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <div class="bg-dark text-bg-dark p-2">
+                                                        <span>Traditional Apartment</span>
+                                                        <br>
+                                                        <span class="fw-semibold">NGN 38 Million</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="bg-lemney-primary-2 text-bg-dark p-2">
+                                                        For sale
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button class="btn btn-lemney text-white" data-bs-toggle="modal"
+                                                    data-bs-target="#houseListingModal">Click to View</button>
+                                            </div>
+
+                                            <div class="d-flex align-items-center justify-content-between text-white">
+                                                <div>
+                                                    <div>
+                                                        <i class="fa fa-location me-2"></i>
+                                                        Lekki, Lagos
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-house me-2"></i>
+                                                        3 Red Room Cottage
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <span>2<i class="fa fa-video ms-1"></i></span>
+                                                    <span>2<i class="fa fa-image ms-1"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between p-2">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <div class="rounded-circle">
+                                                    <img src="../../../assets/img/lhano_rano.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fw-semibold">Lharo Rano</div>
+                                                    <div class="small text-muted">Agent</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-lemney">
+                                                    <i class="fa fa-phone"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- House Listing 2 -->
+                        <div class="col-md-4 py-3">
+                            <div>
+                                <!-- Card -->
+                                <div class="card border shadow-sm">
+                                    <div class="position-relative rounded-top">
+                                        <img src="../../../assets/img/card_img_overlay_farm_house.png"
+                                            class="card-img-top rounded-top" alt="Traditional Apartment">
+
+                                        <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
+                                            style="background-color: rgba(0, 0, 0, 0.6);">
+
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <div class="bg-dark text-bg-dark p-2">
+                                                        <span>Traditional Apartment</span>
+                                                        <br>
+                                                        <span class="fw-semibold">NGN 38 Million</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="bg-lemney-primary-2 text-bg-dark p-2">
+                                                        For sale
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button class="btn btn-lemney text-white" data-bs-toggle="modal"
+                                                    data-bs-target="#houseListingModal">Click to View</button>
+                                            </div>
+
+                                            <div class="d-flex align-items-center justify-content-between text-white">
+                                                <div>
+                                                    <div>
+                                                        <i class="fa fa-location me-2"></i>
+                                                        Lekki, Lagos
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-house me-2"></i>
+                                                        3 Red Room Cottage
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <span>2<i class="fa fa-video ms-1"></i></span>
+                                                    <span>2<i class="fa fa-image ms-1"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between p-2">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <div class="rounded-circle">
+                                                    <img src="../../../assets/img/lhano_rano.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fw-semibold">Lharo Rano</div>
+                                                    <div class="small text-muted">Agent</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-lemney">
+                                                    <i class="fa fa-phone"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- House Listing 1 -->
+                        <div class="col-md-4 py-3">
+                            <div>
+                                <!-- Card -->
+                                <div class="card border shadow-sm">
+                                    <div class="position-relative rounded-top">
+                                        <img src="../../../assets/img/card_img_overlay_room.png" class="card-img-top"
+                                            alt="Traditional Apartment">
+
+                                        <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
+                                            style="background-color: rgba(0, 0, 0, 0.6);">
+
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <div class="bg-dark text-bg-dark p-2">
+                                                        <span>Traditional Apartment</span>
+                                                        <br>
+                                                        <span class="fw-semibold">NGN 38 Million</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="bg-lemney-primary-2 text-bg-dark p-2">
+                                                        For sale
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button class="btn btn-lemney text-white" data-bs-toggle="modal"
+                                                    data-bs-target="#houseListingModal">Click to View</button>
+                                            </div>
+
+                                            <div class="d-flex align-items-center justify-content-between text-white">
+                                                <div>
+                                                    <div>
+                                                        <i class="fa fa-location me-2"></i>
+                                                        Lekki, Lagos
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-house me-2"></i>
+                                                        3 Red Room Cottage
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <span>2<i class="fa fa-video ms-1"></i></span>
+                                                    <span>2<i class="fa fa-image ms-1"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between p-2">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <div class="rounded-circle">
+                                                    <img src="../../../assets/img/lhano_rano.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fw-semibold">Lharo Rano</div>
+                                                    <div class="small text-muted">Agent</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-lemney">
+                                                    <i class="fa fa-phone"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- House Listing 2 -->
+                        <div class="col-md-4 py-3">
+                            <div>
+                                <!-- Card -->
+                                <div class="card border shadow-sm">
+                                    <div class="position-relative rounded-top">
+                                        <img src="../../../assets/img/card_img_overlay_farm_house.png"
+                                            class="card-img-top rounded-top" alt="Traditional Apartment">
+
+                                        <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
+                                            style="background-color: rgba(0, 0, 0, 0.6);">
+
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <div class="bg-dark text-bg-dark p-2">
+                                                        <span>Traditional Apartment</span>
+                                                        <br>
+                                                        <span class="fw-semibold">NGN 38 Million</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="bg-lemney-primary-2 text-bg-dark p-2">
+                                                        For sale
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button class="btn btn-lemney text-white" data-bs-toggle="modal"
+                                                    data-bs-target="#houseListingModal">Click to View</button>
+                                            </div>
+
+                                            <div class="d-flex align-items-center justify-content-between text-white">
+                                                <div>
+                                                    <div>
+                                                        <i class="fa fa-location me-2"></i>
+                                                        Lekki, Lagos
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-house me-2"></i>
+                                                        3 Red Room Cottage
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <span>2<i class="fa fa-video ms-1"></i></span>
+                                                    <span>2<i class="fa fa-image ms-1"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between p-2">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <div class="rounded-circle">
+                                                    <img src="../../../assets/img/lhano_rano.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fw-semibold">Lharo Rano</div>
+                                                    <div class="small text-muted">Agent</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-lemney">
+                                                    <i class="fa fa-phone"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- House Listing 1 -->
+                        <div class="col-md-4 py-3">
+                            <div>
+                                <!-- Card -->
+                                <div class="card border shadow-sm">
+                                    <div class="position-relative rounded-top">
+                                        <img src="../../../assets/img/card_img_overlay_room.png" class="card-img-top"
+                                            alt="Traditional Apartment">
+
+                                        <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
+                                            style="background-color: rgba(0, 0, 0, 0.6);">
+
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <div class="bg-dark text-bg-dark p-2">
+                                                        <span>Traditional Apartment</span>
+                                                        <br>
+                                                        <span class="fw-semibold">NGN 38 Million</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="bg-lemney-primary-2 text-bg-dark p-2">
+                                                        For sale
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button class="btn btn-lemney text-white" data-bs-toggle="modal"
+                                                    data-bs-target="#houseListingModal">Click to View</button>
+                                            </div>
+
+                                            <div class="d-flex align-items-center justify-content-between text-white">
+                                                <div>
+                                                    <div>
+                                                        <i class="fa fa-location me-2"></i>
+                                                        Lekki, Lagos
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-house me-2"></i>
+                                                        3 Red Room Cottage
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <span>2<i class="fa fa-video ms-1"></i></span>
+                                                    <span>2<i class="fa fa-image ms-1"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between p-2">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <div class="rounded-circle">
+                                                    <img src="../../../assets/img/lhano_rano.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fw-semibold">Lharo Rano</div>
+                                                    <div class="small text-muted">Agent</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-lemney">
+                                                    <i class="fa fa-phone"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- House Listing 2 -->
+                        <div class="col-md-4 py-3">
+                            <div>
+                                <!-- Card -->
+                                <div class="card border shadow-sm">
+                                    <div class="position-relative rounded-top">
+                                        <img src="../../../assets/img/card_img_overlay_farm_house.png"
+                                            class="card-img-top rounded-top" alt="Traditional Apartment">
+
+                                        <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
+                                            style="background-color: rgba(0, 0, 0, 0.6);">
+
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div>
+                                                    <div class="bg-dark text-bg-dark p-2">
+                                                        <span>Traditional Apartment</span>
+                                                        <br>
+                                                        <span class="fw-semibold">NGN 38 Million</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="bg-lemney-primary-2 text-bg-dark p-2">
+                                                        For sale
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-center">
+                                                <button class="btn btn-lemney text-white" data-bs-toggle="modal"
+                                                    data-bs-target="#houseListingModal">Click to View</button>
+                                            </div>
+
+                                            <div class="d-flex align-items-center justify-content-between text-white">
+                                                <div>
+                                                    <div>
+                                                        <i class="fa fa-location me-2"></i>
+                                                        Lekki, Lagos
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-house me-2"></i>
+                                                        3 Red Room Cottage
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <span>2<i class="fa fa-video ms-1"></i></span>
+                                                    <span>2<i class="fa fa-image ms-1"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between p-2">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <div class="rounded-circle">
+                                                    <img src="../../../assets/img/lhano_rano.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="fw-semibold">Lharo Rano</div>
+                                                    <div class="small text-muted">Agent</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-lemney">
+                                                    <i class="fa fa-phone"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- History -->
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between my-2">
+                            <div>
+                                <div class="fw-semibold text-uppercase fs-5">History</div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <select name="house-type" id="house-type" class="form-select">
+                                    <option value="type1">Type 1</option>
+                                    <option value="type2">Type 2</option>
+                                    <option value="type3">Type 3</option>
+                                    <option value="type4">Type 4</option>
+                                    <option value="type5">Type 5</option>
+                                </select>
+                                <input type="date" name="date" id="date" class="form-control">
+                                <span>
+                                    <button class="btn btn-lemney">
+                                        <i class="fa fa-filter"></i>
+                                    </button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
     </main>
 
 

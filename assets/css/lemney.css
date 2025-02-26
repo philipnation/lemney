@@ -124,3 +124,20 @@ html, body {
 .font-lemney-secondary {
     font-family: var(--font-lemney-secondary);
 }
+
+/* Borders */
+.border-lemney-primary-1 {
+    border-color: var(--bg-lemney-primary-1) !important;
+}
+
+.border-lemney-primary-2 {
+    border-color: var(--bg-lemney-primary-2) !important;
+}
+
+.border-lemney-secondary-1 {
+    border-color: var(--bg-lemney-secondary-1) !important;
+}
+
+.border-lemney-secondary-2 {
+    border-color: var(--bg-lemney-secondary-2) !important;
+}
