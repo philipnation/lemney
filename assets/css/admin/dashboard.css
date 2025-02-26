@@ -1,7 +1,7 @@
 @import url("../lemney.css");
 
 .sidebar-container {
-    min-width: 240px;
+    min-width: 320px !important;
 }
 
 .sidebar-menu-list .list-group-item {

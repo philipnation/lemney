@@ -25,9 +25,16 @@
     <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <!-- Swiper -->
     <script src="../../../node_modules/swiper/swiper-bundle.min.js" defer></script>
+    <!-- Chart JS -->
+    <script src="../../../node_modules/chart.js/dist/chart.umd.js" defer></script>
+    <!-- Chat Data Labels -->
+    <script src="../../../node_modules/chartjs-plugin-datalabels/dist/chartjs-plugin-datalabels.min.js" defer></script>
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="../../../assets/css/admin/dashboard.css">
+
+    <!-- Custom script -->
+    <script src="../../../assets/js/admin/recent.js" defer></script>
 
 
 </head>
@@ -47,6 +54,26 @@
 
         <!--  -->
         <div class="d-md-flex">
+
+            <!--Sign out Confirmation Modal -->
+            <div class="modal fade" id="signOutConfirmationModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="Confirmation Modal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered mx-auto rounded-3" style="max-width: 360px;">
+                    <div class="modal-content p-3">
+                        <div class="text-center fw-bold">
+                            <p class="mb-4 fw-normal">Are you sure you want to <span
+                                    class="fw-bold text-uppercase">signout</span>?</p>
+
+                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                <button class="btn btn-lemney-primary fw-bold px-5">Yes</button>
+                                <button class="btn btn-lemney-outline-primary fw-bold px-5"
+                                    data-bs-dismiss="modal">No</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
             <!-- Side bar (desktop) -->
             <div class="sidebar-container border-end border-2 py-3 d-none d-md-block">
@@ -113,10 +140,12 @@
 
                 <!--  -->
                 <div class="position-sticky sticky-bottom bg-white border-top border-2 ps-3 py-2">
-                    <button class="btn btn-lemney text-danger">
+                    <button class="btn btn-lemney text-danger" data-bs-toggle="modal"
+                        data-bs-target="#signOutConfirmationModal">
                         <i class="fa fa-sign-out me-2"></i>
                         Logout
                     </button>
+
                 </div>
 
             </div>
@@ -193,6 +222,7 @@
 
                 <!--  -->
                 <div class="p-3">
+
                     <div class="d-flex align-items-center justify-content-between">
                         <!-- Empty div to push Search Bar to the end -->
                         <div>
@@ -223,6 +253,229 @@
                                             class="fa fa-search"></i></label>
                                 </span>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Info Dashboard -->
+                    <div class="row my-3">
+
+                        <!-- Pie Chart -->
+                        <div class="col-md-3">
+                            <div class="p-2 text-center">
+                                <h3>Activities</h3>
+                                <canvas id="myPieChart" width="240" height="240" class="mx-auto"></canvas>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                        <div class="col-md-9">
+                            <div class="p-3 bg-lemney-secondary-2 rounded-3">
+                                <p>These records are by number of fulfilled order once shipped to customer. Record
+                                    cannot be tampered with and are absolute</p>
+
+                                <div>
+
+                                    <!-- Stats -->
+                                    <div class="row">
+
+                                        <!-- Numbers -->
+                                        <div class="col-md-6">
+                                            <div class="d-flex align-items-stretch justify-content-evenly gap-2">
+                                                <div class="rounded-2 p-2 text-white"
+                                                    style="background-color: #4E2708;">
+                                                    <div class="lead display-6 fw-semibold">158</div>
+                                                    <div>Honey Orders</div>
+                                                </div>
+                                                <div class="rounded-2 p-2 text-white"
+                                                    style="background-color: #F68F18;">
+                                                    <div class="lead display-6 fw-semibold">75</div>
+                                                    <div>Logistics</div>
+                                                </div>
+                                                <div class="rounded-2 p-2 text-white" style="background-color: #FFBF00">
+                                                    <div class="lead display-6 fw-semibold">54</div>
+                                                    <div>Home Services</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bar Chart -->
+                                        <div class="col-md-6">
+
+                                            <div class="p-2 text-center">
+                                                <canvas id="myBarChart" height="160" class="mx-auto"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- History -->
+                    <div>
+
+                        <!-- Title -->
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div>
+                                <h3 class="fs-4">History</h3>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <!-- Duration -->
+                                <select name="duration" id="duration" class="form-select">
+                                    <option value="duration1">Duration1</option>
+                                    <option value="duration2">Duration2</option>
+                                    <option value="duration3">Duration3</option>
+                                    <option value="duration4">Duration4</option>
+                                    <option value="duration5">Duration5</option>
+                                </select>
+                                <!-- Order Type -->
+                                <select name="order-type" id="order-type" class="form-select">
+                                    <option value="type1">Type 1</option>
+                                    <option value="type2">Type 2</option>
+                                    <option value="type3">Type 3</option>
+                                    <option value="type4">Type 4</option>
+                                    <option value="type5">Type 5</option>
+                                </select>
+                                <!-- Filter -->
+                                <button class="btn btn-lemney">
+                                    <i class="fa fa-filter"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div>
+
+                            <!-- 1 -->
+                            <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+
+                                <!--  -->
+                                <div class="d-flex align-items-sm-center justify-content-between py-3">
+                                    <div>
+                                        <span
+                                            class="border bg-lemney-secondary-2 text-lemney-primary fw-semibold px-3 py-2 rounded-4 small user-select-none">
+                                            <span class="me-2">
+                                                <svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.6708 6.1999L9.35693 1.3999L1.04309 6.1999V15.7999L9.35693 20.5999M17.6708 6.1999L9.35693 11.5999M17.6708 6.1999V10.9999M9.35693 20.5999V11.5999M9.35693 20.5999L11.1564 19.561M9.35693 11.5999L1.55693 6.7999M12.9569 8.5999L5.15693 3.7999M14.1569 16.9999L15.3569 18.1999L18.9569 14.5999"
+                                                        stroke="black" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            Delivered
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Order Information -->
+                                <div class="bg-white p-3 rounded-4">
+                                    <div class="py-2 d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <div><b>Order Date: </b>11-11-2024</div>
+                                            <div><b>Order Number: </b>L-NG1111241A</div>
+                                            <div><b>Payment Method: </b><span>Transfer</span></div>
+                                        </div>
+                                        <div>
+                                            <div><b>Recipient Name: </b>Mr. Silas</div>
+                                            <div><b>Call Line: </b>+234 803 567 4532</div>
+                                            <div><b>Address: </b><span>No. 1 Salem Street</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- Order Details -->
+                                    <div class="py-2 d-flex align-content-center justify-content-between gap-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="../../../assets/img/salon_styled_hair.png" alt=""
+                                                class="img-fluid">
+                                            <div class="ps-1">
+                                                <b>Home Service</b> <br>
+                                                <span>House Cleaning</span>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="d-flex flex-column flex-md-row align-items-md-center justify-content-between text-end text-md-center gap-2 flex-grow-1">
+                                            <div>
+                                                <b>Schedule</b><br>
+                                                <span>Saturday, 11 Nov. 2024 9:00 am</span>
+                                            </div>
+                                            <div>
+                                                <b>Cost</b><br>
+                                                <span class="text-uppercase">NaN</span>
+                                            </div>
+                                            <div>
+                                                <b>Service Location</b><br>
+                                                <span>GetStyled Krib, Enugu</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 2 -->
+                            <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+
+                                <!--  -->
+                                <div class="d-flex align-items-sm-center justify-content-between py-3">
+                                    <div>
+                                        <span
+                                            class="border bg-lemney-secondary-2 text-lemney-primary fw-semibold px-3 py-2 rounded-4 small user-select-none">
+                                            <span class="me-2">
+                                                <svg width="20" height="22" viewBox="0 0 20 22" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M17.6708 6.1999L9.35693 1.3999L1.04309 6.1999V15.7999L9.35693 20.5999M17.6708 6.1999L9.35693 11.5999M17.6708 6.1999V10.9999M9.35693 20.5999V11.5999M9.35693 20.5999L11.1564 19.561M9.35693 11.5999L1.55693 6.7999M12.9569 8.5999L5.15693 3.7999M14.1569 16.9999L15.3569 18.1999L18.9569 14.5999"
+                                                        stroke="black" stroke-width="2" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            Completed
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Order Information -->
+                                <div class="bg-white p-3 rounded-4">
+                                    <div class="py-2 d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <div><b>Order Date: </b>11-11-2024</div>
+                                            <div><b>Order Number: </b>L-NG1111241A</div>
+                                            <div><b>Payment Method: </b><span>Transfer</span></div>
+                                        </div>
+                                        <div>
+                                            <div><b>Recipient Name: </b>Mr. Silas</div>
+                                            <div><b>Call Line: </b>+234 803 567 4532</div>
+                                            <div><b>Address: </b><span>No. 1 Salem Street</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- Order Details -->
+                                    <div class="py-2 d-flex align-content-center justify-content-between gap-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="../../../assets/img/salon_styled_hair.png" alt=""
+                                                class="img-fluid">
+                                            <div class="ps-1">
+                                                <b>Home Service</b> <br>
+                                                <span>House Cleaning</span>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="d-flex flex-column flex-md-row align-items-md-center justify-content-between text-end text-md-center gap-2 flex-grow-1">
+                                            <div>
+                                                <b>Schedule</b><br>
+                                                <span>Saturday, 11 Nov. 2024 9:00 am</span>
+                                            </div>
+                                            <div>
+                                                <b>Cost</b><br>
+                                                <span class="text-uppercase">NaN</span>
+                                            </div>
+                                            <div>
+                                                <b>Service Location</b><br>
+                                                <span>GetStyled Krib, Enugu</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
