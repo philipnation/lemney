@@ -84,6 +84,20 @@ html, body {
     color: white;
 }
 
+.btn-lemney-review-star:hover,
+.btn-lemney-review-star:focus,
+.btn-lemney-review-star:active,
+.btn-lemney-review-star {
+    color: #D9D9D9 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+
+.btn-lemney-review-star.active {
+    color: var(--bg-lemney-primary-1) !important;
+}
+
 /* -----------------
     Custom Classes
   ------------------ */

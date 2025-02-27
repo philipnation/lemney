@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved House - Account Management | Lemney Logistics</title>
+
+    <link rel="shortcut icon" href="../../assets/img/logo.png" type="image/x-icon">
+
+    <!-- Styles -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css">
+
+    <!-- Scripts -->
+
+    <!-- JQuery -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js" defer></script>
+    <!-- Bootstrap -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Swiper -->
+    <script src="../../node_modules/swiper/swiper-bundle.min.js" defer></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../../assets/css/account_management/account_management.css">
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- NavBar -->
+        <nav
+            class="lemney-navbar bg-lemney-primary-gradient navbar navbar-dark navbar-expand-lg px-4 px-md-5 py-3 shadow-sm">
+            <div class="container-fluid d-flex justify-content-between px-0">
+                <!-- Brand -->
+                <a class="navbar-brand text-start d-flex align-items-center" href="#">
+                    <img src="../../assets/img/logo.png" alt="Lemney Brand Logo" class="img-fluid" width="48">
+                </a>
+                <div class="order-md-last d-flex align-items-center justify-content-center">
+                    <!-- NavBar icons -->
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <button type="button" class="btn"><i class="fa fa-search text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-shopping-cart text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-user text-white"></i></button>
+                    </div>
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- NavBar menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-xl-3">
+                        <!-- Honey Order -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Honey Order</a>
+                        </li>
+                        <!-- Logistics -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./logistics.html">Logistics</a>
+                        </li>
+                        <!-- Home Service -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Home Service
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="">Honey Sale</a></li>
+                                <li><a class="dropdown-item" href="./logistics.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="./home_service.html">Home Service</a></li>
+                                <li><a class="dropdown-item" href="">Consultancy</a></li>
+                            </ul>
+                        </li>
+                        <!-- Housing -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Housing</a>
+                        </li>
+                        <!-- Support -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Support
+                            </a>
+                            <ul class="dropdown-menu shadow dropdown-menu-end bg-lemney-primary-2">
+                                <li><a class="dropdown-item" href="#">Track Order</a></li>
+                                <li><a class="dropdown-item" href="#">Shipping and Delivery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <main>
+
+        <!-- Breadcrumbs -->
+        <div class="d-flex align-items-center px-4 px-md-5 bg-lemney-primary-1">
+
+            <!-- Toggle (mobile) sidebar -->
+            <a class="btn px-0 me-3 d-md-none border-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                role="button" aria-controls="offcanvasExample">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="py-3" style="--bs-breadcrumb-divider: '⋙';" aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold my-0">
+                    <li class="breadcrumb-item"><a href="#" class="link">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Saved House</li>
+                </ol>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="d-md-flex ps-md-4">
+
+            <!-- Side bar -->
+            <div class="border-end px-4 py-3 d-none d-md-block">
+                <h5 class="my-2">Account Management</h5>
+                <ul class="list-unstyled text-muted">
+                    <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
+                    <li class="py-1"><a href="./personal_info.html" class="link">Personal Information</a></li>
+                    <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
+                    <li class="py-1"><a href="./product_review.html" class="link">Product Review</a>
+                    </li>
+                    <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                    <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
+                    <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
+                    <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
+                    <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
+                    <li class="py-1"><a href="./house_listing.html" class="link">House Listing</a></li>
+                    <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a></li>
+                    <li class="py-1"><a href="./saved_house.html" class="link active">Saved House</a></li>
+                </ul>
+            </div>
+
+            <!-- Side bar (mobile) -->
+            <div class="px-4 px-md-5 d-md-none">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header py-2">
+                        <h5 class="offcanvas-title my-2" id="offcanvasExampleLabel">Account Management</h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body py-0 my-0">
+                        <div>
+                            <ul class="list-unstyled text-muted">
+                                <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
+                                <li class="py-1"><a href="./personal_info.html" class="link">Personal Information</a>
+                                </li>
+                                <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
+                                <li class="py-1"><a href="./product_review.html" class="link">Product
+                                        Review</a></li>
+                                <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                                <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
+                                <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a>
+                                </li>
+                                <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
+                                <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
+                                <li class="py-1"><a href="./house_listing.html" class="link">House Listing</a></li>
+                                <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a>
+                                </li>
+                                <li class="py-1"><a href="./saved_house.html" class="link active">Saved House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="flex-grow-1">
+
+                <!-- House Listings -->
+                <div>
+
+                    <!-- House Listing 1 -->
+                    <div class="col-md-3 py-2 py-md-3">
+                        <div>
+                            <!-- Card -->
+                            <div class="card border shadow-sm">
+                                <div class="position-relative rounded-top">
+                                    <img src="../assets/img/card_img_overlay_room.png" class="card-img-top"
+                                        alt="Traditional Apartment">
+
+                                    <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
+                                        style="background-color: rgba(0, 0, 0, 0.6);">
+
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <div class="bg-dark text-bg-dark p-2">
+                                                    <span>Traditional Apartment</span>
+                                                    <br>
+                                                    <span class="fw-semibold">NGN 38 Million</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="bg-lemney-primary-2 text-bg-dark p-2">
+                                                    For sale
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-between text-white">
+                                            <div>
+                                                <div>
+                                                    <i class="fa fa-location me-2"></i>
+                                                    Lekki, Lagos
+                                                </div>
+                                                <div>
+                                                    <i class="fa fa-house me-2"></i>
+                                                    3 Red Room Cottage
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span>2<i class="fa fa-video ms-1"></i></span>
+                                                <span>2<i class="fa fa-image ms-1"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center justify-content-between p-2">
+                                        <div class="d-flex align-items-center gap-1">
+                                            <div class="rounded-circle">
+                                                <img src="../../../assets/img/lhano_rano.png" alt="">
+                                            </div>
+                                            <div>
+                                                <div class="fw-semibold">Lharo Rano</div>
+                                                <div class="small text-muted">Agent</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-lemney">
+                                                <i class="fa fa-phone"></i>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+
+        <div class="container-fluid py-3">
+
+            <!-- Social media handles -->
+            <div class="my-3">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook-f"></i>
+                <span>lemney_ltf | lemney.com ltd.</span>
+            </div>
+
+            <!-- Logo -->
+            <div class="my-3">
+                <img src="../../assets/img/logo.png" alt="" height="48">
+            </div>
+
+            <!-- Footer information and details -->
+            <div class="my-3">
+
+                <div class="row">
+
+                    <!-- Contact Information -->
+                    <div class="col-md-3 my-3">
+                        <h5>Contact Information</h5>
+
+                        <!-- Service hours -->
+                        <div class="my-2">
+                            <h6>Service Hours</h6>
+                            <div>Monday to Friday 9 to 6pm</div>
+                        </div>
+
+                        <!-- Phone number -->
+                        <div class="my-2">
+                            <h6>Phone Number</h6>
+                            <div>+234 911 919 4182</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="my-2">
+                            <h6>Email</h6>
+                            <div>customercare@lennygroup.com</div>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-md-3 my-3">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Honey Sale</a></li>
+                            <li><a href="" class="link">Logistics</a></li>
+                            <li><a href="" class="link">Home Service</a></li>
+                            <li><a href="" class="link">Consultancy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Policy -->
+                    <div class="col-md-3 my-3">
+                        <h5>Policy</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">FAQ</a></li>
+                            <li><a href="" class="link">Terms and Condition</a></li>
+                            <li><a href="" class="link">Privacy Policy</a></li>
+                            <li><a href="" class="link">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Get Help -->
+                    <div class="col-md-3 my-3">
+                        <h5>Get Help</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Track Order</a></li>
+                            <li><a href="" class="link">Shipping and Delivery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
