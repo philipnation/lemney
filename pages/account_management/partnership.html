@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saved Submission - Account Management | Lemney Logistics</title>
+    <title>House Listing - Account Management | Lemney Logistics</title>
 
     <link rel="shortcut icon" href="../../assets/img/logo.png" type="image/x-icon">
 
@@ -118,7 +118,7 @@
             <div class="py-3" style="--bs-breadcrumb-divider: '⋙';" aria-label="breadcrumb">
                 <ol class="breadcrumb fw-bold my-0">
                     <li class="breadcrumb-item"><a href="#" class="link">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Saved Submission</li>
+                    <li class="breadcrumb-item active" aria-current="page">Partnership</li>
                 </ol>
             </div>
         </div>
@@ -139,9 +139,9 @@
                     <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
                     <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
                     <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
-                    <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
+                    <li class="py-1"><a href="./partnership.html" class="link active">Partnership</a></li>
                     <li class="py-1"><a href="./house_listing.html" class="link">House Listing</a></li>
-                    <li class="py-1"><a href="./saved_submission.html" class="link active">Saved Submission</a></li>
+                    <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a></li>
                     <li class="py-1"><a href="./saved_house.html" class="link">Saved House</a></li>
                 </ul>
             </div>
@@ -166,11 +166,12 @@
                                         Review</a></li>
                                 <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
                                 <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
-                                <li class="py-1"><a href="./booked_service.html" class="link active">Booked Service</a>
+                                <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a>
                                 </li>
                                 <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
-                                <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
-                                <li class="py-1"><a href="./house_listing.html" class="link">House Listing</a></li>
+                                <li class="py-1"><a href="./partnership.html" class="link active">Partnership</a></li>
+                                <li class="py-1"><a href="./house_listing.html" class="link active">House Listing</a>
+                                </li>
                                 <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a>
                                 </li>
                                 <li class="py-1"><a href="./saved_house.html" class="link">Saved House</a></li>
@@ -187,19 +188,165 @@
                 <div class="px-3">
 
                     <!--  -->
-                    <p>
-                        Your Submissions will be pending until approved to proceed working with us. All house listing
-                        will be scrutinised before approval on the site. So sit back and relax. We've got you covered.
+                    <p class="pt-3 fw-semibold">
+                        Your Submissions will be pending until approved to proceed working with us. You can apply to
+                        work in our preferred location or register your business as we will help you organise your
+                        scheduling through our partnerships
                     </p>
 
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
 
                         <div class="row">
 
-                            <!-- Property Description -->
-                            <div class="col-md-6">
-                                <label for="description">Property Description</label>
-                                <input type="text" name="description" id="description">
+                            <!-- Surname -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="surname" class="form-label fw-semibold">Surname</label>
+                                <input type="text" name="surname" id="surname" class="form-control">
+                            </div>
+
+                            <!-- First Name -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="firstname" class="form-label fw-semibold">Listing Type</label>
+                                <input type="text" name="firstname" id="firstname" class="form-control">
+                            </div>
+
+                            <!-- Middle Name -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="middlename" class="form-label fw-semibold">Middle Name</label>
+                                <input type="text" name="middlename" id="middlename" class="form-control">
+                            </div>
+
+                            <!-- Business Name/Name -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="business-name" class="form-label fw-semibold">Business Name</label>
+                                <input type="text" name="business-name" id="business-name" class="form-control">
+                            </div>
+
+                            <!-- Business Type -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="business-type" class="form-label fw-semibold">Business Type</label>
+                                <select name="business-type" id="business-type" class="form-select">
+                                    <option value="" disabled selected>Property Condition</option>
+                                    <option value="dry-cleaning">Dry Cleaning</option>
+                                    <option value="salon">Salon</option>
+                                </select>
+                            </div>
+
+                            <!-- Business Address -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="business-address" class="form-label fw-semibold">Business Address</label>
+                                <input type="text" name="business-address" id="business-address" class="form-control">
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="col-md-4 my-2">
+                                <label for="phone-no" class="form-label fw-semibold">Phone Number</label>
+                                <input type="text" name="phone-no" id="phone-no" class="form-control">
+                            </div>
+
+
+                            <!-- Years of Experience -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="years-of-experience" class="form-label fw-semibold">Years of
+                                    Experience</label>
+                                <select name="years-of-experience" id="years-of-experience" class="form-select">
+                                    <option value="" disabled selected>Years of Experience</option>
+                                    <option value="less-1">Less than A Year</option>
+                                    <option value="1-to-3">One to Three Years</option>
+                                    <option value="3-to-5">Three to Five Years</option>
+                                    <option value="more-5">More than five Years</option>
+                                </select>
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="email" class="form-label fw-semibold">Email Address</label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+
+                            <!-- Working Days -->
+                            <div class="col-6 col-md-3 my-2">
+                                <label for="working-days" class="form-label fw-semibold">Working Days</label>
+                                <select name="working-days" id="working-days" class="form-select" multiple>
+                                    <option value="" disabled selected>Working Days</option>
+                                    <option value="monday">Monday</option>
+                                    <option value="tuesday">Tuesday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="thursday">Thursday</option>
+                                    <option value="friday">Friday</option>
+                                    <option value="saturday">Saturday</option>
+                                    <option value="sunday">Sunday</option>
+                                </select>
+                            </div>
+
+                            <!-- Preferred Working Location -->
+                            <div class="col-6 col-md-3 my-2">
+                                <label for="preferred-working-location" class="form-label fw-semibold">Preferred Working
+                                    Location</label>
+                                <input type="text" name="preferred-working-location" id="preferred-working-location"
+                                    class="form-control">
+                            </div>
+
+                            <!-- State -->
+                            <div class="col-6 col-md-3 my-2">
+                                <label for="state" class="form-label fw-semibold">State</label>
+                                <input type="text" name="state" id="state" class="form-control">
+                            </div>
+
+                            <!-- L.G.A -->
+                            <div class="col-6 col-md-3 my-2">
+                                <label for="lga" class="form-label fw-semibold">L.G.A</label>
+                                <input type="text" name="lga" id="lga" class="form-control">
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div class="my-2">
+                                <label for="additional-information" class="form-label fw-semibold">Additional
+                                    Information</label>
+                                <textarea name="additional-information" id="additional-information"
+                                    class="form-control"></textarea>
+                            </div>
+
+                            <!-- Attach Relevant Work Documents -->
+                            <div class="col-12 my-2">
+                                <label for="house-images" class="form-label fw-semibold">Attach Relevant Work documents
+                                    (2 Min)</label>
+                                <p class="text-muted small">Your submissions can a business portfolio, skill acquisition
+                                    certificate, client testimonial, job images, awards etc.</p>
+                                <input type="file" name="house-images" id="house-images" class="form-control" multiple>
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between my-3" (2 min)>
+                            <button type="submit" formaction="/save-for-later"
+                                class="btn btn-lemney-outline-primary text-uppercase">Save for
+                                Later</button>
+                            <button type="button" class="btn btn-lemney-primary text-uppercase" data-bs-toggle="modal"
+                                data-bs-target="#partnershipSubmissionConfirmationModal">Submit Now</button>
+
+                            <!-- Partnership Submission Confirmation Modal -->
+                            <div class="modal fade" id="partnershipSubmissionConfirmationModal"
+                                data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="Listing Submission Confirmation Modal" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered mx-auto rounded-3"
+                                    style="max-width: 360px;">
+                                    <div class="modal-content p-3">
+                                        <div class="text-center fw-bold">
+                                            <p class="mb-4">Are you sure you want to <span
+                                                    class="fw-bold">Submit</span>?</p>
+
+                                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                                <button type="submit"
+                                                    class="btn btn-lemney-primary fw-bold px-5">Yes</button>
+                                                <button type="button"
+                                                    class="btn btn-lemney-outline-primary fw-bold px-5"
+                                                    data-bs-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
