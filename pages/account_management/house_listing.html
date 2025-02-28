@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Listing - Account Management | Lemney Logistics</title>
+
+    <link rel="shortcut icon" href="../../assets/img/logo.png" type="image/x-icon">
+
+    <!-- Styles -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css">
+
+    <!-- Scripts -->
+
+    <!-- JQuery -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js" defer></script>
+    <!-- Bootstrap -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Swiper -->
+    <script src="../../node_modules/swiper/swiper-bundle.min.js" defer></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../../assets/css/account_management/account_management.css">
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- NavBar -->
+        <nav
+            class="lemney-navbar bg-lemney-primary-gradient navbar navbar-dark navbar-expand-lg px-4 px-md-5 py-3 shadow-sm">
+            <div class="container-fluid d-flex justify-content-between px-0">
+                <!-- Brand -->
+                <a class="navbar-brand text-start d-flex align-items-center" href="#">
+                    <img src="../../assets/img/logo.png" alt="Lemney Brand Logo" class="img-fluid" width="48">
+                </a>
+                <div class="order-md-last d-flex align-items-center justify-content-center">
+                    <!-- NavBar icons -->
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <button type="button" class="btn"><i class="fa fa-search text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-shopping-cart text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-user text-white"></i></button>
+                    </div>
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- NavBar menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-xl-3">
+                        <!-- Honey Order -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Honey Order</a>
+                        </li>
+                        <!-- Logistics -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./logistics.html">Logistics</a>
+                        </li>
+                        <!-- Home Service -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Home Service
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="">Honey Sale</a></li>
+                                <li><a class="dropdown-item" href="./logistics.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="./home_service.html">Home Service</a></li>
+                                <li><a class="dropdown-item" href="">Consultancy</a></li>
+                            </ul>
+                        </li>
+                        <!-- Housing -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Housing</a>
+                        </li>
+                        <!-- Support -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Support
+                            </a>
+                            <ul class="dropdown-menu shadow dropdown-menu-end bg-lemney-primary-2">
+                                <li><a class="dropdown-item" href="#">Track Order</a></li>
+                                <li><a class="dropdown-item" href="#">Shipping and Delivery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <main>
+
+        <!-- Breadcrumbs -->
+        <div class="d-flex align-items-center px-4 px-md-5 bg-lemney-primary-1">
+
+            <!-- Toggle (mobile) sidebar -->
+            <a class="btn px-0 me-3 d-md-none border-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                role="button" aria-controls="offcanvasExample">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="py-3" style="--bs-breadcrumb-divider: '⋙';" aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold my-0">
+                    <li class="breadcrumb-item"><a href="#" class="link">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">House Listing</li>
+                </ol>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="d-md-flex ps-md-4">
+
+            <!-- Side bar -->
+            <div class="account-management-sidebar border-end px-4 py-3 d-none d-md-block">
+                <h5 class="my-2">Account Management</h5>
+                <ul class="list-unstyled text-muted">
+                    <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
+                    <li class="py-1"><a href="./personal_info.html" class="link">Personal Information</a></li>
+                    <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
+                    <li class="py-1"><a href="./product_review.html" class="link">Product Review</a>
+                    </li>
+                    <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                    <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
+                    <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
+                    <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
+                    <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
+                    <li class="py-1"><a href="./house_listing.html" class="link active">House Listing</a></li>
+                    <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a></li>
+                    <li class="py-1"><a href="./saved_house.html" class="link">Saved House</a></li>
+                </ul>
+            </div>
+
+            <!-- Side bar (mobile) -->
+            <div class="px-4 px-md-5 d-md-none">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header py-2">
+                        <h5 class="offcanvas-title my-2" id="offcanvasExampleLabel">Account Management</h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body py-0 my-0">
+                        <div>
+                            <ul class="list-unstyled text-muted">
+                                <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
+                                <li class="py-1"><a href="./personal_info.html" class="link">Personal Information</a>
+                                </li>
+                                <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
+                                <li class="py-1"><a href="./product_review.html" class="link">Product
+                                        Review</a></li>
+                                <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                                <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
+                                <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a>
+                                </li>
+                                <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
+                                <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
+                                <li class="py-1"><a href="./house_listing.html" class="link active">House Listing</a>
+                                </li>
+                                <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a>
+                                </li>
+                                <li class="py-1"><a href="./saved_house.html" class="link">Saved House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="flex-grow-1">
+
+                <!--  -->
+                <div class="px-3">
+
+                    <!--  -->
+                    <p class="py-3">
+                        Your Submissions will be pending until approved to proceed working with us. All house listing
+                        will be scrutinised before approval on the site. So sit back and relax. We've got you covered.
+                    </p>
+
+                    <form action="" method="post" enctype="multipart/form-data">
+
+                        <div class="row">
+
+                            <!-- Property Description -->
+                            <div class="col-md-4 my-2">
+                                <label for="description" class="form-label fw-semibold">Property Description</label>
+                                <input type="text" name="description" id="description" class="form-control">
+                            </div>
+
+                            <!-- Listing Type -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="listing-type" class="form-label fw-semibold">Listing Type</label>
+                                <select name="listing-type" id="listing-type" class="form-select">
+                                    <option value="" disabled selected>Listing Type</option>
+                                    <option value="rent">Rent</option>
+                                    <option value="sale">Sale</option>
+                                </select>
+                            </div>
+
+                            <!-- Property Name -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="property-name" class="form-label fw-semibold">Property Name</label>
+                                <input type="text" name="property-name" id="property-name" class="form-control">
+                            </div>
+
+                            <!-- Property Type -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="property-type" class="form-label fw-semibold">Property Type</label>
+                                <select name="property-type" id="property-type" class="form-select">
+                                    <option value="" disabled selected>Listing Type</option>
+                                    <option value="bedroom-flat">Bedroom Flat</option>
+                                    <option value="self-contain">Self Contain</option>
+                                    <option value="single-room">Single Room</option>
+                                </select>
+                            </div>
+
+                            <!-- Property Condition -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="property-condition" class="form-label fw-semibold">Property
+                                    Condition</label>
+                                <select name="property-condition" id="property-condition" class="form-select">
+                                    <option value="" disabled selected>Property Condition</option>
+                                    <option value="newly-built">Newly Built</option>
+                                    <option value="existing">Existing</option>
+                                </select>
+                            </div>
+
+                            <!-- House Age -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="house-age" class="form-label fw-semibold">House Age</label>
+                                <input type="text" name="house-age" id="house-age" class="form-control">
+                            </div>
+
+                            <!-- Size -->
+                            <div class="col-6 col-md-3 my-2">
+                                <label for="size" class="form-label fw-semibold">Size (Square Footage)</label>
+                                <input type="text" name="size" id="size" class="form-control">
+                            </div>
+
+                            <!-- Listing Price -->
+                            <div class="col-6 col-md-3 my-2">
+                                <label for="price" class="form-label fw-semibold">Listing Price</label>
+                                <input type="text" name="price" id="price" class="form-control">
+                            </div>
+
+                            <!-- No. of Bedrooms -->
+                            <div class="col-6 col-md-3 my-2">
+                                <label for="no-of-bedrooms" class="form-label fw-semibold">No. of Bedrooms</label>
+                                <input type="text" name="no-of-bedrooms" id="no-of-bedrooms" class="form-control">
+                            </div>
+
+                            <!-- No. of Bathrooms -->
+                            <div class="col-6 col-md-3 my-2">
+                                <label for="no-of-bathrooms" class="form-label fw-semibold">No. of Bathrooms</label>
+                                <input type="text" name="no-of-bathrooms" id="no-of-bathrooms" class="form-control">
+                            </div>
+
+                            <!-- Parking Space -->
+                            <div class="col-6 col-md-4 my-2">
+                                <div class="form-label fw-semibold">Parking Space</div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div>
+                                        <input type="radio" name="parking-space" id="parking-space-yes">
+                                        <label for="parking-space-yes" class="form-label">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="parking-space" id="parking-space-no">
+                                        <label for="parking-space-no" class="form-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Furnishing -->
+                            <div class="col-6 col-md-4 my-2">
+                                <div class="form-label fw-semibold">Furnishing</div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div>
+                                        <input type="radio" name="furnishing" id="furnishing-yes">
+                                        <label for="furnishing-yes" class="form-label">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="furnishing" id="furnishing-no">
+                                        <label for="furnishing-no" class="form-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Negotiable -->
+                            <div class="col-6 col-md-4 my-2">
+                                <div class="form-label fw-semibold">Negotiable</div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div>
+                                        <input type="radio" name="negotiable" id="negotiable-yes">
+                                        <label for="negotiable-yes" class="form-label">Yes</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="negotiable" id="negotiable-no">
+                                        <label for="negotiable-no" class="form-label">No</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Description -->
+                            <div class="col-md-6 my-2">
+                                <label for="additional-description" class="form-label fw-semibold">Additional
+                                    Description</label>
+                                <textarea name="additional-description" id="additional-description"
+                                    class="form-control"></textarea>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="col-md-6 my-2">
+
+                                <div>
+                                    <label for="location" class="form-label fw-semibold">Location</label>
+                                    <input type="text" name="location" id="location" class="form-control">
+                                </div>
+
+                                <div class="row">
+
+                                    <!-- L.G.A -->
+                                    <div class="col-6 my-2">
+                                        <label for="lga" class="form-label fw-semibold">L.G.A</label>
+                                        <input type="text" name="lga" id="lga" class="form-control">
+                                    </div>
+
+                                    <!-- State -->
+                                    <div class="col-6 my-2">
+                                        <label for="state" class="form-label fw-semibold">State</label>
+                                        <input type="text" name="state" id="state" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Name -->
+                            <div class="col-md-4 my-2">
+                                <label for="contact-name" class="form-label fw-semibold">Contact Name</label>
+                                <input type="text" name="contact-name" id="contact-name" class="form-control">
+                            </div>
+
+                            <!-- Contact Role -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="contact-role" class="form-label fw-semibold">Contact Role</label>
+                                <select name="contact-role" id="contact-role" class="form-select">
+                                    <option value="" disable selected>Contact Role</option>
+                                    <option value="agent">Agent</option>
+                                    <option value="owner">Owner</option>
+                                </select>
+                            </div>
+
+                            <!-- Contact Phone Number -->
+                            <div class="col-6 col-md-4 my-2">
+                                <label for="contact-phone" class="form-label fw-semibold">Contact Phone Number</label>
+                                <input type="text" name="contact-phone" id="contact-phone" class="form-control">
+                            </div>
+
+                            <!-- Profile Image -->
+                            <div class="col-12 my-2">
+                                <label for="profile-image" class="form-label fw-semibold">Profile Image</label>
+                                <input type="file" name="profile-image" id="profile-image" class="form-control">
+                            </div>
+
+                            <!-- Attach House Images -->
+                            <div class="col-12 my-2">
+                                <label for="house-images" class="form-label fw-semibold">Attach House Images</label>
+                                <p class="text-muted small">Your submissions can include videos to improve listing
+                                    credibility</p>
+                                <input type="file" name="house-images" id="house-images" class="form-control" multiple>
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between my-3">
+                            <button type="submit" formaction="/save-for-later"
+                                class="btn btn-lemney-outline-primary text-uppercase">Save for
+                                Later</button>
+                            <button type="button" class="btn btn-lemney-primary text-uppercase" data-bs-toggle="modal"
+                                data-bs-target="#listingSubmissionConfirmationModal">Submit Now</button>
+
+                            <!-- Listing Submission Confirmation Modal -->
+                            <div class="modal fade" id="listingSubmissionConfirmationModal" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="Listing Submission Confirmation Modal" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered mx-auto rounded-3"
+                                    style="max-width: 360px;">
+                                    <div class="modal-content p-3">
+                                        <div class="text-center fw-bold">
+                                            <p class="mb-4">Are you sure you want to <span
+                                                    class="fw-bold">Submit</span>?</p>
+
+                                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                                <button type="submit"
+                                                    class="btn btn-lemney-primary fw-bold px-5">Yes</button>
+                                                <button type="button"
+                                                    class="btn btn-lemney-outline-primary fw-bold px-5"
+                                                    data-bs-dismiss="modal">No</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+
+        <div class="container-fluid py-3">
+
+            <!-- Social media handles -->
+            <div class="my-3">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook-f"></i>
+                <span>lemney_ltf | lemney.com ltd.</span>
+            </div>
+
+            <!-- Logo -->
+            <div class="my-3">
+                <img src="../../assets/img/logo.png" alt="" height="48">
+            </div>
+
+            <!-- Footer information and details -->
+            <div class="my-3">
+
+                <div class="row">
+
+                    <!-- Contact Information -->
+                    <div class="col-md-3 my-3">
+                        <h5>Contact Information</h5>
+
+                        <!-- Service hours -->
+                        <div class="my-2">
+                            <h6>Service Hours</h6>
+                            <div>Monday to Friday 9 to 6pm</div>
+                        </div>
+
+                        <!-- Phone number -->
+                        <div class="my-2">
+                            <h6>Phone Number</h6>
+                            <div>+234 911 919 4182</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="my-2">
+                            <h6>Email</h6>
+                            <div>customercare@lennygroup.com</div>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-md-3 my-3">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Honey Sale</a></li>
+                            <li><a href="" class="link">Logistics</a></li>
+                            <li><a href="" class="link">Home Service</a></li>
+                            <li><a href="" class="link">Consultancy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Policy -->
+                    <div class="col-md-3 my-3">
+                        <h5>Policy</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">FAQ</a></li>
+                            <li><a href="" class="link">Terms and Condition</a></li>
+                            <li><a href="" class="link">Privacy Policy</a></li>
+                            <li><a href="" class="link">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Get Help -->
+                    <div class="col-md-3 my-3">
+                        <h5>Get Help</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Track Order</a></li>
+                            <li><a href="" class="link">Shipping and Delivery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>

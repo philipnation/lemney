@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Lemney Logistics</title>
+    <title>Create an Account | Lemney Logistics</title>
 
     <link rel="shortcut icon" href="../assets/img/logo.png" type="image/x-icon">
 
@@ -107,7 +107,7 @@
     <main>
 
         <div class="container-fluid bg-lemney-primary-gradient text-white py-5">
-            <h2 class="text-uppercase text-center my-3 fw-bold">Login to Your Lemney Account</h2>
+            <h2 class="text-uppercase text-center my-3 fw-bold">Create Your Lemney Account</h2>
 
             <div class="login-form-container">
 
@@ -115,6 +115,22 @@
                 <div class="login-form bg-white text-dark rounded-4 mx-auto px-3 px-md-4 py-4 mt-4"
                     style="max-width: 480px;">
                     <form action="javascript:void()" method="post">
+
+                        <!-- Name - Surname and First Name -->
+                        <div class="row">
+
+                            <!-- Surname -->
+                            <div class="col-md-6 form-field mb-3">
+                                <label for="surname" class="form-label">Surname</label>
+                                <input type="text" name="surname" id="surname" class="form-control">
+                            </div>
+
+                            <!-- First Name -->
+                            <div class="col-md-6 form-field mb-3">
+                                <label for="firstname" class="form-label">Firstname</label>
+                                <input type="text" name="firstname" id="firstname" class="form-control">
+                            </div>
+                        </div>
 
                         <!-- Email address -->
                         <div class="form-field mb-3">
@@ -128,31 +144,40 @@
                             <input type="password" class="form-control" name="password" id="password">
                         </div>
 
-                        <!-- Remember Me section -->
-                        <div class="form-field mb-3 d-flex align-items-center justify-content-between">
-                            <div>
-                                <input type="checkbox" name="remember-me" id="remember-me">
-                                <label for="remember-me">Remember Me</label>
+                        <!-- Confirm Password -->
+                        <div class="form-field mb-3">
+                            <label for="password-confirmation" class="form-label">Confirm Password</label>
+                            <input type="password-confirmation" class="form-control" name="password-confirmation"
+                                id="password-confirmation">
+                        </div>
+
+
+                        <!-- Agree to Terms and Condition Section -->
+                        <div class="form-field mb-3 d-flex align-items-center justify-content-center">
+                            <div class="d-flex align-items-center gap-2">
+                                <input type="checkbox" name="agree" id="agree" class="form-check">
+                                <label for="agree" class="form-label mb-0">
+                                    I have agreed to <a href="" class="link fw-semibold">Terms and Conditions</a>
+                                </label>
                             </div>
-                            <div><a href="./forgot_password.html" class="link">Forgot Password?</a></div>
                         </div>
 
 
                         <!-- Submit Button -->
                         <div>
                             <button type="submit"
-                                class="btn btn-block d-block w-100 bg-lemney-primary-2 text-white text-uppercase py-2 my-3">Sign
-                                In
+                                class="btn btn-block d-block w-100 bg-lemney-primary-2 text-white text-uppercase py-2 my-3 fw-semibold">
+                                Create Account
                             </button>
                             <button type="button"
                                 class="btn btn-block d-block w-100 btn-lemney-outline-primary py-2 my-3">
                                 <img src="../assets/img/google-icons.png" alt="" class="img-fluid me-1">
-                                Sign In With Google
+                                Sign Up With Google
                             </button>
                         </div>
 
                         <div class="text-center mb-2">
-                            I don't have an account, <a href="./signup.html" class="fw-bold link">Sign Up</a>
+                            I already have an account, <a href="./login.html" class="fw-bold link">Sign In</a>
                         </div>
                     </form>
                 </div>
