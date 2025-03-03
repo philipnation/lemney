@@ -392,8 +392,35 @@
                                     <div>
 
                                         <div class="my-2">
-                                            <button class="btn btn-lemney-primary">Approve Shipping</button>
+                                            <button type="button" data-bs-toggle="modal"
+                                                data-bs-target="#approveShippingConfirmationModal"
+                                                class="btn btn-lemney-primary">Approve
+                                                Shipping</button>
+                                        </div>
 
+                                        <!-- Approve Shipping Confirmation Modal -->
+                                        <div class="modal fade" id="approveShippingConfirmationModal"
+                                            data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                            aria-labelledby="Review Submission Confirmation Modal" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered mx-auto rounded-3"
+                                                style="max-width: 360px;">
+                                                <div class="modal-content p-3">
+                                                    <div class="text-center fw-bold">
+                                                        <p class="mb-4">Are you sure you want to <span
+                                                                class="fw-bold">Approve items for shipping</span>?</p>
+
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mt-4">
+                                                            <button type="submit"
+                                                                class="btn btn-lemney-primary fw-bold px-5">Yes</button>
+                                                            <button type="button"
+                                                                class="btn btn-lemney-outline-primary fw-bold px-5"
+                                                                data-bs-dismiss="modal">No</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
