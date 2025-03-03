@@ -135,9 +135,9 @@
                     <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
                     <li class="py-1"><a href="./personal_info.html" class="link">Personal Information</a></li>
                     <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
-                    <li class="py-1"><a href="./product_review.html" class="link active text-dark">Product Review</a>
+                    <li class="py-1"><a href="./product_review.html" class="link">Product Review</a>
                     </li>
-                    <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                    <li class="py-1"><a href="./logistics.html" class="link active">Logistics</a></li>
                     <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
                     <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
                     <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
@@ -164,9 +164,9 @@
                                 <li class="py-1"><a href="./personal_info.html" class="link">Personal Information</a>
                                 </li>
                                 <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
-                                <li class="py-1"><a href="./product_review.html" class="link active text-dark">Product
+                                <li class="py-1"><a href="./product_review.html" class="link">Product
                                         Review</a></li>
-                                <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                                <li class="py-1"><a href="./logistics.html" class="link active">Logistics</a></li>
                                 <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
                                 <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
                                 <li class="py-1"><a href="./notifications.html" class="link">Notifications</a></li>
@@ -392,8 +392,35 @@
                                     <div>
 
                                         <div class="my-2">
-                                            <button class="btn btn-lemney-primary">Approve Shipping</button>
+                                            <button type="button" data-bs-toggle="modal"
+                                                data-bs-target="#approveShippingConfirmationModal"
+                                                class="btn btn-lemney-primary">Approve
+                                                Shipping</button>
+                                        </div>
 
+                                        <!-- Approve Shipping Confirmation Modal -->
+                                        <div class="modal fade" id="approveShippingConfirmationModal"
+                                            data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                            aria-labelledby="Review Submission Confirmation Modal" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered mx-auto rounded-3"
+                                                style="max-width: 360px;">
+                                                <div class="modal-content p-3">
+                                                    <div class="text-center fw-bold">
+                                                        <p class="mb-4">Are you sure you want to <span
+                                                                class="fw-bold">Approve items for shipping</span>?</p>
+
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-between mt-4">
+                                                            <button type="submit"
+                                                                class="btn btn-lemney-primary fw-bold px-5">Yes</button>
+                                                            <button type="button"
+                                                                class="btn btn-lemney-outline-primary fw-bold px-5"
+                                                                data-bs-dismiss="modal">No</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 

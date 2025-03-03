@@ -50,9 +50,12 @@
                 <div class="order-md-last d-flex align-items-center justify-content-center">
                     <!-- NavBar icons -->
                     <div class="d-flex align-items-center justify-content-center gap-2">
-                        <button type="button" class="btn"><i class="fa fa-search text-white"></i></button>
-                        <button type="button" class="btn"><i class="fa fa-shopping-cart text-white"></i></button>
-                        <button type="button" class="btn"><i class="fa fa-user text-white"></i></button>
+                        <button type="button" class="btn" title="Search"><i
+                                class="fa fa-search text-white"></i></button>
+                        <a href="/cart" class="btn" title="Go To Cart"><i
+                                class="fa fa-shopping-cart text-white"></i></a>
+                        <a href="/pages/login.html" class="btn" title="Login"><i class="fa fa-user text-white"></i>
+                        </a>
                     </div>
                     <!-- Toggle button -->
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
@@ -123,13 +126,15 @@
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper swiperMain">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="../assets/img/home_service_banner.png" />
+                            <img src="../assets/img/home_service_banner.png" class="img-fluid"
+                                alt="Home Service Banner" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/honey_service_banner.png" />
+                            <img src="../assets/img/honey_service_banner.png" class="img-fluid"
+                                alt="Honey Service Banner" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="../assets/img/logistics_banner.png" />
+                            <img src="../assets/img/logistics_banner.png" class="img-fluid" alt="Logistics Banner" />
                         </div>
                     </div>
                 </div>
@@ -296,7 +301,7 @@
                             <!-- Card -->
                             <div class="card border shadow-sm">
                                 <div class="position-relative rounded-top">
-                                    <img src="../assets/img/card_img_overlay_room.png" class="card-img-top"
+                                    <img src="../assets/img/card_img_overlay_room.png" class="img-fluid card-img-top"
                                         alt="Traditional Apartment">
 
                                     <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
@@ -364,7 +369,7 @@
                             <!-- Card -->
                             <div class="card border shadow-sm">
                                 <div class="position-relative rounded-top">
-                                    <img src="../assets/img/card_img_overlay_room.png" class="card-img-top"
+                                    <img src="../assets/img/card_img_overlay_room.png" class="img-fluid card-img-top"
                                         alt="Traditional Apartment">
 
                                     <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
@@ -432,7 +437,7 @@
                             <!-- Card -->
                             <div class="card border shadow-sm">
                                 <div class="position-relative rounded-top">
-                                    <img src="../assets/img/card_img_overlay_room.png" class="card-img-top"
+                                    <img src="../assets/img/card_img_overlay_room.png" class="img-fluid card-img-top"
                                         alt="Traditional Apartment">
 
                                     <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
@@ -500,7 +505,7 @@
                             <!-- Card -->
                             <div class="card border shadow-sm">
                                 <div class="position-relative rounded-top">
-                                    <img src="../assets/img/card_img_overlay_room.png" class="card-img-top"
+                                    <img src="../assets/img/card_img_overlay_room.png" class="img-fluid card-img-top"
                                         alt="Traditional Apartment">
 
                                     <div class="position-absolute top-0 h-100 w-100 d-flex flex-column justify-content-between small p-2"
@@ -766,7 +771,52 @@
                 <!-- Swiper -->
                 <div class="swiper customerReviewSwiper">
                     <div class="swiper-wrapper p-2">
-                        <div class="swiper-slide" style="width: 360px">
+                        <div class="customer-swiper-slide swiper-slide">
+
+                            <!-- Customer 1 -->
+                            <div class="shadow-sm rounded-4 p-2">
+
+                                <div class="d-flex">
+                                    <!-- Customer profile picture -->
+                                    <div class="p-2">
+                                        <img src="../assets/img/customer_pfp.png" alt="" class="img-fluid" width="48">
+                                    </div>
+
+                                    <!-- Customer Review -->
+                                    <div class="p-2 flex-grow-1">
+
+                                        <!-- Review Header -->
+                                        <div class="mb-2">
+                                            <h5 class="fw-bold mb-0">Customer 1</h5>
+                                            <div>
+                                                <i class="i fa fa-star btn-lemney-review-star active"></i>
+                                                <i class="i fa fa-star btn-lemney-review-star active"></i>
+                                                <i class="i fa fa-star btn-lemney-review-star active"></i>
+                                                <i class="i fa fa-star btn-lemney-review-star"></i>
+                                                <i class="i fa fa-star btn-lemney-review-star"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="my-2 text-muted small">
+
+                                            <div class="my-2 ">
+                                                <p>
+                                                    The services by Lemney is superb. The service is delivery is what is
+                                                    required
+                                                </p>
+                                            </div>
+
+                                            <div>
+                                                Executed By <br>
+                                                <span class="fw-bold">Get Styled Krib</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="customer-swiper-slide swiper-slide">
 
                             <!-- Customer 1 -->
                             <div class="shadow-sm rounded-4 p-2">
@@ -811,7 +861,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="width: 360px">
+                        <div class="customer-swiper-slide swiper-slide">
 
                             <!-- Customer 1 -->
                             <div class="shadow-sm rounded-4 p-2">
@@ -856,7 +906,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="width: 360px">
+                        <div class="customer-swiper-slide swiper-slide">
 
                             <!-- Customer 1 -->
                             <div class="shadow-sm rounded-4 p-2">
@@ -901,7 +951,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="width: 360px">
+                        <div class="customer-swiper-slide swiper-slide">
 
                             <!-- Customer 1 -->
                             <div class="shadow-sm rounded-4 p-2">
@@ -946,7 +996,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="width: 360px">
+                        <div class="customer-swiper-slide swiper-slide">
 
                             <!-- Customer 1 -->
                             <div class="shadow-sm rounded-4 p-2">
@@ -991,7 +1041,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="width: 360px">
+                        <div class="customer-swiper-slide swiper-slide">
 
                             <!-- Customer 1 -->
                             <div class="shadow-sm rounded-4 p-2">
@@ -1036,7 +1086,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="width: 360px">
+                        <div class="customer-swiper-slide swiper-slide">
 
                             <!-- Customer 1 -->
                             <div class="shadow-sm rounded-4 p-2">
@@ -1081,52 +1131,7 @@
                             </div>
                         </div>
 
-                        <div class="swiper-slide" style="width: 360px">
-
-                            <!-- Customer 1 -->
-                            <div class="shadow-sm rounded-4 p-2">
-
-                                <div class="d-flex">
-                                    <!-- Customer profile picture -->
-                                    <div class="p-2">
-                                        <img src="../assets/img/customer_pfp.png" alt="" class="img-fluid" width="48">
-                                    </div>
-
-                                    <!-- Customer Review -->
-                                    <div class="p-2 flex-grow-1">
-
-                                        <!-- Review Header -->
-                                        <div class="mb-2">
-                                            <h5 class="fw-bold mb-0">Customer 1</h5>
-                                            <div>
-                                                <i class="i fa fa-star btn-lemney-review-star active"></i>
-                                                <i class="i fa fa-star btn-lemney-review-star active"></i>
-                                                <i class="i fa fa-star btn-lemney-review-star active"></i>
-                                                <i class="i fa fa-star btn-lemney-review-star active"></i>
-                                                <i class="i fa fa-star btn-lemney-review-star active"></i>
-                                            </div>
-                                        </div>
-
-                                        <div class="my-2 text-muted small">
-
-                                            <div class="my-2 ">
-                                                <p>
-                                                    The services by Lemney is superb. The service is delivery is what is
-                                                    required
-                                                </p>
-                                            </div>
-
-                                            <div>
-                                                Executed By <br>
-                                                <span class="fw-bold">Get Styled Krib</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide" style="width: 360px">
+                        <div class="customer-swiper-slide swiper-slide">
 
                             <!-- Customer 1 -->
                             <div class="shadow-sm rounded-4 p-2">
@@ -1173,8 +1178,16 @@
 
                     </div>
 
-                    <div class="swiper-slide-next"></div>
-                    <div class="swiper-slide-prev"></div>
+                    <div class="customer-swiper-slide-next">
+                        <button type="button" class="btn btn-lemney" title="Next">
+                            <i class="fa fa-caret-right"></i>
+                        </button>
+                    </div>
+                    <div class="customer-swiper-slide-prev">
+                        <button type="button" class="btn btn-lemney" title="Prev">
+                            <i class="fa fa-caret-left"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
 

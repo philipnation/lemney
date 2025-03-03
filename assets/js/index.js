@@ -1,16 +1,12 @@
 /** ----------------------------------------
  * HERO AREA SWIPER
  ------------------------------------------ */
-var swiperThumbnail = new Swiper(".swiperThumbnail", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 5,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-
 var swiperMain = new Swiper(".swiperMain", {
     loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
     spaceBetween: 10,
 });
 
@@ -25,6 +21,10 @@ const customerReviewSwiper = new Swiper(".customerReviewSwiper", {
       el: ".swiper-pagination",
       clickable: true,
     },
+    navigation: {
+        nextEl: ".customer-swiper-slide-next",
+        prevEl: ".customer-swiper-slide-prev"
+    }
   });
 
 /** --------------------------------------------

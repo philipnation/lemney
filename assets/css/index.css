@@ -1,84 +1,35 @@
 @import url("./lemney.css");
 @import url("./navbar.css");
 
-
-/* .swiper {
-    width: 100%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+.customer-swiper-slide {
+    width: 360px;
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+.customer-swiper-slide-next,
+.customer-swiper-slide-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    margin: 0;
+}
+
+.customer-swiper-slide-next {
+    right: 10px;
+}
+
+.customer-swiper-slide-prev {
+    left: 10px;
+}
+
+.customer-swiper-slide-next > button,
+.customer-swiper-slide-prev > button {
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
 }
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.swiperMain {
-    height: 80%;
-    width: 100%;
-}
-
-.swiperThumbnail {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-}
-
-.swiperThumbnail .swiper-slide {
-    height: 100%;
-    opacity: 0.4;
-}
-
-.swiperThumbnail .swiper-slide-thumb-active {
-    opacity: 1;
-} */
-
-
-
-/* 
-.swiper.customerReviewSwiper {
-    width: 100%;
-    height: 100%;
-  }
-
-.swiper.customerReviewSwiper .swiper-slide {
-text-align: center;
-font-size: 18px;
-background: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.swiper.customerReviewSwiper .swiper-slide img {
-display: block;
-width: 100%;
-height: 100%;
-object-fit: cover;
-}
-
-.swiper.customerReviewSwiper .swiper-slide {
-width: 80%;
-}
-
-.swiper.customerReviewSwiper .swiper-slide:nth-child(2n) {
-width: 60%;
-}
-
-.swiper.customerReviewSwiper .swiper-slide:nth-child(3n) {
-width: 40%;
-} */
