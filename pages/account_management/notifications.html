@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Account Management | Lemney Logistics</title>
+
+    <link rel="shortcut icon" href="../../assets/img/logo.png" type="image/x-icon">
+
+    <!-- Styles -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="../../node_modules/swiper/swiper-bundle.min.css">
+
+    <!-- Scripts -->
+
+    <!-- JQuery -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js" defer></script>
+    <!-- Bootstrap -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Swiper -->
+    <script src="../../node_modules/swiper/swiper-bundle.min.js" defer></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../../assets/css/account_management/account_management.css">
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- NavBar -->
+        <nav
+            class="lemney-navbar bg-lemney-primary-gradient navbar navbar-dark navbar-expand-lg px-4 px-md-5 py-3 shadow-sm">
+            <div class="container-fluid d-flex justify-content-between px-0">
+                <!-- Brand -->
+                <a class="navbar-brand text-start d-flex align-items-center" href="#">
+                    <img src="../../assets/img/logo.png" alt="Lemney Brand Logo" class="img-fluid" width="48">
+                </a>
+                <div class="order-md-last d-flex align-items-center justify-content-center">
+                    <!-- NavBar icons -->
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <button type="button" class="btn"><i class="fa fa-search text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-shopping-cart text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-user text-white"></i></button>
+                    </div>
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- NavBar menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-xl-3">
+                        <!-- Honey Order -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Honey Order</a>
+                        </li>
+                        <!-- Logistics -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Logistics</a>
+                        </li>
+                        <!-- Home Service -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Home Service
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#">Honey Sale</a></li>
+                                <li><a class="dropdown-item" href="./logistics.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="./home_service.html">Home Service</a></li>
+                                <li><a class="dropdown-item" href="#">Consultancy</a></li>
+                            </ul>
+                        </li>
+                        <!-- Housing -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Housing</a>
+                        </li>
+                        <!-- Support -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Support
+                            </a>
+                            <ul class="dropdown-menu shadow dropdown-menu-end bg-lemney-primary-2">
+                                <li><a class="dropdown-item" href="#">Track Order</a></li>
+                                <li><a class="dropdown-item" href="#">Shipping and Delivery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <main>
+
+        <!-- Breadcrumbs -->
+        <div class="d-flex align-items-center px-4 px-md-5 bg-lemney-primary-1">
+            <!-- Toggle (mobile) sidebar -->
+            <a class="btn px-0 me-3 d-md-none border-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                role="button" aria-controls="offcanvasExample">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div class="py-3" style="--bs-breadcrumb-divider: '⋙';" aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold my-0">
+                    <li class="breadcrumb-item"><a href="#" class="link">Home</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Notifications</li>
+                </ol>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="d-md-flex ps-md-4">
+
+            <!-- Side bar (Desktop) -->
+            <div class="account-management-sidebar border-end px-4 py-3 d-none d-md-block" style="min-width: 240px;">
+                <h5 class="my-2">Account Management</h5>
+                <ul class="list-unstyled text-muted">
+                    <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
+                    <li class="py-1"><a href="./personal_info.html" class="link">Personal Information</a></li>
+                    <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
+                    <li class="py-1"><a href="./product_review.html" class="link">Product Review</a>
+                    </li>
+                    <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                    <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
+                    <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
+                    <li class="py-1"><a href="./notifications.html" class="link active">Notifications</a></li>
+                    <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
+                    <li class="py-1"><a href="./house_listing.html" class="link">House Listing</a></li>
+                    <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a></li>
+                    <li class="py-1"><a href="./saved_house.html" class="link">Saved House</a></li>
+                </ul>
+            </div>
+
+            <!-- Side bar (mobile - open on click) -->
+            <div class="container-fluid account-management-sidebar px-4 px-md-5 d-md-none">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header py-2">
+                        <h5 class="offcanvas-title my-2" id="offcanvasExampleLabel">Account Management</h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body py-0 my-0">
+                        <div>
+                            <ul class="list-unstyled text-muted">
+                                <li class="py-1"><a href="./order_history.html" class="link">My Order History</a></li>
+                                <li class="py-1"><a href="./personal_info.html" class="link">Personal
+                                        Information</a>
+                                </li>
+                                <li class="py-1"><a href="./honey_order.html" class="link">Honey Order</a></li>
+                                <li class="py-1"><a href="./product_review.html" class="link">Product
+                                        Review</a></li>
+                                <li class="py-1"><a href="./logistics.html" class="link">Logistics</a></li>
+                                <li class="py-1"><a href="./home_service.html" class="link">Home Service</a></li>
+                                <li class="py-1"><a href="./booked_service.html" class="link">Booked Service</a></li>
+                                <li class="py-1"><a href="./notifications.html" class="link active">Notifications</a>
+                                </li>
+                                <li class="py-1"><a href="./partnership.html" class="link">Partnership</a></li>
+                                <li class="py-1"><a href="./house_listing.html" class="link">House Listing</a></li>
+                                <li class="py-1"><a href="./saved_submission.html" class="link">Saved Submission</a>
+                                </li>
+                                <li class="py-1"><a href="./saved_house.html" class="link">Saved House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="container p-2 p-md-3 bg-light">
+
+                <!-- Notifications -->
+                <div class="notifications-container p-2">
+
+                    <!-- Notification 1 -->
+                    <div class="notification bg-white shadow-sm rounded-2 my-3 p-2 px-3 p-md-3 px-md-4"
+                        data-bs-toggle="collapse" data-bs-target="#notificationCollapse1">
+
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between my-2 small">
+                                <h5 class="fs-5 fw-bold">Order Arrival</h5>
+                                <div class="d-flex align-items-center gap-2 text-lemney-primary">
+                                    <svg width="12" height="14" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="6" cy="6" r="6" fill="#F37E21" />
+                                    </svg>
+                                    12 mins ago
+                                </div>
+                            </div>
+                            <p class="mb-0">Hi, <span class="fw-semibold">User</span>, Your request is on its way to
+                                your doorstep. Our dispatch guy
+                                <span class="fw-bold">Mr. G. C.</span> will be in touch. Keep in touch using <span
+                                    class="fw-bold">+234 904 436 6458</span>
+                            </p>
+                        </div>
+
+                        <!-- Notification extra detail -->
+                        <div class="notification-detail" id="notificationCollapse1">
+
+                            <!-- Add ".collapse" to ".notification-detail" to hide it when loaded -->
+
+                            <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                                <!-- Order Information -->
+                                <div class="py-2 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div><b>Order Date: </b>11-11-2024</div>
+                                        <div><b>Order Number: </b>L-NG1111241A</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span
+                                            class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">Ongoing</span><br>
+                                        <div class="d-md-none"><b>Price: </b><span class="text-uppercase">NGN
+                                                17,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Order Details -->
+                                <div class="py-2 d-flex align-content-center justify-content-between text-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="../../assets/img/order_img_natural_honey.png" alt=""
+                                            class="img-fluid">
+                                        <div class="ps-1">
+                                            <b>Natural Honey</b> <br>
+                                            <span>Plastic Bottling</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <b>QTY</b><br>
+                                        <span class="">5 litres</span>
+                                    </div>
+                                    <div class="d-none d-md-block">
+                                        <b>Price</b><br>
+                                        <span class="text-uppercase">NGN 17,000</span>
+                                    </div>
+                                    <div>
+                                        <b>Delivery</b><br>
+                                        <span class="text-uppercase">1 DAY</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification 2 -->
+                    <div class="notification bg-white shadow-sm rounded-2 my-3 p-2 px-3 p-md-3 px-md-4"
+                        data-bs-toggle="collapse" data-bs-target="#notificationCollapse2">
+
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between my-2 small">
+                                <h5 class="fs-5 fw-bold">Order Arrival</h5>
+                                <div class="d-flex align-items-center gap-2 text-lemney-primary">
+                                    <svg width="12" height="14" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="6" cy="6" r="6" fill="#F37E21" />
+                                    </svg>
+                                    12 mins ago
+                                </div>
+                            </div>
+                            <p class="mb-0">Hi, <span class="fw-semibold">User</span>, Your request is on its way to
+                                your doorstep. Our dispatch guy
+                                <span class="fw-bold">Mr. G. C.</span> will be in touch. Keep in touch using <span
+                                    class="fw-bold">+234 904 436 6458</span>
+                            </p>
+                        </div>
+
+                        <!-- Notification extra detail -->
+                        <div class="notification-detail collapse" id="notificationCollapse2">
+
+                            <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                                <!-- Order Information -->
+                                <div class="py-2 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div><b>Order Date: </b>11-11-2024</div>
+                                        <div><b>Order Number: </b>L-NG1111241A</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span
+                                            class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">Ongoing</span><br>
+                                        <div class="d-md-none"><b>Price: </b><span class="text-uppercase">NGN
+                                                17,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Order Details -->
+                                <div class="py-2 d-flex align-content-center justify-content-between text-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="../../assets/img/order_img_natural_honey.png" alt=""
+                                            class="img-fluid">
+                                        <div class="ps-1">
+                                            <b>Natural Honey</b> <br>
+                                            <span>Plastic Bottling</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <b>QTY</b><br>
+                                        <span class="">5 litres</span>
+                                    </div>
+                                    <div class="d-none d-md-block">
+                                        <b>Price</b><br>
+                                        <span class="text-uppercase">NGN 17,000</span>
+                                    </div>
+                                    <div>
+                                        <b>Delivery</b><br>
+                                        <span class="text-uppercase">1 DAY</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification 3 -->
+                    <div class="notification bg-white shadow-sm rounded-2 my-3 p-2 px-3 p-md-3 px-md-4"
+                        data-bs-toggle="collapse" data-bs-target="#notificationCollapse3">
+
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between my-2 small">
+                                <h5 class="fs-5 fw-bold">Dry Cleaning Update</h5>
+                                <div class="d-flex align-items-center gap-2 text-lemney-primary">
+                                    <svg width="12" height="14" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="6" cy="6" r="6" fill="#F37E21" />
+                                    </svg>
+                                    12 mins ago
+                                </div>
+                            </div>
+                            <p class="mb-0">Hi, <span class="fw-semi">User</span>, your dry cleaned items are available
+                                for pickup. Please contact <span class="fw-semibold">Mr. G. C. </span> on <span
+                                    class="fw-semibold">+234 904 345 6734</span> for more details on pickup.
+                            </p>
+                        </div>
+
+                        <!-- Notification extra detail -->
+                        <div class="notification-detail collapse" id="notificationCollapse3">
+
+                            <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                                <!-- Order Information -->
+                                <div class="py-2 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div><b>Order Date: </b>11-11-2024</div>
+                                        <div><b>Order Number: </b>L-NG1111241A</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span
+                                            class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">Ongoing</span><br>
+                                        <div class="d-md-none"><b>Price: </b><span class="text-uppercase">NGN
+                                                17,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Order Details -->
+                                <div class="py-2 d-flex align-content-center justify-content-between text-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="../../assets/img/order_img_natural_honey.png" alt=""
+                                            class="img-fluid">
+                                        <div class="ps-1">
+                                            <b>Natural Honey</b> <br>
+                                            <span>Plastic Bottling</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <b>QTY</b><br>
+                                        <span class="">5 litres</span>
+                                    </div>
+                                    <div class="d-none d-md-block">
+                                        <b>Price</b><br>
+                                        <span class="text-uppercase">NGN 17,000</span>
+                                    </div>
+                                    <div>
+                                        <b>Delivery</b><br>
+                                        <span class="text-uppercase">1 DAY</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification 4 -->
+                    <div class="notification bg-white shadow-sm rounded-2 my-3 p-2 px-3 p-md-3 px-md-4"
+                        data-bs-toggle="collapse" data-bs-target="#notificationCollapse4">
+
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between my-2 small">
+                                <h5 class="fs-5 fw-bold">House Cleaning Update</h5>
+                                <div class="d-flex align-items-center gap-2 text-lemney-primary">
+                                    <svg width="12" height="14" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="6" cy="6" r="6" fill="#F37E21" />
+                                    </svg>
+                                    12 mins ago
+                                </div>
+                            </div>
+                            <p class="mb-0">Hi, <span class="fw-semi">User</span>, hope you enjoyed our cleaning
+                                services for sure? Ensure to help with a review for us to improve on how to serve you
+                                better.
+                            </p>
+                        </div>
+
+                        <!-- Notification extra detail -->
+                        <div class="notification-detail collapse" id="notificationCollapse4">
+
+                            <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                                <!-- Order Information -->
+                                <div class="py-2 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div><b>Order Date: </b>11-11-2024</div>
+                                        <div><b>Order Number: </b>L-NG1111241A</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span
+                                            class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">Ongoing</span><br>
+                                        <div class="d-md-none"><b>Price: </b><span class="text-uppercase">NGN
+                                                17,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Order Details -->
+                                <div class="py-2 d-flex align-content-center justify-content-between text-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="../../assets/img/order_img_natural_honey.png" alt=""
+                                            class="img-fluid">
+                                        <div class="ps-1">
+                                            <b>Natural Honey</b> <br>
+                                            <span>Plastic Bottling</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <b>QTY</b><br>
+                                        <span class="">5 litres</span>
+                                    </div>
+                                    <div class="d-none d-md-block">
+                                        <b>Price</b><br>
+                                        <span class="text-uppercase">NGN 17,000</span>
+                                    </div>
+                                    <div>
+                                        <b>Delivery</b><br>
+                                        <span class="text-uppercase">1 DAY</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification 5 -->
+                    <div class="notification bg-white shadow-sm rounded-2 my-3 p-2 px-3 p-md-3 px-md-4"
+                        data-bs-toggle="collapse" data-bs-target="#notificationCollapse5">
+
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between my-2 small">
+                                <h5 class="fs-5 fw-bold">Saloon Update</h5>
+                                <div class="d-flex align-items-center gap-2 text-lemney-primary">
+                                    <svg width="12" height="14" viewBox="0 0 12 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="6" cy="6" r="6" fill="#F37E21" />
+                                    </svg>
+                                    12 mins ago
+                                </div>
+                            </div>
+                            <p class="mb-0">Hi, <span class="fw-semi">User</span>, hope you enjoyed our cleaning
+                                services for sure? Ensure to help with a review for us to improve on how to serve you
+                                better.
+                            </p>
+                        </div>
+
+                        <!-- Notification extra detail -->
+                        <div class="notification-detail collapse" id="notificationCollapse5">
+
+                            <div class="bg-lemney-secondary rounded-3 p-3 my-3">
+                                <!-- Order Information -->
+                                <div class="py-2 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div><b>Order Date: </b>11-11-2024</div>
+                                        <div><b>Order Number: </b>L-NG1111241A</div>
+                                    </div>
+                                    <div class="text-end">
+                                        <span
+                                            class="rounded-1 p-2 text-lemney-primary fw-bold bg-lemney-secondary-2">Ongoing</span><br>
+                                        <div class="d-md-none"><b>Price: </b><span class="text-uppercase">NGN
+                                                17,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Order Details -->
+                                <div class="py-2 d-flex align-content-center justify-content-between text-center">
+                                    <div class="d-flex align-items-center">
+                                        <img src="../../assets/img/order_img_natural_honey.png" alt=""
+                                            class="img-fluid">
+                                        <div class="ps-1">
+                                            <b>Natural Honey</b> <br>
+                                            <span>Plastic Bottling</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <b>QTY</b><br>
+                                        <span class="">5 litres</span>
+                                    </div>
+                                    <div class="d-none d-md-block">
+                                        <b>Price</b><br>
+                                        <span class="text-uppercase">NGN 17,000</span>
+                                    </div>
+                                    <div>
+                                        <b>Delivery</b><br>
+                                        <span class="text-uppercase">1 DAY</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+
+        <div class="container-fluid py-3">
+
+            <!-- Social media handles -->
+            <div class="my-3">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook-f"></i>
+                <span>lemney_ltf | lemney.com ltd.</span>
+            </div>
+
+            <!-- Logo -->
+            <div class="my-3">
+                <img src="../../assets/img/logo.png" alt="" height="48">
+            </div>
+
+            <!-- Footer information and details -->
+            <div class="my-3">
+
+                <div class="row">
+
+                    <!-- Contact Information -->
+                    <div class="col-md-3 my-3">
+                        <h5>Contact Information</h5>
+
+                        <!-- Service hours -->
+                        <div class="my-2">
+                            <h6>Service Hours</h6>
+                            <div>Monday to Friday 9 to 6pm</div>
+                        </div>
+
+                        <!-- Phone number -->
+                        <div class="my-2">
+                            <h6>Phone Number</h6>
+                            <div>+234 911 919 4182</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="my-2">
+                            <h6>Email</h6>
+                            <div>customercare@lennygroup.com</div>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-md-3 my-3">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Honey Sale</a></li>
+                            <li><a href="" class="link">Logistics</a></li>
+                            <li><a href="" class="link">Home Service</a></li>
+                            <li><a href="" class="link">Consultancy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Policy -->
+                    <div class="col-md-3 my-3">
+                        <h5>Policy</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">FAQ</a></li>
+                            <li><a href="" class="link">Terms and Condition</a></li>
+                            <li><a href="" class="link">Privacy Policy</a></li>
+                            <li><a href="" class="link">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Get Help -->
+                    <div class="col-md-3 my-3">
+                        <h5>Get Help</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Track Order</a></li>
+                            <li><a href="" class="link">Shipping and Delivery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
