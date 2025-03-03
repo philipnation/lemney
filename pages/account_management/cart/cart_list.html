@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Account Management | Lemney Logistics</title>
+
+    <link rel="shortcut icon" href="../../../assets/img/logo.png" type="image/x-icon">
+
+    <!-- Styles -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="../../../node_modules/swiper/swiper-bundle.min.css">
+
+    <!-- Scripts -->
+
+    <!-- JQuery -->
+    <script src="../../../node_modules/jquery/dist/jquery.min.js" defer></script>
+    <!-- Bootstrap -->
+    <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Swiper -->
+    <script src="../../../node_modules/swiper/swiper-bundle.min.js" defer></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../../../assets/css/account_management/account_management.css">
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <!-- NavBar -->
+        <nav
+            class="lemney-navbar bg-lemney-primary-gradient navbar navbar-dark navbar-expand-lg px-4 px-md-5 py-3 shadow-sm">
+            <div class="container-fluid d-flex justify-content-between px-0">
+                <!-- Brand -->
+                <a class="navbar-brand text-start d-flex align-items-center" href="#">
+                    <img src="../../../assets/img/logo.png" alt="Lemney Brand Logo" class="img-fluid" width="48">
+                </a>
+                <div class="order-md-last d-flex align-items-center justify-content-center">
+                    <!-- NavBar icons -->
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <button type="button" class="btn"><i class="fa fa-search text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-shopping-cart text-white"></i></button>
+                        <button type="button" class="btn"><i class="fa fa-user text-white"></i></button>
+                    </div>
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <!-- NavBar menu -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-xl-3">
+                        <!-- Honey Order -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Honey Order</a>
+                        </li>
+                        <!-- Logistics -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Logistics</a>
+                        </li>
+                        <!-- Home Service -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Home Service
+                            </a>
+                            <ul class="dropdown-menu shadow">
+                                <li><a class="dropdown-item" href="#">Honey Sale</a></li>
+                                <li><a class="dropdown-item" href="./logistics.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="./home_service.html">Home Service</a></li>
+                                <li><a class="dropdown-item" href="#">Consultancy</a></li>
+                            </ul>
+                        </li>
+                        <!-- Housing -->
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Housing</a>
+                        </li>
+                        <!-- Support -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Support
+                            </a>
+                            <ul class="dropdown-menu shadow dropdown-menu-end bg-lemney-primary-2">
+                                <li><a class="dropdown-item" href="#">Track Order</a></li>
+                                <li><a class="dropdown-item" href="#">Shipping and Delivery</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <main>
+
+        <!-- Breadcrumbs -->
+        <div class="d-flex align-items-center px-4 px-md-5 bg-lemney-primary-1">
+            <!-- Toggle (mobile) sidebar -->
+            <a class="btn px-0 me-3 d-md-none border-0" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                role="button" aria-controls="offcanvasExample">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <div class="py-3" style="--bs-breadcrumb-divider: '⋙';" aria-label="breadcrumb">
+                <ol class="breadcrumb fw-bold my-0">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.29279 15.2069C7.10532 15.0194 7 14.7651 7 14.4999C7 14.2348 7.10532 13.9804 7.29279 13.7929L10.5858 10.4999L7.29279 7.20692C7.11063 7.01832 7.00983 6.76571 7.01211 6.50352C7.01439 6.24132 7.11956 5.99051 7.30497 5.8051C7.49038 5.61969 7.74119 5.51452 8.00339 5.51224C8.26558 5.50997 8.51818 5.61076 8.70679 5.79292L12.7068 9.79292C12.8943 9.98045 12.9996 10.2348 12.9996 10.4999C12.9996 10.7651 12.8943 11.0194 12.7068 11.2069L8.70679 15.2069C8.51926 15.3944 8.26495 15.4997 7.99979 15.4997C7.73462 15.4997 7.48031 15.3944 7.29279 15.2069Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M13.2928 15.1947C13.1053 15.0072 13 14.7529 13 14.4877C13 14.2225 13.1053 13.9682 13.2928 13.7807L16.5858 10.4877L13.2928 7.19471C13.1106 7.00611 13.0098 6.75351 13.0121 6.49131C13.0144 6.22911 13.1196 5.9783 13.305 5.79289C13.4904 5.60749 13.7412 5.50232 14.0034 5.50004C14.2656 5.49776 14.5182 5.59855 14.7068 5.78071L18.7068 9.78071C18.8943 9.96824 18.9996 10.2225 18.9996 10.4877C18.9996 10.7529 18.8943 11.0072 18.7068 11.1947L14.7068 15.1947C14.5193 15.3822 14.265 15.4875 13.9998 15.4875C13.7346 15.4875 13.4803 15.3822 13.2928 15.1947Z"
+                            fill="black" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.29279 15.1947C1.10532 15.0072 1 14.7529 1 14.4877C1 14.2225 1.10532 13.9682 1.29279 13.7807L4.58579 10.4877L1.29279 7.19471C1.11063 7.00611 1.00983 6.75351 1.01211 6.49131C1.01439 6.22911 1.11956 5.9783 1.30497 5.79289C1.49038 5.60749 1.74119 5.50232 2.00339 5.50004C2.26558 5.49776 2.51818 5.59855 2.70679 5.78071L6.70679 9.78071C6.89426 9.96824 6.99957 10.2225 6.99957 10.4877C6.99957 10.7529 6.89426 11.0072 6.70679 11.1947L2.70679 15.1947C2.51926 15.3822 2.26495 15.4875 1.99979 15.4875C1.73462 15.4875 1.48031 15.3822 1.29279 15.1947Z"
+                            fill="black" />
+                    </svg>
+
+                    <li class="breadcrumb-item"><a href="#" class="link">Back</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="d-md-flex ps-md-4">
+
+            <!-- Side bar (Desktop) -->
+            <div class="account-management-sidebar border-end px-4 py-3 d-none d-md-block" style="min-width: 240px;">
+                <h5 class="my-2">Account Management</h5>
+                <ul class="list-unstyled text-muted">
+                    <li class="py-1"><a href="../order_history.html" class="link">My Order History</a></li>
+                    <li class="py-1"><a href="../personal_info.html" class="link active">Personal Information</a></li>
+                    <li class="py-1"><a href="../honey_order.html" class="link">Honey Order</a></li>
+                    <li class="py-1"><a href="../product_review.html" class="link">Product Review</a>
+                    </li>
+                    <li class="py-1"><a href="../logistics.html" class="link">Logistics</a></li>
+                    <li class="py-1"><a href="../home_service.html" class="link">Home Service</a></li>
+                    <li class="py-1"><a href="../booked_service.html" class="link">Booked Service</a></li>
+                    <li class="py-1"><a href="../notifications.html" class="link">Notifications</a></li>
+                    <li class="py-1"><a href="../partnership.html" class="link">Partnership</a></li>
+                    <li class="py-1"><a href="../house_listing.html" class="link">House Listing</a></li>
+                    <li class="py-1"><a href="../saved_submission.html" class="link">Saved Submission</a></li>
+                    <li class="py-1"><a href="../saved_house.html" class="link">Saved House</a></li>
+                </ul>
+            </div>
+
+            <!-- Side bar (mobile - open on click) -->
+            <div class="container-fluid account-management-sidebar px-4 px-md-5 d-md-none">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header py-2">
+                        <h5 class="offcanvas-title my-2" id="offcanvasExampleLabel">Account Management</h5>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body py-0 my-0">
+                        <div>
+                            <ul class="list-unstyled text-muted">
+                                <li class="py-1"><a href="../order_history.html" class="link">My Order History</a></li>
+                                <li class="py-1"><a href="../personal_info.html" class="link active">Personal
+                                        Information</a>
+                                </li>
+                                <li class="py-1"><a href="../honey_order.html" class="link">Honey Order</a></li>
+                                <li class="py-1"><a href="../product_review.html" class="link">Product
+                                        Review</a></li>
+                                <li class="py-1"><a href="../logistics.html" class="link">Logistics</a></li>
+                                <li class="py-1"><a href="../home_service.html" class="link">Home Service</a></li>
+                                <li class="py-1"><a href="../booked_service.html" class="link">Booked Service</a></li>
+                                <li class="py-1"><a href="../notifications.html" class="link">Notifications</a></li>
+                                <li class="py-1"><a href="../partnership.html" class="link">Partnership</a></li>
+                                <li class="py-1"><a href="../house_listing.html" class="link">House Listing</a></li>
+                                <li class="py-1"><a href="../saved_submission.html" class="link">Saved Submission</a>
+                                </li>
+                                <li class="py-1"><a href="../saved_house.html" class="link">Saved House</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main content -->
+            <div class="p-2 p-md-3">
+
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+
+        <div class="container-fluid py-3">
+
+            <!-- Social media handles -->
+            <div class="my-3">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook-f"></i>
+                <span>lemney_ltf | lemney.com ltd.</span>
+            </div>
+
+            <!-- Logo -->
+            <div class="my-3">
+                <img src="../../../assets/img/logo.png" alt="" height="48">
+            </div>
+
+            <!-- Footer information and details -->
+            <div class="my-3">
+
+                <div class="row">
+
+                    <!-- Contact Information -->
+                    <div class="col-md-3 my-3">
+                        <h5>Contact Information</h5>
+
+                        <!-- Service hours -->
+                        <div class="my-2">
+                            <h6>Service Hours</h6>
+                            <div>Monday to Friday 9 to 6pm</div>
+                        </div>
+
+                        <!-- Phone number -->
+                        <div class="my-2">
+                            <h6>Phone Number</h6>
+                            <div>+234 911 919 4182</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="my-2">
+                            <h6>Email</h6>
+                            <div>customercare@lennygroup.com</div>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="col-md-3 my-3">
+                        <h5>Services</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Honey Sale</a></li>
+                            <li><a href="" class="link">Logistics</a></li>
+                            <li><a href="" class="link">Home Service</a></li>
+                            <li><a href="" class="link">Consultancy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Policy -->
+                    <div class="col-md-3 my-3">
+                        <h5>Policy</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">FAQ</a></li>
+                            <li><a href="" class="link">Terms and Condition</a></li>
+                            <li><a href="" class="link">Privacy Policy</a></li>
+                            <li><a href="" class="link">About Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Get Help -->
+                    <div class="col-md-3 my-3">
+                        <h5>Get Help</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="" class="link">Track Order</a></li>
+                            <li><a href="" class="link">Shipping and Delivery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
