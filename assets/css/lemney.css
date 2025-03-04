@@ -74,6 +74,9 @@ html, body {
     outline: none;
     border: none !important;
 }
+.btn-lemney-primary:disabled {
+    background-color: gray;
+}
 .btn-lemney-outline-primary {
     border: 1px solid var(--bg-lemney-primary-2) !important;
     color: var(--bg-lemney-primary-2);
